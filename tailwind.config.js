@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: 'hsl(var(--background))',
         background: 'hsl(var(--background))',
       },
       boxShadow: {

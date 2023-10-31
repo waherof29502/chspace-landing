@@ -6,7 +6,8 @@ import localFonts from 'next/font/local';
 import Header from '@/src/components/ui/header';
 import Banner from '@/src/components/banner';
 import Footer from '@/src/components/ui/footer';
-import Newsletter from '@/src/components/newsletter';
+import ContactUs from '@/src/components/contact-us';
+
 const syne = Syne({
   subsets: ['latin'],
   variable: '--font-syne',
@@ -40,7 +41,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Banner />
-          <Newsletter />
+          <ContactUs />
           <Footer />
         </div>
       </body>

@@ -17,6 +17,7 @@
 }
 @layer base {
   :root {
+    --primary: 0 0% 11%;
     --background: 0 0% 11%;
   }
 }
