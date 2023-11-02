@@ -15,8 +15,8 @@ const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: Portfoli
       {isImageLeft && (
         <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={600} height={600} />
       )}
-      <div className='flex md:flex-col justify-center items-center m-10'>
-        <div className='text-primary font-sans md:w-[250px]'>
+      <div className='flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 mb-10 md:m-10'>
+        <div className='text-primary font-sans w-full md:w-[250px]'>
         <p className='text-[22px] font-semibold py-[14px]'>
           {title}
         </p>

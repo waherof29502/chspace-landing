@@ -1,7 +1,7 @@
-import ServiceCard from './service-card';
+import ServiceGridCard from './service-grid-card';
 import Image from 'next/image';
 import NewsBg from '@/public/images/bg-2.png';
-
+import ServiceCard from './service-card'
 import { SERVICE_ITEMS } from '@/src/constants';
 export default function Service() {
   return (
@@ -15,10 +15,10 @@ export default function Service() {
         alt='News bg'
       />
 
-      <div className='relative max-w-6xl mx-auto px-4 sm:px-6'>
+      <div className='relative max-w-7xl items-center mx-auto px-4 sm:px-6'>
         <div className='py-12 md:py-20'>
           {/* Section header */}
-          <div className='text-primary flex flex-col md:flex-row md:justify-start items-center'>
+          <div className='text-primary flex flex-col md:ml-[80px] md:flex-row md:justify-start items-center'>
             <h1 className='font-syne text-[48px] font-normal capitalize'>
               Service
             </h1>
@@ -26,19 +26,28 @@ export default function Service() {
               服務項目
             </span>
           </div>
-          <div className='mt-[60px] mx-auto grid gap-[12px] grid-cols-3 md:grid-cols-5 items-start md:max-w-2xl lg:max-w-none'>
-            {/* Items */}
+          {/*<div className='mt-[60px] mx-auto grid gap-[12px]  md:grid-cols-5 items-start md:max-w-2xl lg:max-w-none'>
+             Items 
             {SERVICE_ITEMS.map((item) => (
-
                 <ServiceCard
-                key={item.id}
+                key={item.id}    
                   src={item.src}
                   title={item.title}
                   icon={item.icon}
                 />
-              
+      
             ))}
-          </div>
+          </div>*/}
+          <div className="flex overflow-x-auto mt-4 items-start w-auto md:max-w-2xl lg:max-w-none">
+           {SERVICE_ITEMS.map((item) => (
+          <ServiceCard
+           key={item.id}
+                  dataIndex= {item.id}
+                  src={item.src}
+                  title={item.title}
+                  icon={item.icon}/>
+                   ))}
+                 </div>
         </div>
       </div>
     </section>

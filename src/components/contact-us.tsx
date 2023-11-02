@@ -1,4 +1,4 @@
-import ProjectCard from './service-card';
+import ProjectCard from './service-grid-card';
 import Image from 'next/image';
 import { IconPhone, IconLocation } from '@/public/svg';
 

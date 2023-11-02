@@ -28,7 +28,7 @@ export default function Header() {
         !top ? 'bg-white ease-in ' : ''
       }`}
     >
-      <div className='h-[100px] md:h-auto max-w-6xl mx-auto px-5 sm:px-6'>
+      <div className='h-[100px] md:h-auto max-w-8xl mx-auto px-5 sm:px-6 lg:px-[80px]'>
         <div className='flex items-center justify-between h-16 pt-6 pr-2 md:h-40'>
           {/* Site branding */}
           <div className='shrink-0 mr-4 mt-4 md:hidden'>

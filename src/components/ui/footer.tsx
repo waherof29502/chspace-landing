@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Service Nav as */}
           <div>
-            <div className='mb-10 ml-5 md:mb-0 flex flex-col justify-center items-center md:items-center text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
+            <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-center text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
               <Link href='/about-us' className=' text-white text-[22px]'>
                 <span className='block' style={{ letterSpacing: '1.6em' }}>
                   文・域
@@ -68,7 +68,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </div>
+        </div> 
         {/* Bottom area */}
         <div className='flex flex-col justify-center items-center md:-mt-20 md:flex md:flex-row md:items-center md:justify-between py-4 md:px-[90px] lg:px-[280px] md:py-12 '>
           {/* Social as */}
