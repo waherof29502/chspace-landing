@@ -5,13 +5,11 @@ import NewsBg from '@/public/images/bg-2.png';
 const NewsLetter = () => {
   return (
     <section className='relative overflow-hidden'>
-      <div className='w-full h-[485px]'>
+      <div className='w-full h-[485px] object-cover'>
         <Image
           className='rounded-lg'
           src={NewsBg}
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
+          fill
           alt='News bg'
         />
         <div className='absolute inset-0 flex flex-col justify-center items-center p-2'>

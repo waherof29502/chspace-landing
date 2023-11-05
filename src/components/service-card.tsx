@@ -58,11 +58,12 @@ const ServiceCard = ({ dataIndex,src, title, icon }: ServiceProps) => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  
 
   return (
       <div ref={carouselRef} onScroll={handleScroll}>
           <div
-            className={`w-60 p-2 ${
+            className={`w-60 2xl:w-[300px] p-2 ${
               dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
             }  rounded-lg cursor-pointer`}
             onClick={(e) => handleClick(e, dataIndex)}
@@ -71,8 +72,8 @@ const ServiceCard = ({ dataIndex,src, title, icon }: ServiceProps) => {
       <Image
         src={src}
         alt={title}
-        width={100}
-        height={100}
+        width={300}
+        height={300}
         className='w-full object-contain'
       />
 

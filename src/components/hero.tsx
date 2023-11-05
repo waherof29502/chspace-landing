@@ -14,16 +14,14 @@ export default function Hero() {
         /> */}
       {/* Hero image */}
         <Image
-          className='pl-2 pr-2 pt-2 pb-2 md:pb-0 rounded-2xl h-auto'
+          className='pl-2 pr-2 pt-2 pb-2 md:pb-0 rounded-2xl h-auto object-cover'
           src={HeroBg}
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
+          fill
           alt='hero-bg'
         />
       </div>
       <Image
-      className='absolute inset-0 mx-auto top-[530px] left-0 p-10 md:top-[530px] lg:top-[530px] 2xl:top-[800px] md:left-[10px] lg:left-[100px] xl:left-[300px] 2xl:left-[770px] '
+      className='absolute inset-0 mx-auto top-[530px] left-0 p-10 md:top-[530px] lg:top-[330px] xl:top-[550px] 2xl:top-[800px] md:left-[10px] lg:left-[100px] xl:left-[370px] 2xl:left-[770px] '
       src={Slogan}
       width={930}
       height={72}

@@ -11,9 +11,9 @@ interface PortfolioProps {
 const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: PortfolioProps) => {
 
   return (
-     <div className={`mx-auto md:mt-[97px] mb-2 md:mb-[202px] flex flex-1 flex-col md:grid md:grid-cols-2 ${isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'}`}>
+     <div className={` max-w-8xl mx-auto md:mt-[97px] mb-2 md:mb-[202px] flex flex-1 flex-col md:grid md:grid-cols-2 ${isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'}`}>
       {isImageLeft && (
-        <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={600} height={600} />
+        <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}
       <div className='flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 mb-10 md:m-10'>
         <div className='text-primary font-sans w-full md:w-[250px]'>
@@ -29,7 +29,7 @@ const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: Portfoli
         </div>
       </div>
       {!isImageLeft && (
-        <Image className='mx-auto my-4 rounded-md' src={imageSrc} alt={title} width={600} height={600} />
+        <Image className='max-w-8xl mx-auto my-4 rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}
     </div>
   );

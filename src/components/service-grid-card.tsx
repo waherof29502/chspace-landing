@@ -9,6 +9,7 @@ interface ServiceProps {
 
 const ServiceGridCard = ({ src, title, icon }: ServiceProps) => {
   return (
+    <div className='mt-[60px] mx-auto grid gap-[12px] md:grid-cols-5 items-start md:max-w-2xl lg:max-w-none'>
     <div className='relative overflow-hidden'>
       <Image
         src={src}
@@ -28,6 +29,7 @@ const ServiceGridCard = ({ src, title, icon }: ServiceProps) => {
         />
         <p className='text-[12px] md:text-[22px] text-white'>{title}</p>
       </div>
+    </div>
     </div>
   );
 };

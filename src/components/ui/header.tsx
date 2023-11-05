@@ -7,7 +7,7 @@ import LogoBlack from '@/public/images/logo-black.png';
 import MobileMenu from './mobile-menu';
 import Image from 'next/image';
 import { NAV_ITEMS } from '@/src/constants';
-
+import Logo from './logo'
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
@@ -28,20 +28,13 @@ export default function Header() {
         !top ? 'bg-white ease-in ' : ''
       }`}
     >
-      <div className='h-[100px] md:h-auto max-w-8xl mx-auto px-5 sm:px-6 lg:px-[80px]'>
+      <div className='h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-[140px]'>
         <div className='flex items-center justify-between h-16 pt-6 pr-2 md:h-40'>
-          {/* Site branding */}
-          <div className='shrink-0 mr-4 mt-4 md:hidden'>
-            <Image
-              className='rounded-lg'
-              src={!top ? LogoBlack : LogoWhite}
-              width={100}
-              height='100'
-              alt='logo'
-            />
-          </div>
+  
           {/* Desktop navigation */}
           <nav className='hidden md:flex md:grow'>
+            <Logo top={top}/>
+            {/* <Link href='/'>
             <div className='shrink-0 mr-4 mt-4'>
               <Image
                 className='rounded-lg'
@@ -51,6 +44,7 @@ export default function Header() {
                 alt='logo'
               />
             </div>
+            </Link> */}
             <ul className='flex grow font-sansCjk justify-end items-center -mt-[43px]'>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
