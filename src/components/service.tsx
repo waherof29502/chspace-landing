@@ -16,7 +16,7 @@ export default function Service() {
       <div className='relative max-w-8xl items-center mx-auto px-4 sm:px-6 justify-center lg:mx-[10px] xl:mx-[90px] 2xl:mx-[100px]'>
         <div className='py-12 md:py-20'>
           {/* Section header */}
-          <div className='text-primary flex flex-col md:ml-[80px] md:flex-row md:justify-start items-center 2xl:mb-[40px]'>
+          <div className='text-primary flex flex-col md:ml-[30px] xl:ml-[10px] 2xl:ml-[120px] md:flex-row md:justify-start items-center 2xl:mb-[40px]'>
             <h1 className='font-syne text-[48px] font-normal capitalize'>
               Service
             </h1>

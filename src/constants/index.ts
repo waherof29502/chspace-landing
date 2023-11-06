@@ -37,3 +37,5 @@ export const PORTFOLIO_PAGE_ITEMS =[
   {id:6,src:'/images/2-6.png',title:'心之所憩｜生活的模樣',location:'台北市 中山區',link:'/portfolio/work06',category:'住宅設計'},
 
 ]
+
+export const slides = ['/images/2-1.png', '/images/2-1.png', '/images/2-1.png'];

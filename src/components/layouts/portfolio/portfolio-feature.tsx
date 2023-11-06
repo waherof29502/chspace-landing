@@ -47,7 +47,7 @@ export default function PortfolioFeature() {
               ))}
             </div>
            
-            {filterProjects().map((item:any)=>(
+            {filterProjects().map((item)=>(
               <PortfolioCard
               key={item.id} 
               imageSrc={item.src}

@@ -6,8 +6,8 @@ export default function ContactUs() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='max-w-8xl flex flex-wrap items-center h-auto md:h-[625px] justify-center'>
-          <div className='px-2 md:px-20 text-black flex flex-col m-10'>
+        <div className='max-w-8xl flex flex-wrap items-center h-auto md:h-[625px] justify-evenly'>
+          <div className=' text-black flex flex-col m-10'>
             <div className='flex flex-col md:flex-row md:justify-start items-center'>
               <h1 className='font-syne text-[48px] font-normal capitalize'>
                 Contact
