@@ -18,7 +18,7 @@ export const SERVICE_ITEMS = [
   { id: 1, src: '/images/3-1.png', title: '住宅設計', icon: '/svg/house.svg' },
   { id: 2, src: '/images/3-2.png', title: '辦公室設計', icon: '/svg/bag.svg' },
   { id: 3, src: '/images/3-3.png', title: '文化場域設計', icon: '/svg/leaf.svg' },
-  { id: 4, src: '/images/3-4.png', title: '商空設計', icon: '/svg/cube.svg' },
+  { id: 4, src: '/images/3-4.png', title: '商空設計', icon: '/svg/cup.svg' },
   { id: 5, src: '/images/3-5.png', title: '展場設計', icon: '/svg/cube.svg' },
 ];
 
@@ -46,3 +46,25 @@ export const PORTFOLIO_PAGE_ITEMS =[
 ]
 
 export const slides = ['/images/2-1.png', '/images/2-1.png', '/images/2-1.png'];
+
+
+export const SLIDERS01 =[
+  {id:1,src:'/images/work01/1-1.jpg'},
+  {id:2,src:'/images/work01/1-2.jpg'},
+  {id:3,src:'/images/work01/1-3.jpg'},
+  {id:4,src:'/images/work01/1-4.jpg'},
+  {id:5,src:'/images/work01/1-5.jpg'},
+  {id:6,src:'/images/work01/1-6.jpg'},
+  {id:7,src:'/images/work01/1-7.jpg'},
+  {id:8,src:'/images/work01/1-8.jpg'},
+]
+export const OTHERSPROJECT01 = [
+  {id:1,src:'/images/work01/2-1.png', title:'台灣室內設計週｜漢斯希爾展館',desc:'南港展覽館1館'},
+  {id:2,src:'/images/work01/2-2.png', title:'台灣室內設計週｜漢斯希爾展館',desc:'新竹高鐵旁'},
+  {id:3,src:'/images/work01/2-3.png', title:'閱讀軌跡｜閱讀迷宮',desc:'浙江/紹興 鏡湖區'}
+]
+export const NEWS01 = [
+  {id:1,content:'【2022 iF獎設計】放緩生活步調享受日光、木質的洗禮'},
+  {id:2,content:'「專訪」日日時光一起生活的初心！'},
+  {id:3,content:'【SHOW AWARDS】文域設計 獲2022 年―書店 | 別墅 | 住宅 | 辦公空間―4 項IF 設計大獎'}
+]

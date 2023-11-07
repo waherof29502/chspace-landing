@@ -74,14 +74,14 @@ export default function Footer() {
           {/* Social as */}
           <div className='flex mb-4 md:order-1 sx:ml-4 md:mb-0'>
             <Link
-              href='#0'
+              href='https://www.instagram.com/chs_interior/'
               className='flex justify-center items-center text-white '
               aria-label='IG'
             >
               <IconIg className='text-[32px]' />
             </Link>
             <Link
-              href='#0'
+              href='https://www.facebook.com/CHSPACE'
               className='flex justify-center items-center ml-4 text-white'
               aria-label='Fb'
             >
@@ -97,7 +97,9 @@ export default function Footer() {
           </div>
           {/* Copyrights note */}
           <div className='text-[18x] text-white font-syne ml-4'>
+            <Link href='https://creer-design.com/' target='_blank'>
             &copy; 2023 by creer-design
+            </Link>
           </div>
         </div>
       </div>
