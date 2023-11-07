@@ -4,14 +4,14 @@ import type { RefObject } from 'react';
 import Image from 'next/image';
 import img1 from '@/public/images/hero-image.png'
 import img2 from '@/public/images/hero-image.png'
-interface ServiceProps {
- dataIndex:number;
+interface ProjectOthersCardProps {
+  dataIndex:number;
   src: string;
-
-  
+  title:string;
+  desc:string
 }
 
-const ProjectOtherCard = ({ dataIndex,src}: ServiceProps) => {
+const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) => {
     const TOTAL_CAROUSEL_COUNT = dataIndex;
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef: RefObject<HTMLDivElement> = useRef(null);
@@ -70,17 +70,23 @@ const ProjectOtherCard = ({ dataIndex,src}: ServiceProps) => {
             onClick={(e) => handleClick(e, dataIndex)}
           >
            <div className='relative overflow-hidden rounded-lg'>
-      <Image
-        src={src}
-        alt={dataIndex.toString()}
-        width={380}
-        height={267}
-        className='w-full object-contain'
-      />
+          <div className='flex flex-col'>
+          <Image
+            src={src}
+            alt={dataIndex.toString()}
+            width={380}
+            height={267}
+            className='w-full object-contain'
+          />      
+          <div className='flex mt-6 items-center'>
+          <p className='text-[12px] md:text-[16px] text-primary font-medium tracking-[1.8px]'>{title}</p>
+           <p className='ml-2 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
+           </div>
 
+
+          </div>
       <div className='absolute inset-0 flex flex-col justify-center items-center p-0 md:p-6 '>
       
-        <p className='text-[12px] md:text-[22px] text-black'>123</p>
       </div>
     </div>
           </div>

@@ -36,7 +36,7 @@ export default function Service() {
       
             ))}
           </div>*/}
-          <div className="flex overflow-x-auto no-scrollbar  mt-4 items-start w-auto md:max-w-2xl lg:max-w-none 2xl:ml-[100px]">
+          <div className="flex overflow-x-auto no-scrollbar mt-4 items-start w-auto md:max-w-2xl lg:max-w-none 2xl:ml-[100px]">
            {SERVICE_ITEMS.map((item) => (
           <ServiceCard
            key={item.id}

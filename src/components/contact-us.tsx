@@ -6,8 +6,8 @@ export default function ContactUs() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='max-w-8xl flex flex-wrap items-center h-auto md:h-[625px] justify-evenly'>
-          <div className=' text-black flex flex-col m-10'>
+        <div className='max-w-8xl mx-auto flex flex-wrap items-center h-auto md:h-[625px] justify-evenly'>
+          <div className=' text-black flex flex-col m-10 3xl:mr-8'>
             <div className='flex flex-col md:flex-row md:justify-start items-center'>
               <h1 className='font-syne text-[48px] font-normal capitalize'>
                 Contact
@@ -16,7 +16,7 @@ export default function ContactUs() {
                 聯絡我們
               </span>
             </div>
-            <div className='flex mt-[60px] flex-col items-center justify-center'>
+            <div className='flex p-12 md:p-0 mt-[60px] flex-col items-center justify-center'>
               <span className='text-[#545351] text-[18px] font-semibold leading-10'>
                 營造生活美學，享受無比舒適
                 <br />

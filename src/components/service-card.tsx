@@ -85,7 +85,7 @@ const ServiceCard = ({ dataIndex,src, title, icon }: ServiceProps) => {
     height={200}
     className="w-[200px] p-[65px] -mt-[100px] hover:-mt-[10px]  animate-in slide-in-from-top-2 opacity-0 hover:slide-out-to-bottom-2 hover:opacity-100 hover:slide-in-from-top-100"
   />
-  <p className="text-[22px] font-bold tracking-[3.3px] text-white -translate-y-10 ">
+  <p className="text-[22px] font-serif font-bold tracking-[3.3px] text-white -translate-y-10 ">
     {title}
   </p>
 </div>

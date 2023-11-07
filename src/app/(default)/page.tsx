@@ -1,6 +1,6 @@
 export const metadata = {
   title: '文域首頁',
-  description: 'Page description',
+  description: '首頁',
 };
 
 import Hero from '@/src/components/hero';
