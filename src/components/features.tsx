@@ -123,7 +123,7 @@ export default function Features() {
               alt='img01'
             />
           </div>
-          <div className='flex inset-0 justify-start ml-[80px] lg:ml-[200px] xl:ml-[390px] 2xl:ml-[400px]  md:-mt-[90px] items-center absolute z-20'>
+          <div className='flex inset-0 justify-start ml-[80px] md:ml-[100px] lg:ml-[190px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] items-center absolute z-20'>
           <div className='text-[16px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
               <span className='block' style={{ letterSpacing: '0.5em' }}>為一個家的圓</span>
               <span className='block' style={{ letterSpacing: '0.5em' }}>
@@ -201,7 +201,7 @@ export default function Features() {
               alt='img01'
             />
           </div>
-          <div className='flex inset-0 justify-end mr-[45px] -mt-[50px] md:mr-[400px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] items-center absolute z-20'>
+          <div className='flex inset-0 justify-end mr-[65px] -mt-[50px] md:mr-[100px] lg:mr-[240px] xl:mr-[450px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] items-center absolute z-20'>
           <div className='font-sans text-[16px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
               <div className="relative left-4 right-1 bottom-10 w-px p-[0.5px] h-20 bg-gray-500 transform translate-y-1/2"></div>
               <span className='block' style={{ letterSpacing: '0.5em' }}>

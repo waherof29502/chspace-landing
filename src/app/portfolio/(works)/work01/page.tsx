@@ -3,12 +3,12 @@ export const metadata = {
   description: 'Page description',
 };
 
-import Work01 from '@/src/components/layouts/works/work-01';
+import Project01 from '@/src/components/layouts/projects/project-01';
 
 export default function Work() {
   return (
     <>
-      <Work01 />
+      <Project01 />
     </>
   );
 }

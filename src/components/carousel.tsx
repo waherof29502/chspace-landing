@@ -27,11 +27,11 @@ const Carousel = ({ children, autoSlide = false, autoSlideInterval = 3000 ,curr,
             <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)` }}>
                 {children}
             </div>
-            <div className="absolute inset-0 flex items-center justify-between p-10">
-                <button onClick={prev} className='p-1 w-[53px] h-[53px] rounded-full border-1 shadow border-[1px] border-white border-solid text-white hover:bg-white/80 hover:text-primary'>
+            <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10">
+                <button onClick={prev} className='p-1 w-[33px] h-[33px] md:w-[53px] md:h-[53px] rounded-full border-1 shadow border-[1px] border-white border-solid text-white hover:bg-white/80 hover:text-primary'>
                    &#60;
                 </button>
-                <button onClick={next} className='p-1 w-[53px] h-[53px] rounded-full border-1 shadow border-[1px] border-white border-solid text-white hover:bg-white/80 hover:text-primary'>
+                <button onClick={next} className='p-1 w-[33px] h-[33px] md:w-[53px] md:h-[53px] rounded-full border-1 shadow border-[1px] border-white border-solid text-white hover:bg-white/80 hover:text-primary'>
                     &#62;
                 </button>
             </div>

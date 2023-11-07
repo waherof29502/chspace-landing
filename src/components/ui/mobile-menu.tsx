@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import LogoBlack from '@/public/images/logo-black.png';
+import LogoWhite from '@/public/images/logo-white.png';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { NAV_ITEMS } from '@/src/constants';
@@ -54,6 +56,7 @@ export default function MobileMenu() {
   return (
     <div className='flex md:hidden'>
       {/* Hamburger button */}
+
       <button
         ref={trigger}
         className={`hamburger ${
@@ -75,10 +78,9 @@ export default function MobileMenu() {
           <rect y='18' width='24' height='2' />
         </svg>
       </button>
-
       {/*Mobile navigation */}
       <div ref={mobileNav}>
-        {/* {mobileNavOpen ? (
+        {mobileNavOpen ? (
           <div
             id='mobile-nav'
             className='absolute top-0 h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white'
@@ -105,8 +107,8 @@ export default function MobileMenu() {
               ))}
             </ul>
           </div>
-        ) : null} */}
-        <Transition
+        ) : null}
+        {/* <Transition
           show={mobileNavOpen}
           as='nav'
           id='mobile-nav'
@@ -141,7 +143,7 @@ export default function MobileMenu() {
               ))}
             </ul>
           </>
-        </Transition>
+        </Transition> */}
       </div>
     </div>
   );

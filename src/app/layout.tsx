@@ -1,5 +1,4 @@
 import '../styles/style.css';
-
 import { Syne } from 'next/font/google';
 import localFonts from 'next/font/local';
 
