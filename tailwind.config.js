@@ -34,6 +34,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
+        serif:['var(--font-serif)','sans-serif'],
         syne: ['var(--font-syne)', 'sans-serif'],
         sansCjk: ['var(--font-sansCjk)', 'sans-serif'],
       },

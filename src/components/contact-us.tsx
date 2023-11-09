@@ -1,18 +1,19 @@
 import ProjectCard from './service-grid-card';
 import Image from 'next/image';
 import { IconPhone, IconLocation } from '@/public/svg';
+import CustomBtn from './custom-btn';
 
 export default function ContactUs() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='max-w-8xl mx-auto flex flex-wrap items-center h-auto md:h-[625px] justify-evenly'>
+        <div className='max-w-8xl mx-auto flex flex-wrap flex-col md:flex-row item-start items-center h-auto md:h-[825px] justify-evenly'>
           <div className=' text-black flex flex-col m-10 3xl:mr-8'>
             <div className='flex flex-col md:flex-row md:justify-start items-center'>
               <h1 className='font-syne text-[48px] font-normal capitalize'>
                 Contact
               </h1>
-              <span className='pl-4 mt-1.5 font-sans text-[#545351] text-[18px]'>
+              <span className='md:pl-4 mt-1.5 font-sans text-[#545351] text-[18px]'>
                 聯絡我們
               </span>
             </div>
@@ -24,7 +25,7 @@ export default function ContactUs() {
               </span>
             </div>
             <div className='md:mt-6 flex justify-end'>
-              <h1 className='font-serif'>立即諮詢</h1>
+              <CustomBtn title={"立即諮詢"} fontType={"font-serif"} />
             </div>
           </div>
           <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] md:border-l-[1px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] md:border-r-[1px]'>

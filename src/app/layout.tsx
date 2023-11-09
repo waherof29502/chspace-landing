@@ -1,8 +1,8 @@
 import '../styles/style.css';
-import { Syne } from 'next/font/google';
+import { Syne,Noto_Serif_TC } from 'next/font/google';
 import localFonts from 'next/font/local';
 
-import Header from '@/src/components/ui/header';
+
 import Banner from '@/src/components/banner';
 import Footer from '@/src/components/ui/footer';
 import ContactUs from '@/src/components/contact-us';
@@ -11,6 +11,12 @@ const syne = Syne({
   subsets: ['latin'],
   variable: '--font-syne',
   display: 'swap',
+});
+const serif = Noto_Serif_TC({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+  weight:['200','300','400','500','600','700','900']
 });
 const sansCjk = localFonts({
   src: '../../public/fonts/NotoSerifCJKtc-VF.otf',
@@ -31,10 +37,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${syne.variable} ${sansCjk.variable} font-sans antialiased bg-white text-white tracking-tight`}
+        className={`${serif.variable} font-sans ${syne.variable} ${sansCjk.variable} antialiased bg-white text-white tracking-tight`}
       >
         <div className='flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip'>
-          <Header />
+        
           {children}
           <Banner />
           <ContactUs />

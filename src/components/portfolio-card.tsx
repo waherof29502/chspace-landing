@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import IconClick from '@/public/svg/icon.svg'
+import CustomBtn from './custom-btn';
 interface PortfolioProps {
   imageSrc: string;
   title: string;
@@ -16,21 +17,17 @@ const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: Portfoli
       {isImageLeft && (
         <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}
-      <div className='md:flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 -mb-2 md:m-10'>
+      <div className='md:flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 md:mt-20 -mb-2 md:m-10'>
         <div className='flex flex-col justify-start items-start text-primary w-full md:w-[250px] lg:ml-[20px] lg:mr-[150px]'>
         <p className='md:text-[22px] font-serif font-semibold py-[14px]'>
           {title}
         </p>
          <span className='text-[#464646] text-[18px] font-serif font-normal'>{location}</span>
          </div>
-
-        <div className='flex justify-end md:mt-[40px]'>
-         
-          {/* <IconClick className='text-[172px] text-primary'/> */}
-        {/* <Link href={link} className='text-primary'>
-        <IconClick className='text-[172px] text-primary'/>
-      </Link> */}
-        </div>
+        <Link href={link} className='transition-all'>
+        <CustomBtn title={"view more"} fontType={'font-syne'}/>
+        </Link>
+        
       </div>
       {!isImageLeft && (
         <Image className='max-w-8xl mx-auto my-4 rounded-md' src={imageSrc} alt={title} width={768} height={486} />
