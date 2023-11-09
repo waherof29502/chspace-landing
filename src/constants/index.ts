@@ -1,17 +1,17 @@
 
 export const NAV_ITEMS = [
-  { id: 1, navItems: '關於文域', link: '/about-us' },
+  { id: 1, navItems: '關於文域', link: '#1' },
   { id: 2, navItems: '作品欣賞', link: '/portfolio' },
-  { id: 3, navItems: '服務與流程', link: '/services' },
-  { id: 4, navItems: '媒體報導', link: '/reports' },
-  { id: 5, navItems: '文・域', link: '/portfolio' },
-  { id: 6, navItems: '聯絡文域', link: '/contact-us' },
+  { id: 3, navItems: '服務與流程', link: '#2' },
+  { id: 4, navItems: '媒體報導', link: '#3' },
+  { id: 5, navItems: '文・域', link: '#4' },
+  { id: 6, navItems: '聯絡文域', link: '#5' },
 ];
 
 export const FOOTER_ITEMS = [
-  { id: 1, navItems: '關於文域', link: '/about-us' },
+  { id: 1, navItems: '關於文域', link: '#1' },
   { id: 2, navItems: '作品欣賞', link: '/portfolio' },
-  { id: 3, navItems: '服務與流程', link: '/services' },
+  { id: 3, navItems: '服務與流程', link: '#2' },
 ];
 
 export const SERVICE_ITEMS = [
@@ -66,5 +66,5 @@ export const OTHERSPROJECT01 = [
 export const NEWS01 = [
   {id:1,content:'【2022 iF獎設計】放緩生活步調享受日光、木質的洗禮'},
   {id:2,content:'「專訪」日日時光一起生活的初心！'},
-  {id:3,content:'【SHOW AWARDS】文域設計 獲2022 年―書店 | 別墅 | 住宅 | 辦公空間―4 項IF 設計大獎'}
+  {id:3,content:'【SHOW AWARDS】文域設計 獲2022 年―書店 | 別墅 | 住宅 | 辦公空間―4 項IF 設計大獎'},
 ]

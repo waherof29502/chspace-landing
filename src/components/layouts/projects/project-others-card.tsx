@@ -78,9 +78,9 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
             height={267}
             className='w-full object-contain'
           />      
-          <div className='flex mt-6 items-center'>
+          <div className='flex flex-col items-start mt-6 md:flex-row md:items-center'>
           <p className='text-[12px] md:text-[16px] text-primary font-medium tracking-[1.8px]'>{title}</p>
-           <p className='ml-2 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
+           <p className='mt-2 md:mt-0 md:ml-2 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
            </div>
 
 

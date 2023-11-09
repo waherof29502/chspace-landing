@@ -17,14 +17,14 @@ export default function ContactUs() {
               </span>
             </div>
             <div className='flex p-12 md:p-0 mt-[60px] flex-col items-center justify-center'>
-              <span className='text-[#545351] text-[18px] font-semibold leading-10'>
+              <span className='text-[#545351] text-[18px] font-serif font-semibold leading-10'>
                 營造生活美學，享受無比舒適
                 <br />
                 欲瞭解更多我們的專業服務，歡迎與我們聯繫
               </span>
             </div>
             <div className='md:mt-6 flex justify-end'>
-              <h1>立即諮詢</h1>
+              <h1 className='font-serif'>立即諮詢</h1>
             </div>
           </div>
           <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] md:border-l-[1px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] md:border-r-[1px]'>
@@ -43,10 +43,10 @@ export default function ContactUs() {
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconLocation className='text-[30px] text-white' />
                 <div className='flex flex-col mt-[50px] gap-4'>
-                  <span className='text-primary'>
+                  <span className='text-primary font-serif'>
                     105台北市大安區復興南路二段290號8樓
                   </span>
-                  <span className='text-primary'>
+                  <span className='text-primary font-serif'>
                     上海市長寧區新華路210弄1號402室
                   </span>
                 </div>

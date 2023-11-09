@@ -29,15 +29,15 @@ export default function PortfolioFeature() {
       <section className='relative overflow-hidden'>
         <div className='relative max-w-6xl mx-auto px-4 sm:px-6'>
           <div className='py-2 md:py-20'>
-            <div className='text-primary flex flex-row justify-center items-center mt-10 md:mt-10 mb-[100px] '>
+            <div className='text-primary flex flex-col md:flex-row justify-center items-center font-serif mt-10 md:mt-10 mb-[100px] '>
               {FILTER_LISTS.map((item)=>(
                  <button
                   key={item.id}
                   onClick={() => setActiveCategory(item.category)}
                    className={`px-5 mr-5 ${
                     item.id !== FILTER_LISTS[FILTER_LISTS.length - 1].id
-                    ? 'border-r-[1px] border-primary border-solid'
-                    : ''
+                    ? 'md:border-r-[1px] border-primary border-solid mb-10 md:mb-0'
+                    : 'mb-10 md:mb-0'
                     }`}
                 >
                   <span className="tracking-wider text-[22px] text-[#888] font-semibold hover:text-primary">

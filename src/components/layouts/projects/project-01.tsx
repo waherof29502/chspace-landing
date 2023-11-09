@@ -31,10 +31,10 @@ export default function project01() {
       )} */}
 
       </div>
-        <div className='flex justify-end -mt-[400px] md:-mt-[40px] lg:mt-[80px] mr-[100px]'>
+        <div className='flex justify-end -mt-[410px] md:-mt-[40px] lg:mt-[80px] mr-[140px] md:mr-[100px]'>
                 <div className='flex items-center justify-center gap-2'>
                     {SLIDERS01.map((_, i) => (
-                        <div key={i} className={`transition-all w-[18px] h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-gray-700" : "bg-opacity-20"}`} />
+                        <div key={i} className={` w-[10px] h-[10px] md:w-[18px] md:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-gray-700" : "bg-opacity-20"}`} />
                     ))}
                 </div>
             </div>
@@ -67,7 +67,7 @@ export default function project01() {
                </Link>
             </div>
             <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px]'>
-              <h1 className='font-syne text-[48px] text-primary font-normal capitalize'>
+              <h1 className='font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize'>
                recommend
               </h1>
               <span className='pl-4 mt-1.5 font-sans text-[#545351] text-[18px]'>
@@ -87,7 +87,7 @@ export default function project01() {
             </div>
           
              <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px]'>
-              <h1 className='font-syne text-[48px] text-primary font-normal capitalize'>
+              <h1 className='font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize'>
                News
               </h1>
               <span className='pl-4 mt-1.5 font-sans text-[#545351] text-[18px]'>
@@ -96,12 +96,12 @@ export default function project01() {
             </div>
         <div className='flex flex-col justify-start items-start h-auto'>
           {NEWS01.map((item) => (<div key={item.id}>
-            <p className='mb-[20px] text-primary text-[24px] md:text-[16px] font-semibold text-center hover:text-[#4b4b4b]'>{item.content}</p></div>))}
+            <p className='mb-[20px] text-primary text-[14px] md:text-[16px] font-semibold text-center hover:text-[#4b4b4b]'>{item.content}</p></div>))}
+          </div>
         </div>
             
-           </div>
-{/*            
-      <div className='relative'>
+           
+      {/* <div className='relative'>
       <div className='w-full h-[408px] object-cover'>
         <Image
           className='rounded-lg'
@@ -110,11 +110,11 @@ export default function project01() {
           alt='News bg'
         />
         <div className='absolute inset-0 flex flex-col justify-evenly items-start '>
-          {NEWS.map((item) => (<div key={item.id}>
+          {NEWS01.map((item) => (<div key={item.id}>
             <p className='mx-[270px] my-[60px] mb-2 text-primary text-[24px] md:text-[16px] font-semibold text-center'>{item.content}</p></div>))}
         </div>
       </div> 
-    </div>*/}
+    </div> */}
            
     </section>
   );

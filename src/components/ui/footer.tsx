@@ -21,13 +21,13 @@ export default function Footer() {
           {/* Service Nav as */}
           <div>
             <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-center text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
-              <Link href='/about-us' className=' text-white text-[22px]'>
+              <Link href='#1' className='font-serif text-white text-[22px]'>
                 <span className='block' style={{ letterSpacing: '1.6em' }}>
                   文・域
                 </span>
               </Link>
               <Link
-                href='/about-us'
+                href='#1'
                 className=' text-white md:ml-5 text-[22px]'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
@@ -35,7 +35,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='/about-us'
+                href='#1'
                 className='text-white md:ml-5 text-[22px] md:-mr-1'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
@@ -43,7 +43,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='/about-us'
+                href='#1'
                 className=' text-white md:ml-5 lg:ml-[100px] text-[22px]'
               >
                 <span className='block' style={{ letterSpacing: '0.6em' }}>
@@ -51,7 +51,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='/about-us'
+                href='#1'
                 className=' text-white md:ml-5 text-[22px]'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
@@ -59,7 +59,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='/about-us'
+                href='#1'
                 className='text-white md:ml-5 text-[22px] md:-mr-1'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>

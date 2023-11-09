@@ -5,9 +5,8 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Footer from '@/src/components/ui/footer';
-import Header from '@/src/components/ui/header';
-export default function DefaultLayout({
+import OtherHeader from '@/src/components/ui/other-header';
+export default function PotfolioLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -23,7 +22,7 @@ export default function DefaultLayout({
 
   return (
     <>
-      <Header />
+      <OtherHeader />
       <main className='grow'>{children}</main>
     </>
   );

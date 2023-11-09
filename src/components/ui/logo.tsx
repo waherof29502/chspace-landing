@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Logo({top}:any) {
   return( 
   <Link href='/'>
-     <div className='shrink-0 -ml-4 md:ml-0 mr-4 mt-4 w-[100px] md:w-[183px]'>
+     <div className='shrink-0 -ml-4 md:ml-0 mr-4 mt-2 w-[100px] md:w-[183px]'>
               <Image
                 className='rounded-lg'
                 src={!top ? LogoBlack : LogoWhite}

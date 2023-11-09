@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import IconClick from '@/public/svg/icon2.svg'
 interface PortfolioProps {
   imageSrc: string;
   title: string;
@@ -11,21 +12,21 @@ interface PortfolioProps {
 const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: PortfolioProps) => {
 
   return (
-     <div className={` max-w-8xl mx-auto md:mt-[97px] mb-2 md:mb-[202px] flex flex-1 flex-col md:grid md:grid-cols-2 ${isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'}`}>
+     <div className={`max-w-8xl mx-auto lg:mt-[97px] mb-2 lg:mb-[202px] flex flex-1 flex-col md:flex-row md:grid md:grid-cols-2 ${isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'}`}>
       {isImageLeft && (
         <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}
-      <div className='flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 mb-10 md:m-10'>
-        <div className='text-primary font-sans w-full md:w-[250px]'>
-        <p className='text-[22px] font-semibold py-[14px]'>
+      <div className='md:flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 -mb-2 md:m-10'>
+        <div className='flex flex-col justify-start items-start text-primary w-full md:w-[250px] lg:ml-[20px] lg:mr-[150px]'>
+        <p className='md:text-[22px] font-serif font-semibold py-[14px]'>
           {title}
         </p>
-         <span className='text-[#464646] text-[18px] font-normal'>{location}</span>
+         <span className='text-[#464646] text-[18px] font-serif font-normal'>{location}</span>
+         </div>
         <div className='flex justify-end md:mt-[40px]'>
         <Link href={link} className='text-primary'>
-         立即諮詢
+        <IconClick className='text-[172px] text-primary'/>
       </Link>
-        </div>
         </div>
       </div>
       {!isImageLeft && (
