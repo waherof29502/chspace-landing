@@ -32,7 +32,7 @@ export default function ContactUs() {
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconPhone className='text-[30px] text-white' />
                 <div className='flex flex-col mt-[50px] gap-4'>
-                  <span className='text-primary'>TEL:+886-2-27386876</span>
+                  <span className='text-primary'><a href='tel:+886-2-27386876'>TEL:+886-2-27386876</a></span>
                   <span className='text-primary'>FAX:+886-2-27386878</span>
                 </div>
               </div>

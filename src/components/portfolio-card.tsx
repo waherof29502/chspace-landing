@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import IconClick from '@/public/svg/icon2.svg'
+import IconClick from '@/public/svg/icon.svg'
 interface PortfolioProps {
   imageSrc: string;
   title: string;
@@ -23,10 +23,13 @@ const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: Portfoli
         </p>
          <span className='text-[#464646] text-[18px] font-serif font-normal'>{location}</span>
          </div>
+
         <div className='flex justify-end md:mt-[40px]'>
-        <Link href={link} className='text-primary'>
+         
+          {/* <IconClick className='text-[172px] text-primary'/> */}
+        {/* <Link href={link} className='text-primary'>
         <IconClick className='text-[172px] text-primary'/>
-      </Link>
+      </Link> */}
         </div>
       </div>
       {!isImageLeft && (

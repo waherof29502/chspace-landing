@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { IconMessage, IconLine } from '@/public/svg';
 export default function Banner() {
   return (
-    <div className='fixed bottom-[300px] right-2 w-auto z-50'>
-      <div className='p-3 md:rounded shadow-lg flex flex-col justify-between'>
+    <div className='fixed bottom-[220px] right-2 w-auto z-50'>
+      <div className='p-3 md:rounded flex flex-col justify-between'>
         <a
           className={`mt-3 flex items-center transition duration-150 ease-in-out`}
           href='https://line.com'
           target='_blank'
           rel='noreferrer'
         >
-          <IconLine className='text-[48px] text-white' />
+          <IconLine className='text-[48px] text-white hover:text-primary' />
         </a>
 
         <a
