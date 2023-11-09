@@ -63,7 +63,7 @@ const ServiceCard = ({ dataIndex,src, title, icon }: ServiceProps) => {
   return (
       <div ref={carouselRef} onScroll={handleScroll}>
           <div
-            className={`w-60 lg:w-[250px] xl:w-[270px] 2xl:w-[300px] px-2 ${
+            className={`w-60 2xl:w-[270px] wide:w-[300px] px-2 ${
               dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
             }  rounded-lg cursor-pointer`}
             onClick={(e) => handleClick(e, dataIndex)}
@@ -78,13 +78,13 @@ const ServiceCard = ({ dataIndex,src, title, icon }: ServiceProps) => {
       />
 
            
-     <div className="absolute inset-0 flex flex-col justify-center items-center p-0 md:p-1 transition-all hover:animate-in  slide-out-from-bottom-10   hover:bg-slate-200/20 hover:rounded-[51px]">
+     <div className="absolute inset-0 flex flex-col justify-center items-center p-0 md:p-1 transition-all slide-out-from-bottom-10   hover:bg-slate-200/20 hover:rounded-[51px]">
     <Image
     src={icon}
     alt={title}
     width={200}
     height={200}
-    className=" p-[85px] -mb-[100px] hover:-mb-[30px] hover:-mt-10 animate-in  opacity-0 hover:slide-out-to-bottom-2 hover:opacity-100 hover:slide-in-from-top-50 ease-linear duration-700 z-20"
+    className=" p-[85px] -mb-[100px] hover:-mb-[30px] hover:-mt-10 animate-in opacity-0 hover:opacity-100 ease-linear duration-700 z-20"
   />
   <p className="text-[22px] font-serif font-bold tracking-[3.3px] text-white -translate-y-10  ease-linear  duration-700 ">
     {title}

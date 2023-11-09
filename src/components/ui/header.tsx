@@ -29,7 +29,7 @@ export default function Header() {
       }`}
     >
       <div className='h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-8 xl:px-[140px]'>
-        <div className='flex items-center justify-between h-16 pt-6 pr-2 md:h-40'>
+        <div className='flex items-center justify-between h-16 pt-6 pr-2 md:h-[170px]'>
               <Logo top={top}/>
 
           {/* Desktop navigation */}
@@ -46,7 +46,7 @@ export default function Header() {
               />
             </div>
             </Link> */}
-            <ul className='flex grow font-sansCjk justify-end items-center -mt-[43px] text-[16px]'>
+            <ul className='flex grow font-sansCjk justify-end items-center -mt-[55px] text-[16px]'>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link

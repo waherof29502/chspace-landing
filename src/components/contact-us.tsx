@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='max-w-8xl mx-auto flex flex-wrap flex-col md:flex-row item-start items-center h-auto md:h-[825px] justify-evenly'>
+        <div className='max-w-8xl mx-auto flex flex-col lg:flex-row item-start items-center h-auto lg:p-0 xl:p-[70px] justify-evenly '>
           <div className=' text-black flex flex-col m-10 3xl:mr-8'>
             <div className='flex flex-col md:flex-row md:justify-start items-center'>
               <h1 className='font-syne text-[48px] font-normal capitalize'>
@@ -17,19 +17,19 @@ export default function ContactUs() {
                 聯絡我們
               </span>
             </div>
-            <div className='flex p-12 md:p-0 mt-[60px] flex-col items-center justify-center'>
-              <span className='text-[#545351] text-[18px] font-serif font-semibold leading-10'>
+            <div className='flex p-12 md:p-0 mt-[60px] xl:mr-[150px] flex-col items-center justify-center'>
+              <span className='text-[#545351] text-[16px] md:text-[18px] font-serif font-semibold leading-10'>
                 營造生活美學，享受無比舒適
                 <br />
                 欲瞭解更多我們的專業服務，歡迎與我們聯繫
               </span>
             </div>
-            <div className='md:mt-6 flex justify-end'>
+            <div className='mr-20 xl:mr-[150px] md:mt-6 flex justify-end'>
               <CustomBtn title={"立即諮詢"} fontType={"font-serif"} />
             </div>
           </div>
-          <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] md:border-l-[1px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] md:border-r-[1px]'>
-            <div className='ml-3 px-10 py-12 md:mr-10 sm:mr-5 mr-0 my-5 '>
+          <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] lg:border-l-[1px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] lg:border-r-[1px]'>
+            <div className='lg:ml-10 py-12 md:mr-10 lg:mr-[60px] xl:px-10 sm:mr-5 mr-0 my-5 '>
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconPhone className='text-[30px] text-white' />
                 <div className='flex flex-col mt-[50px] gap-4'>
@@ -39,8 +39,8 @@ export default function ContactUs() {
               </div>
             </div>
           </div>
-          <div className='flex flex-col md:flex-row justify-center items-center'>
-            <div className='ml-3 px-10 py-12  md:mr-10 sm:mr-5 mr-0 my-5 '>
+          <div className='lg:ml-10 flex flex-col md:flex-row justify-center items-center'>
+            <div className='py-12  md:mr-10 sm:mr-5 mr-0 my-5 '>
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconLocation className='text-[30px] text-white' />
                 <div className='flex flex-col mt-[50px] gap-4'>

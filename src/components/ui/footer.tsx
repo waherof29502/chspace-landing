@@ -5,10 +5,10 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer>
-      <div className='max-w-8xl mx-auto px-4 sm:px-6 bg-background py-20'>
-        <div className='flex flex-col justify-center items-center mb-2 md:mb-4 md:flex-row md:items-center md:justify-between md:px-[80px] lg:px-[280px] py-4 md:py-12'>
+      <div className='max-w-8xl mx-auto px-4 sm:px-6 bg-background rounded-xl -my-3 lg:m-[8px] py-20'>
+        <div className='flex flex-col justify-center items-center mb-2 md:mb-4 md:flex-row md:items-center md:justify-between p-10 xl:px-[120px] py-4 md:py-12'>
           {/* Logo */}
-          <div className='mb-2'>
+          <div className='md:-mt-[30px] '>
             <Image
               className='rounded-lg'
               src={Logo}
@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Service Nav as */}
           <div>
-            <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-center text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
+            <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
               <Link href='#1' className='font-serif text-white text-[22px]'>
                 <span className='block' style={{ letterSpacing: '1.6em' }}>
                   文・域
@@ -28,7 +28,7 @@ export default function Footer() {
               </Link>
               <Link
                 href='#1'
-                className=' text-white md:ml-5 text-[22px]'
+                className='font-serif text-white md:ml-5 text-[22px]'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
                   聯絡文域
@@ -36,7 +36,7 @@ export default function Footer() {
               </Link>
               <Link
                 href='#1'
-                className='text-white md:ml-5 text-[22px] md:-mr-1'
+                className='text-white font-serif md:ml-5 text-[22px] md:-mr-1'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
                   媒體報導
@@ -44,7 +44,7 @@ export default function Footer() {
               </Link>
               <Link
                 href='#1'
-                className=' text-white md:ml-5 lg:ml-[100px] text-[22px]'
+                className=' text-white font-serif md:ml-5 lg:ml-[100px] text-[22px]'
               >
                 <span className='block' style={{ letterSpacing: '0.6em' }}>
                   服務與流程
@@ -52,7 +52,7 @@ export default function Footer() {
               </Link>
               <Link
                 href='#1'
-                className=' text-white md:ml-5 text-[22px]'
+                className=' text-white font-serif md:ml-5 text-[22px]'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
                   作品欣賞
@@ -60,7 +60,7 @@ export default function Footer() {
               </Link>
               <Link
                 href='#1'
-                className='text-white md:ml-5 text-[22px] md:-mr-1'
+                className='text-white font-serif md:ml-5 text-[22px] md:-mr-1'
               >
                 <span className='block' style={{ letterSpacing: '1em' }}>
                   關於文域
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div> 
         {/* Bottom area */}
-        <div className='flex flex-col justify-center items-center md:-mt-20 md:flex md:flex-row md:items-center md:justify-between py-4 md:px-[90px] lg:px-[280px] md:py-12 '>
+        <div className='flex flex-col justify-center items-center md:-mt-20 md:flex md:flex-row md:items-center md:justify-between py-4 md:px-[45px] lg:px-[40px] xl:px-[120px] md:py-12 '>
           {/* Social as */}
           <div className='flex mb-4 md:order-1 sx:ml-4 md:mb-0'>
             <Link

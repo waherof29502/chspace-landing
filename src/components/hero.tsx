@@ -21,7 +21,7 @@ export default function Hero() {
         />
       </div>
       <Image
-      className='absolute inset-0 mx-auto top-[530px] left-0 p-10 md:top-[530px] lg:top-[330px] xl:top-[550px] 2xl:top-[800px] md:left-[10px] lg:left-[100px] xl:left-[370px] 2xl:left-[770px] '
+      className='absolute inset-0 mx-auto top-[530px] left-0 p-10 md:top-[530px] lg:top-[320px] xl:top-[550px] 2xl:top-[620px] wide:top-[735px] md:left-[10px] lg:left-[100px] xl:left-[370px] 2xl:left-[600px] wide:left-[770px]  '
       src={Slogan}
       width={930}
       height={72}

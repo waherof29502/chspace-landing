@@ -101,6 +101,10 @@ module.exports = {
       zIndex: {
         '-1': '-1',
       },
+      screens:{
+        "3xl":'1580px',
+        "wide":'1920px'
+      }
     },
   },
     plugins: [require('tailwindcss-animate'),require('@tailwindcss/forms')]
