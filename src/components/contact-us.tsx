@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='max-w-8xl mx-auto flex flex-col lg:flex-row item-start items-center h-auto lg:p-0 xl:p-[70px] justify-evenly '>
+        <div className='max-w-8xl mx-auto flex flex-col lg:flex-row item-start h-auto lg:p-0 xl:p-[70px] justify-evenly '>
           <div className=' text-black flex flex-col m-10 3xl:mr-8'>
             <div className='flex flex-col md:flex-row md:justify-start items-center'>
               <h1 className='font-syne text-[48px] font-normal capitalize'>
@@ -17,15 +17,15 @@ export default function ContactUs() {
                 聯絡我們
               </span>
             </div>
-            <div className='flex p-12 md:p-0 mt-[60px] xl:mr-[150px] flex-col items-center justify-center'>
-              <span className='text-[#545351] text-[16px] md:text-[18px] font-serif font-semibold leading-10'>
+            <div className='flex p-12 md:p-0 mt-[60px] xl:mr-[150px] flex-col lg:items-center lg:justify-center '>
+              <span className='text-[#545351] text-[16px] lg:text-[18px] font-sansCjk font-semibold leading-10'>
                 營造生活美學，享受無比舒適
                 <br />
                 欲瞭解更多我們的專業服務，歡迎與我們聯繫
               </span>
             </div>
             <div className='mr-20 xl:mr-[150px] md:mt-6 flex justify-end'>
-              <CustomBtn title={"立即諮詢"} fontType={"font-serif"} />
+              <CustomBtn title={"立即諮詢"} fontType={"font-sansCjk"} />
             </div>
           </div>
           <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] lg:border-l-[1px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] lg:border-r-[1px]'>
@@ -33,7 +33,7 @@ export default function ContactUs() {
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconPhone className='text-[30px] text-white' />
                 <div className='flex flex-col mt-[50px] gap-4'>
-                  <span className='text-primary'><a href='tel:+886-2-27386876'>TEL:+886-2-27386876</a></span>
+                  <span className='text-primary  hover:text-gray-600'><a href='tel:+886-2-27386876' >TEL:+886-2-27386876</a></span>
                   <span className='text-primary'>FAX:+886-2-27386878</span>
                 </div>
               </div>
@@ -44,11 +44,15 @@ export default function ContactUs() {
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconLocation className='text-[30px] text-white' />
                 <div className='flex flex-col mt-[50px] gap-4'>
-                  <span className='text-primary font-serif'>
+                  <span className='text-primary font-serif hover:text-gray-600'>
+                    <a href='https://maps.app.goo.gl/SccgiGPd85kFWuSX6' target='_blank'>
                     105台北市大安區復興南路二段290號8樓
+                    </a>
                   </span>
-                  <span className='text-primary font-serif'>
+                  <span className='text-primary font-serif  hover:text-gray-600'>
+                  <a href='https://maps.app.goo.gl/g2qt7RrNW1yGhphZ7' target='_blank'>
                     上海市長寧區新華路210弄1號402室
+                  </a>
                   </span>
                 </div>
               </div>

@@ -1,5 +1,4 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -34,7 +33,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
-        serif:['var(--font-serif)','sans-serif'],
+        serifNoto:['var(--font-serifNoto)',...fontFamily.serif],
         syne: ['var(--font-syne)', 'sans-serif'],
         sansCjk: ['var(--font-sansCjk)', 'sans-serif'],
       },
@@ -107,5 +106,5 @@ module.exports = {
       }
     },
   },
-    plugins: [require('tailwindcss-animate'),require('@tailwindcss/forms')]
+    plugins: [require('tailwindcss-animate'),require('@tailwindcss/forms'),require('@tailwindcss/typography')]
 };

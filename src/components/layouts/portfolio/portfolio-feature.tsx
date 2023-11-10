@@ -6,8 +6,11 @@ import {PORTFOLIO_PAGE_ITEMS} from '@/src/constants'
 const FILTER_LISTS =[
   {id:1,title:'All',category:'All'},
   {id:2,title:'住宅設計',category:'住宅設計'},
-  {id:3,title:'書店・文化場域設計',category:'書店設計'},
-  {id:4,title:'商空・展場設計',category:'展場設計'},
+  {id:3,title:'辦公室設計',category:'辦公室設計'},
+  {id:4,title:'文化場域設計',category:'文化場域設計'},
+  {id:5,title:'商空設計',category:'商空設計'},
+  {id:6,title:'展場設計',category:'展場設計'},
+
 ]
 export default function PortfolioFeature() {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -34,13 +37,13 @@ export default function PortfolioFeature() {
                  <button
                   key={item.id}
                   onClick={() => setActiveCategory(item.category)}
-                   className={`px-5 mr-5 ${
+                   className={`px-8  ${
                     item.id !== FILTER_LISTS[FILTER_LISTS.length - 1].id
-                    ? 'md:border-r-[1px] border-primary border-solid mb-10 md:mb-0'
+                    ? 'md:border-r-[1px] border-[#9c9c9c] border-solid mb-10 md:mb-0'
                     : 'mb-10 md:mb-0'
                     }`}
                 >
-                  <span className="tracking-wider text-[22px] text-[#888] font-semibold hover:text-primary">
+                  <span className="tracking-wider font-sansCjk text-[18px] md:text-[14px] lg:text-[22px] text-[#888] font-semibold hover:text-primary">
                   {item.title}
                   </span>
                 </button>

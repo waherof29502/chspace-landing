@@ -32,8 +32,8 @@ export default function Portfolio() {
             </div>
             
             {PORTFOLIO_ITEMS.map((item)=>(
-               <div className="transition-all">
-              <div  className="relative flex flex-col text-center lg:text-right" key={item.id}  data-aos="zoom-y-out" ref={tabs}>
+               <div className="transition-all" key={item.id}>
+              <div  className="relative flex flex-col text-center lg:text-right"   data-aos="zoom-y-out" ref={tabs}>
                 <Transition
                     show={tab === 1}
                     appear={true}
@@ -48,7 +48,7 @@ export default function Portfolio() {
                     unmount={false}                     
                   >
               <PortfolioCard
-             
+              key={item.id}
               imageSrc={item.src}
               title={item.title}
               location={item.location}
