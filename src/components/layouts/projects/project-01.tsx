@@ -3,33 +3,43 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import Carousel from '@/src/components/carousel'
-import Lightbox from '../../lightbox';
 import ProjectCard from './project-feature-card';
 import NewsBg from '@/public/images/bg-2.png';
 import ProjectOtherCard from './project-others-card'
 import {PORTFOLIO_PAGE_ITEMS,SLIDERS01,OTHERSPROJECT01,NEWS01} from '@/src/constants'
 import IconFb from '@/public/svg/fb-solid.svg'
 import IconIg from '@/public/svg/ig-solid.svg'
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 export default function project01() {
   const [curr, setCurr] = useState(0)
+  const [openLightBox, setOpenLightBox] = React.useState(false);
+  const toggleLightBoxOpen = (state: boolean) => () => setOpenLightBox(state);
+
+  const updateIndex = ({ index: current }: { index: number }) =>
+    setCurr(current);
+    
+
+
   return (
     <section className='relative'>
 
        <div className="max-w-8xl min-h-screen p-2 ">
-        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} >
+        <Lightbox
+        open={openLightBox}
+        close={toggleLightBoxOpen(false)}
+        index={curr}
+        slides={SLIDERS01}
+        on={{ view: updateIndex }}
+        animation={{ fade: 0 }}
+        controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
+      />  
+        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox}>
            {SLIDERS01.map((item)=>(
                 <Image key={item.id} src={item.src} width={1920} height="1270" alt="12" className='2xl:h-[1280px]' />
            ))}
         </Carousel>
-         {/* {showLightbox && (
-        <Lightbox
-          images={SLIDER}
-          selectedImage={selectedImage}
-          closeLightbox={() => setShowLightbox(false)}
-        />
-      )} */}
-
       </div>
         <div className='flex justify-end -mt-[410px] md:-mt-[40px] lg:mt-[80px] mr-[140px] md:mr-[100px]'>
                 <div className='flex items-center justify-center gap-2 z-10'>
