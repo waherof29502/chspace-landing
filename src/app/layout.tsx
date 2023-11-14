@@ -1,6 +1,6 @@
 import '../styles/style.css';
-import { Syne,Noto_Serif_TC } from '@next/font/google';
-import localFonts from '@next/font/local';
+import { Syne,Noto_Serif_TC } from 'next/font/google';
+import localFonts from 'next/font/local';
 import {cn} from '@/src/utils/utils'
 
 import Banner from '@/src/components/banner';
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-      className={cn('font-serif antialiased bg-white text-white tracking-tight',syne.variable,sansCjk.variable, serifNoto.variable)}
+      className={cn('font-serif antialiased bg-white text-white tracking-tight',syne.variable,sansCjk.variable,serifNoto.variable)}
       >
         <div className='flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip'>
           {children}

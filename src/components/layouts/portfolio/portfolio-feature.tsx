@@ -18,8 +18,12 @@ export default function PortfolioFeature() {
   const filterProjects = () => {
     if(activeCategory == "住宅設計") {
       return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === "住宅設計")
-    }else if(activeCategory === '書店設計'){
-      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === "書店設計")
+    }else if(activeCategory === '辦公室設計'){
+      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === "辦公室設計")
+    }else if(activeCategory === '文化場域設計'){
+      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === "文化場域設計")
+    }else if(activeCategory === '商空設計'){
+      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === "商空設計")
     }else if(activeCategory === '展場設計'){
      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === "展場設計")
     }else{

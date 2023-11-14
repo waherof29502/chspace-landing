@@ -35,7 +35,7 @@ export default function Features() {
   return (
     <section className='relative overflow-hidden'>
       {/* Section 1 */}
-       <div  className='transition-all'  data-aos="zoom-y-out" ref={tabs}>
+       {/* <div  className='transition-all'  data-aos="zoom-y-out" ref={tabs}>
       <Transition
                     show={tab === 1}
                     appear={true}
@@ -48,7 +48,7 @@ export default function Features() {
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
                     unmount={false}                     
-                  >
+                  > */}
       <div className='relative pr-10 pl-10'>
         <div className='flex items-center justify-center min-h-screen '>
           <div className='shrink-0 md:w-[700px] 2xl:w-[852px] -ml-[80px] mr-[10px] md:ml-[420px] 2xl:ml-[210px] md:mt-[19px] md:mr-[2px] 2xl:mr-[10px]  relative z-10'>
@@ -84,7 +84,7 @@ export default function Features() {
          
         </div>
       </div>
-      </Transition>
+      {/* </Transition> */}
     
       {/* Section 2 */}
       
@@ -145,7 +145,7 @@ export default function Features() {
       </div>
      
        {/* Section 3*/}
-        <Transition
+        {/* <Transition
                     show={tab === 1}
                     appear={true}
                     className="w-full"
@@ -157,7 +157,7 @@ export default function Features() {
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
                     unmount={false}                     
-                  >
+                  > */}
       <div className='relative pr-10 pl-10 -mt-[20px] md:mt-[120px] 2xl:-mt-[140px] mb-[50px]'>
         <div className='flex items-center justify-center min-h-screen'>
           <div className='shrink-0 w-[262px] ml-[2px] mr-[120px] -mt-[300px] md:ml-[550px] md:-mt-[320px] md:mr-[20px] 2xl:ml-[280px] 2xl:-mt-[1200px] relative z-10'>
@@ -222,8 +222,8 @@ export default function Features() {
           </div>
         </div>
       </div>
-      </Transition>
-    </div>
+      {/* </Transition> */}
+    {/* </div> */}
     </section>
   );
 }

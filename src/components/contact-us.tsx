@@ -7,8 +7,8 @@ export default function ContactUs() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='max-w-8xl mx-auto flex flex-col lg:flex-row item-start h-auto lg:p-0 xl:p-[70px] justify-evenly '>
-          <div className=' text-black flex flex-col m-10 3xl:mr-8'>
+        <div className='max-w-8xl mx-auto flex flex-col lg:flex-row item-start h-auto lg:py-[30px] xl:py-[50px] 2xl:p-[70px] justify-evenly'>
+          <div className='text-black flex flex-col m-10 3xl:mr-8'>
             <div className='flex flex-col md:flex-row md:justify-start items-center'>
               <h1 className='font-syne text-[48px] font-normal capitalize'>
                 Contact
@@ -28,7 +28,7 @@ export default function ContactUs() {
               <CustomBtn title={"立即諮詢"} fontType={"font-sansCjk"} />
             </div>
           </div>
-          <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] lg:border-l-[1px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] lg:border-r-[1px]'>
+          <div className='flex flex-col md:flex-row justify-center items-center md:border-l-[#c3c3c3] lg:border-l-[0.8px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] lg:border-r-[0.8px] '>
             <div className='lg:ml-10 py-12 md:mr-10 lg:mr-[60px] xl:px-10 sm:mr-5 mr-0 my-5 '>
               <div className='ml-4 flex flex-col justify-center items-center'>
                 <IconPhone className='text-[30px] text-white' />
