@@ -4,11 +4,11 @@ import { useState, useRef, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 import LogoBlack from '@/public/images/logo-black.png';
 import LogoWhite from '@/public/images/logo-white.png';
-
+import Logo from './logo'
 import Link from 'next/link';
 import Image from 'next/image';
 import { NAV_ITEMS } from '@/src/constants';
-
+import { IconFb, IconIg, IconShare } from '@/public/svg';
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
@@ -61,7 +61,7 @@ export default function MobileMenu() {
         ref={trigger}
         className={`hamburger ${
           !top && !mobileNavOpen ? 'text-black' : ''
-        } z-50 ${mobileNavOpen && `active text-black`}`}
+        } z-50 ${mobileNavOpen && `active text-white`}`}
         aria-controls='mobile-nav'
         aria-expanded={mobileNavOpen}
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
@@ -83,31 +83,54 @@ export default function MobileMenu() {
         {mobileNavOpen ? (
           <div
             id='mobile-nav'
-            className='absolute top-0 h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white'
+            className='absolute top-0 h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-primary'
           >
             <div className='shrink-0 ml-4 pr-2 pl-1 pt-1'>
               <Link href='/'>
               <Image
                 className='rounded-lg'
-                src={LogoBlack}
+                src={LogoWhite}
                 width={100}
                 height='100'
                 alt='logo'
               />
               </Link>
             </div>
-            <ul className='px-5 mt-1 font-sansCjk'>
+            <ul className='px-5 mt-[45px] font-sansCjk'>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={` font-medium text-black px-5 py-3 flex items-center transition duration-150 ease-in-out`}
+                    className={`font-medium text-white tracking-[10px] text-[20px] px-5 py-3 flex justify-center items-center transition duration-150 ease-in-out`}
                   >
                     {item.navItems}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className='flex mt-[76px] ml-[44px] md:order-1'>
+            <Link
+              href='https://www.instagram.com/chs_interior/'
+              className='flex justify-center items-center text-white '
+              aria-label='IG'
+            >
+              <IconIg className='text-[32px]' />
+            </Link>
+            <Link
+              href='https://www.facebook.com/CHSPACE'
+              className='flex justify-center items-center ml-4 text-white'
+              aria-label='Fb'
+            >
+              <IconFb className='text-[32px]' />
+            </Link>
+            <Link
+              href='#0'
+              className='flex justify-center items-center ml-4 text-white'
+              aria-label='Share'
+            >
+              <IconShare className='text-[30px]' />
+            </Link>
+          </div>
           </div>
         ) : null}
         {/* <Transition
