@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import Carousel from '@/src/components/carousel'
+import CarouselText from '@/src/components/carousel-text'
 import ProjectCard from './project-feature-card';
 import NewsBg from '@/public/images/bg-2.png';
 import ProjectOtherCard from './project-others-card'
@@ -11,16 +12,17 @@ import IconFb from '@/public/svg/fb-solid.svg'
 import IconIg from '@/public/svg/ig-solid.svg'
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import CustomBtn02 from '../../custom-btn02';
 
 export default function project01() {
   const [curr, setCurr] = useState(0)
+  const [currText, setCurrText] = useState(0)
   const [openLightBox, setOpenLightBox] = React.useState(false);
   const toggleLightBoxOpen = (state: boolean) => () => setOpenLightBox(state);
 
   const updateIndex = ({ index: current }: { index: number }) =>
     setCurr(current);
     
-
 
   return (
     <section className='relative'>
@@ -41,10 +43,10 @@ export default function project01() {
            ))}
         </Carousel>
       </div>
-        <div className='flex justify-end -mt-[410px] md:-mt-[40px] lg:mt-[80px] mr-[140px] md:mr-[100px]'>
+        <div className='flex justify-end -mt-[380px] md:-mt-[50px] lg:mt-[80px] mr-[140px] md:mr-[100px]'>
                 <div className='flex items-center justify-center gap-2 z-10'>
                     {SLIDERS01.map((_, i) => (
-                        <div key={i} className={` w-[10px] h-[10px] md:w-[18px] md:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 
+                        <div key={i} className={`w-[10px] h-[10px] md:w-[18px] md:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 
                         onClick={()=> setCurr(i)}
                         />
                     ))}
@@ -86,8 +88,8 @@ export default function project01() {
                 其他作品
               </span>
             </div>
-          <div className="flex overflow-x-auto mt-4 items-start no-scrollbar w-auto md:max-w-2xl lg:max-w-none ">
-           {OTHERSPROJECT01.map((item) => (
+          <div className="lg:hidden flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
+            {OTHERSPROJECT01.map((item) => (
             <ProjectOtherCard 
                   key={item.id}
                   dataIndex= {item.id}
@@ -96,6 +98,32 @@ export default function project01() {
                   desc={item.desc}
                 />
                    ))}
+              </div>
+          <div className="hidden lg:flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
+             <CarouselText autoSlide={false} setCurr={setCurrText} curr={currText}>
+           {OTHERSPROJECT01.map((item)=>(
+              // <Image src={item.src} width={427} height="273" alt={item.title} className='mr-10'/>
+          <ProjectOtherCard 
+                  key={item.id}
+                  dataIndex= {item.id}
+                  src={item.src}  
+                  title={item.title}
+                  desc={item.desc}
+                />
+           ))}
+        </CarouselText>
+        <div className='flex flex-row items-center wide:mt-[100px] lg:ml-[100px] lg:mr-[50px]'onClick={()=> setCurrText(currText == 0 ? currText +1 : 0)} > 
+                     <CustomBtn02 title={"view more"} fontType={'font-syne'} />
+            </div>
+           {/* {OTHERSPROJECT01.map((item) => (
+            <ProjectOtherCard 
+                  key={item.id}
+                  dataIndex= {item.id}
+                  src={item.src}  
+                  title={item.title}
+                  desc={item.desc}
+                />
+                   ))} */}
             </div>
           
              <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px]'>
@@ -115,7 +143,7 @@ export default function project01() {
         <div className='relative bg-cover bg-center w-full h-auto pb-10' style={{ backgroundImage: `url(${NewsBg.src})` }}>
         <div className='flex flex-col justify-start item-center'>
           {NEWS01.map((item) => (<div key={item.id}>
-            <p className='m-auto md:mx-[50px] lg:mx-[100px] 2xl:mx-[220px] my-[60px] mb-0 text-primary text-[14px] md:text-[16px] font-semibold'>{item.content}</p></div>))}
+            <p className='mx-[10px] md:mx-[50px] lg:mx-[100px] xl:mx-[125px] wide:mx-[220px] my-[60px] mb-0 text-primary text-[14px] md:text-[16px] font-semibold px-2'>{item.content}</p></div>))}
         </div>
         </div>
     

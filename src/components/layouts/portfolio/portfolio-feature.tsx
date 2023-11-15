@@ -36,7 +36,7 @@ export default function PortfolioFeature() {
       <section className='relative overflow-hidden'>
         <div className='relative max-w-6xl mx-auto px-4 sm:px-6'>
           <div className='py-2 md:py-20'>
-            <div className='text-primary flex flex-col md:flex-row justify-center items-center font-serif mt-10 md:mt-10 mb-[100px] '>
+            <div className='text-primary grid grid-cols-2 md:flex md:flex-row justify-center items-center font-serif mt-10 md:mt-10 md:mb-[100px] '>
               {FILTER_LISTS.map((item)=>(
                  <button
                   key={item.id}
@@ -47,7 +47,7 @@ export default function PortfolioFeature() {
                     : 'mb-10 md:mb-0'
                     }`}
                 >
-                  <span className="tracking-wider font-sansCjk text-[18px] md:text-[14px] lg:text-[22px] text-[#888] font-semibold hover:text-primary">
+                  <span className="tracking-wider font-sansCjk text-[18px] md:text-[12px] lg:text-[22px] text-[#888] font-semibold hover:text-primary">
                   {item.title}
                   </span>
                 </button>

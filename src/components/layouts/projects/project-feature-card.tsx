@@ -38,7 +38,7 @@ const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: Wo
          <div className='flex flex-1 flex-col md:flex-row max-w-2xl items-start md:items-center mt-[30px] mb-[30px] md:mb-0 md:mt-[86px]'>
          <Award className='text-[52px] md:text-[104px] mr-10'/>
          <div className='text-primary md:border-l-[1.2px] border-[#D6D6D6] border-solid md:pl-6 mt-[20px] '>
-          <span className='text-[#1b1b1b] text-[16px] font-serif font-medium tracking-[1.76px] leading-[35px] '> {awards}</span>
+          <span className='text-[#1b1b1b] text-[16px] font-sansCjk font-medium tracking-[1.76px] leading-[35px] '> {awards}</span>
           </div>
          </div>
         </div>

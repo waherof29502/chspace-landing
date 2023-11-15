@@ -64,7 +64,7 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
   return (
       <div ref={carouselRef} onScroll={handleScroll}>
           <div
-            className={`w-60 2xl:w-[380px] p-2 ${
+            className={`w-60 wide:w-[435px] p-2 ${
               dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
             }  rounded-lg cursor-pointer`}
             onClick={(e) => handleClick(e, dataIndex)}
@@ -74,7 +74,7 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
           <Image
             src={src}
             alt={dataIndex.toString()}
-            width={380}
+            width={427}
             height={267}
             className='w-full object-contain'
           />      

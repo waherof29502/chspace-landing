@@ -13,12 +13,12 @@ export default function ContactUs() {
               <h1 className='font-syne text-[48px] font-normal capitalize'>
                 Contact
               </h1>
-              <span className='md:pl-4 mt-1.5 font-sans text-[#545351] text-[18px]'>
+              <span className='md:pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]'>
                 聯絡我們
               </span>
             </div>
-            <div className='flex p-12 md:p-0 mt-[60px] xl:mr-[150px] flex-col lg:items-center lg:justify-center '>
-              <span className='text-[#545351] text-[16px] lg:text-[18px] font-sansCjk font-semibold leading-10'>
+            <div className='flex p-2 md:p-0 mt-[60px] xl:mr-[150px] flex-col lg:items-center lg:justify-center '>
+              <span className='text-[#545351] text-[16px] lg:text-[18px] font-sansCjk font-medium md:font-semibold leading-10'>
                 營造生活美學，享受無比舒適
                 <br />
                 欲瞭解更多我們的專業服務，歡迎與我們聯繫

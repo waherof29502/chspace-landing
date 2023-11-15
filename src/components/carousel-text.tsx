@@ -9,9 +9,8 @@ type CarouselProps = {
   autoSlideInterval?: number;
   curr:number;
   setCurr:React.Dispatch<React.SetStateAction<number>>;
-  setOpenLightBox:React.Dispatch<React.SetStateAction<boolean>>;
 }
-const Carousel = ({ children, autoSlide = false, autoSlideInterval = 3000 ,curr,setCurr ,setOpenLightBox}:CarouselProps) => {
+const CarouselText = ({ children, autoSlide = false, autoSlideInterval = 3000 ,curr,setCurr}:CarouselProps) => {
     // const [curr, setCurr] = useState(0)
 
     const prev = () => setCurr((curr:number) => (curr === 0 ? React.Children.count(children) - 1 : curr - 1))
@@ -27,19 +26,18 @@ const Carousel = ({ children, autoSlide = false, autoSlideInterval = 3000 ,curr,
 
     return (
         <div className='overflow-x-hidden overflow-y-visible relative rounded-lg' >
-            <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)` }}  >
+            <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${curr * 40}%)` }}  >
                 {children}
             </div>
             <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10">
-                   <button onClick={prev} >
+                   {/* <button onClick={prev} >
                    <IconArrowLeft className="text-[53px] text-white/90 hover:text-primary/90"/>
-                </button> 
-                 <div  className='w-full h-full' onClick={() => {setOpenLightBox(true) }}/>
-                <button onClick={next} >
+                </button>  */}
+                {/* <button onClick={next} >
                     <IconArrowRight  className="text-[53px] text-white/90 hover:text-primary/90"/>
-                </button>
+                </button> */}
                 
-            </div>
+            </div> 
             {/* 圖示於圖片中展示 */}
              {/* <div className='absolute bottom-8 right-0 left-0'>
                 <div className='flex items-center justify-center gap-2'>
@@ -52,4 +50,4 @@ const Carousel = ({ children, autoSlide = false, autoSlideInterval = 3000 ,curr,
     )
 }
 
-export default Carousel
+export default CarouselText

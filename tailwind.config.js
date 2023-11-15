@@ -101,6 +101,7 @@ module.exports = {
         '-1': '-1',
       },
       screens:{
+        "xs": '375px',
         "3xl":'1580px',
         "wide":'1920px'
       }

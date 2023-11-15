@@ -26,7 +26,7 @@ export default function Portfolio() {
               <h1 className='font-syne text-[48px] font-normal capitalize'>
                 Portfolio
               </h1>
-              <span className='pl-4 mt-1.5 font-sans text-[#545351] text-[18px]'>
+              <span className='pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]'>
                 最新作品
               </span>
             </div>

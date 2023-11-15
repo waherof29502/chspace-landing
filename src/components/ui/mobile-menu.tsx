@@ -86,6 +86,7 @@ export default function MobileMenu() {
             className='absolute top-0 h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white'
           >
             <div className='shrink-0 ml-4 pr-2 pl-1 pt-1'>
+              <Link href='/'>
               <Image
                 className='rounded-lg'
                 src={LogoBlack}
@@ -93,6 +94,7 @@ export default function MobileMenu() {
                 height='100'
                 alt='logo'
               />
+              </Link>
             </div>
             <ul className='px-5 mt-1 font-sansCjk'>
               {NAV_ITEMS.map((item) => (

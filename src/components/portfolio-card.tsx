@@ -17,18 +17,18 @@ const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: Portfoli
       {isImageLeft && (
         <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}
-      <div className='md:flex md:flex-col justify-start md:justify-center items-center mx-4 mt-8 md:mt-[70px] lg:mt-20 -mb-2 md:m-10 '>
-        <div className='flex flex-col justify-start items-start text-primary w-full md:w-[250px] lg:ml-[20px] lg:mr-[150px]'>
-        <p className='md:text-[22px] font-sansCjk font-semibold md:py-0 py-[14px]'>
+      <div className='md:flex md:flex-col  justify-between md:justify-center items-center mx-4 mt-8 md:mt-[70px] lg:mt-20 -mb-2 md:m-10 '>
+        <div className='flex flex-col md:justify-start items-start text-primary w-full md:w-[250px] lg:ml-[20px] lg:mr-[150px] '>
+        <p className='text-[18px] md:text-[22px] font-sansCjk font-medium md:font-semibold md:py-0 py-[14px]'>
           {title}
         </p>
-         <span className='text-[#464646] text-[18px] font-sansCjk font-normal'>{location}</span>
+         <span className='text-[#464646] text-[14px] md:text-[18px] font-sansCjk font-light lg:font-normal'>{location}</span>
          </div>
         <Link href={link} className='transition-all'>
         <CustomBtn title={"view more"} fontType={'font-syne'}/>
         </Link>
-        
-      </div>
+        </div>
+
       {!isImageLeft && (
         <Image className='max-w-8xl mx-auto my-4 rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}

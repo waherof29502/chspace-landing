@@ -15,7 +15,7 @@ export default function PortfolioHero() {
   </div>
 
   <div className='absolute inset-0 flex flex-col justify-center items-center'>
-     <span className='mt-2 font-sans text-white text-[18px] 2xl:text-[24px]'>
+     <span className='mt-2 font-sansCjk text-white text-[18px] 2xl:text-[24px]'>
       作品欣賞
     </span>
     <h1 className='text-white font-syne text-[48px] 2xl:text-[68px] font-normal capitalize'>
