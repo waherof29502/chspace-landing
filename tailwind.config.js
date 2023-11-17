@@ -35,6 +35,7 @@ module.exports = {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         serifNoto:['var(--font-serifNoto)',...fontFamily.serif],
         syne: ['var(--font-syne)', 'sans-serif'],
+        sansNoto: ['var(--font-sansNoto)','sans-serif'],
         sansCjk: ['var(--font-sansCjk)', 'sans-serif'],
       },
       fontSize: {
@@ -101,9 +102,10 @@ module.exports = {
         '-1': '-1',
       },
       screens:{
-        "xs": '375px',
+        "xs": '425px',
         "3xl":'1580px',
-        "wide":'1920px'
+        "wide":'1920px',
+        "wider":'2560px'
       }
     },
   },

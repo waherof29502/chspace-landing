@@ -64,7 +64,7 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
   return (
       <div ref={carouselRef} onScroll={handleScroll}>
           <div
-            className={`w-60 wide:w-[435px] p-2 ${
+            className={`w-60 xl:w-[350px] wide:w-[435px] p-2 ${
               dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
             }  rounded-lg cursor-pointer`}
             onClick={(e) => handleClick(e, dataIndex)}
@@ -78,9 +78,9 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
             height={267}
             className='w-full object-contain'
           />      
-          <div className='flex flex-col items-start mt-6 md:flex-row md:items-center'>
-          <p className='text-[12px] md:text-[16px] text-primary font-medium tracking-[1.8px]'>{title}</p>
-           <p className='mt-2 md:mt-0 md:ml-2 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
+          <div className='flex flex-col items-start mt-6 lg:mt-2 xl:flex-row xl:items-center'>
+          <p className='text-[12px] md:text-[14px] 3xl:text-[18px] mt-2 text-primary font-semibold tracking-[1.8px]'>{title}</p>
+           <p className='mt-2 md:mt-0 xl:mt-[12px] xl:ml-2 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
            </div>
 
 

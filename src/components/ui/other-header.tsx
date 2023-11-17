@@ -46,12 +46,12 @@ export default function OtherHeader() {
               />
             </div>
             </Link> */}
-            <ul className='flex grow font-sansCjk justify-end items-center -mt-[43px] text-[16px]'>
+            <ul className='flex grow font-syne justify-end items-center -mt-[43px] text-[16px]'>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={`font-medium px-2 2xl:px-5 3xl:px-10 py-3 flex items-center transition duration-150 ease-in-out ${
+                    className={`font-normal px-2 2xl:px-5 3xl:px-10 py-3 flex xl:tracking-[6.4px] items-center transition duration-150 ease-in-out ${
                       !top ? 'text-slate-600' : ''
                     }`}
                   >

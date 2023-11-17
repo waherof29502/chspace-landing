@@ -14,13 +14,12 @@ const NewsLetter = () => {
         />
         <div className='absolute inset-0 flex flex-col justify-center items-center p-2'>
           <h1 className='mb-2 text-primary font-sansCjk text-[18px] md:text-[26px] font-medium md:font-semibold text-center'>
-            以「文化創意」底蘊做設計
-          </h1>
-          <h1 className='mb-2 text-primary font-sansCjk text-[18px] md:text-[26px] font-medium md:font-semibold text-center'>
+            以「文化創意」底蘊做設計<br/>
             創作「知性」的空間
           </h1>
-          <button className='bg-[#1b1b1b] font-syne p-4 w-[200px] md:w-[265px] mt-4 rounded-2xl'>
-            Learn More
+          <button className='flex items-center justify-center bg-[#1b1b1b]  p-4 w-[200px] md:w-[265px] mt-4 rounded-2xl group'>
+                    <div className="w-0 group-hover:w-10  h-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-x-2 duration-1000" />
+                    <p className='font-syne font-bold translate-x-0 transform transition-transform group-hover:translate-x-6 duration-1000'>Learn More</p>
           </button>
         </div>
       </div>

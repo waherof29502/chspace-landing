@@ -10,7 +10,6 @@ import Testimonials from '@/src/components/testimonials';
 import Newsletter from '@/src/components/newsletter';
 import Service from '@/src/components/service';
 import Portfolio from '@/src/components/portfolio';
-
 export default function Home() {
   return (
     <>

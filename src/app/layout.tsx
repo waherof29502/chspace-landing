@@ -1,5 +1,5 @@
 import '../styles/style.css';
-import { Syne } from 'next/font/google';
+import { Syne ,Noto_Sans_TC } from 'next/font/google';
 import localFonts from 'next/font/local';
 import {cn} from '@/src/utils/utils'
 
@@ -11,13 +11,13 @@ const syne = Syne({
   variable: '--font-syne',
   display: 'swap',
 });
-// const serifNoto = Noto_Serif_TC({
-//   subsets: ['latin'],
-//   variable: '--font-serifNoto',
-//   preload: false,
-//   display: 'swap',
-//   weight:['200','300','400','500','600','700','900']
-// });
+const sansNoto = Noto_Sans_TC({
+  subsets: ['latin'],
+  variable: '--font-serifNoto',
+  preload: false,
+  display: 'swap',
+  weight:['200','300','400','500','600','700','900']
+});
 const sansCjk = localFonts({
   src: '../../public/fonts/NotoSerifCJKtc-VF.otf',
   display: 'swap',
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='zh-Hans-TW'>
       <body
       className={cn('font-serif antialiased bg-white text-white tracking-tight',syne.variable,sansCjk.variable)}
       >

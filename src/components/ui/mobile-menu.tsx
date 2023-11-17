@@ -83,7 +83,7 @@ export default function MobileMenu() {
         {mobileNavOpen ? (
           <div
             id='mobile-nav'
-            className='absolute top-0 h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-primary'
+            className='absolute top-0 h-screen pb-16 z-100 left-0 w-full overflow-scroll bg-primary'
           >
             <div className='shrink-0 ml-4 pr-2 pl-1 pt-1'>
               <Link href='/'>
@@ -96,12 +96,12 @@ export default function MobileMenu() {
               />
               </Link>
             </div>
-            <ul className='px-5 mt-[45px] font-sansCjk'>
+            <ul className='px-5 mt-[45px] font-syne'>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={`font-medium text-white tracking-[10px] text-[20px] px-5 py-3 flex justify-center items-center transition duration-150 ease-in-out`}
+                    className={`font-normal text-white tracking-[10px] text-[20px] px-5 py-3 flex justify-center items-center transition duration-150 ease-in-out`}
                   >
                     {item.navItems}
                   </Link>
@@ -111,21 +111,21 @@ export default function MobileMenu() {
             <div className='flex mt-[76px] ml-[44px] md:order-1'>
             <Link
               href='https://www.instagram.com/chs_interior/'
-              className='flex justify-center items-center text-white '
+              className='flex justify-center items-center text-white hover:text-[#888888]'
               aria-label='IG'
             >
               <IconIg className='text-[32px]' />
             </Link>
             <Link
               href='https://www.facebook.com/CHSPACE'
-              className='flex justify-center items-center ml-4 text-white'
+              className='flex justify-center items-center ml-4 text-white hover:text-[#888888]'
               aria-label='Fb'
             >
               <IconFb className='text-[32px]' />
             </Link>
             <Link
               href='#0'
-              className='flex justify-center items-center ml-4 text-white'
+              className='flex justify-center items-center ml-4 text-white hover:text-[#888888]'
               aria-label='Share'
             >
               <IconShare className='text-[30px]' />

@@ -27,7 +27,7 @@ export default function project01() {
   return (
     <section className='relative'>
 
-       <div className="max-w-8xl min-h-screen p-2 ">
+       <div className="max-w-8xl md:min-h-screen p-2 ">
         <Lightbox
         open={openLightBox}
         close={toggleLightBoxOpen(false)}
@@ -39,14 +39,23 @@ export default function project01() {
       />  
         <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox}>
            {SLIDERS01.map((item)=>(
-                <Image key={item.id} src={item.src} width={1920} height="1270" alt="12" className='2xl:h-[1280px]' />
+                <Image key={item.id} src={item.src} width={2560} height="1270" alt="12" className='2xl:h-[1280px] wide:h-[1270px] wider:h-[1720px]' />
            ))}
         </Carousel>
       </div>
-        <div className='flex justify-end -mt-[380px] md:-mt-[50px] lg:mt-[80px] mr-[140px] md:mr-[100px]'>
+       <div className='flex md:hidden justify-center mt-2'>
                 <div className='flex items-center justify-center gap-2 z-10'>
                     {SLIDERS01.map((_, i) => (
-                        <div key={i} className={`w-[10px] h-[10px] md:w-[18px] md:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 
+                        <div key={i} className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[18px] lg:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 
+                        onClick={()=> setCurr(i)}
+                        />
+                    ))}
+                </div>
+            </div>
+        <div className='hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:-mt-[120px] lg:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px]'>
+                <div className='flex items-center justify-center gap-2 z-10'>
+                    {SLIDERS01.map((_, i) => (
+                        <div key={i} className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[18px] lg:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 
                         onClick={()=> setCurr(i)}
                         />
                     ))}

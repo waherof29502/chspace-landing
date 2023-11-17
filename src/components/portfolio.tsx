@@ -20,12 +20,12 @@ export default function Portfolio() {
   return (
     <>
       <section className='relative overflow-hidden'>
-        <div className='relative max-w-8xl mx-auto px-4 sm:px-6 md:px-[50px] xl:px-[100px] 2xl:px-[235px]'>
+        <div className='relative max-w-8xl mx-auto px-4 sm:px-6 md:px-[50px] xl:px-[100px] 2xl:px-[235px] '>
           <div className='py-2 md:py-20'>
-            <div className='text-primary flex flex-col md:flex-row md:justify-start items-center mt-10 md:mt-0 mb-[60px] md:mb-0'>
-              <h1 className='font-syne text-[48px] font-normal capitalize'>
+            <div className='text-primary flex flex-row md:flex-row justify-start items-center mt-10 md:mt-0 mb-[60px] md:mb-0 wider:ml-[200px]'>
+              <h2 className='text-[38px] font-syne md:text-[48px] font-normal capitalize'>
                 Portfolio
-              </h1>
+              </h2>
               <span className='pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]'>
                 最新作品
               </span>

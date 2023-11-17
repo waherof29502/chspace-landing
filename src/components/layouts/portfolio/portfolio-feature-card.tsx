@@ -12,7 +12,7 @@ interface PortfolioProps {
 const PortfolioCard = ({ imageSrc, title, location,link, category }: PortfolioProps) => {
 
   return (
-     <div className={`mx-auto md:mt-[97px] mb-10 md:mb-[160px] flex flex-1 flex-col`}>
+     <div className={`mx-auto md:mt-[97px] mb-10 md:mb-[100px] flex flex-1 flex-col`}>
     
         <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={1090} height={647} />
       
@@ -22,7 +22,7 @@ const PortfolioCard = ({ imageSrc, title, location,link, category }: PortfolioPr
           {category}
         </span>
         </div>
-       <div className='hidden md:flex items-center border-[1.5px] border-primary border-solid rounded-xl w-[68px] h-[78px] pl-[12px] pr-[1px]  lg:pl-[12px] md:mr-10 mr-4'>
+       <div className='hidden md:flex items-center border-[1.5px] border-primary border-solid rounded-xl w-[68px] h-[78px] md:pl-[16px] pl-[12px] pr-[1px] lg:pl-[12px] md:mr-10 mr-4'>
         <span className='text-[12px] font-sansCjk md:text-[16px] lg:text-[18px] text-primary font-semibold' >
           {category}
         </span>

@@ -50,7 +50,7 @@ export default function Features() {
                     unmount={false}                     
                   > */}
       <div className='relative pr-10 pl-10'>
-        <div className='flex items-center justify-center min-h-screen '>
+        <div className='flex items-center justify-center min-h-screen wider:min-h-max wider:mt-[220px] '>
           <div className='shrink-0 md:w-[700px] 2xl:w-[852px] -ml-[80px] mr-[10px] md:ml-[420px] 2xl:ml-[210px] md:mt-[19px] md:mr-[2px] 2xl:mr-[10px]  relative z-10'>
             <Image
               className='rounded-lg'
@@ -60,7 +60,7 @@ export default function Features() {
               alt='img01'
             />
           </div>
-           <div className='flex shrink-0 ml-[280px]  md:left-[50px] 2xl:left-[210px] -top-[250px] 2xl:-top-[330px] relative z-10'>
+           <div className='flex shrink-0 ml-[280px] md:left-[50px] 2xl:left-[210px] -top-[250px] 2xl:-top-[330px] relative z-10'>
             <Image
               className='rounded-lg'
               src={Image02}
@@ -127,8 +127,8 @@ export default function Features() {
               alt='img01'
             />
           </div>
-          <div className='flex inset-0 justify-start ml-[80px] md:ml-[100px] lg:ml-[190px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] items-center absolute z-20'>
-          <div className='text-[16px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
+          <div className='flex inset-0 justify-start ml-[80px] md:ml-[100px] lg:ml-[190px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20'>
+          <div className='text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
               <span className='block font-sansCjk' style={{ letterSpacing: '0.5em' }}>為一個家的圓</span>
               <span className='block font-sansCjk' style={{ letterSpacing: '0.5em' }}>
                週而復始得以滿足
@@ -205,8 +205,8 @@ export default function Features() {
               alt='img01'
             />
           </div>
-          <div className='flex inset-0 justify-end mr-[65px] -mt-[50px] md:mr-[100px] lg:mr-[240px] xl:mr-[450px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] items-center absolute z-20'>
-          <div className='text-[16px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
+          <div className='flex inset-0 justify-end mr-[65px] -mt-[50px] md:mr-[100px] lg:mr-[240px] xl:mr-[450px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] wider:mr-[900px] wider:-mt-[800px]  items-center absolute z-20'>
+          <div className='text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
               <div className="relative left-4 right-1 bottom-10 w-px p-[0.5px] h-20 bg-gray-500 transform translate-y-1/2"></div>
               <span className='block font-sansCjk' style={{ letterSpacing: '0.5em' }}>
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莎士比亞

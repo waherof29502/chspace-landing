@@ -21,48 +21,54 @@ export default function Footer() {
           {/* Service Nav as */}
           <div>
             <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
-              <Link href='#1' className='font-serif text-white text-[22px]'>
-                <span className='block' style={{ letterSpacing: '1.6em' }}>
+              <Link href='#1' className='item-center font-sansCjk text-white text-[22px] group'>
+                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in group-hover:translate-y-1 duration-1000" />
+                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1.6em' }}>
                   文・域
                 </span>
               </Link>
               <Link
                 href='#1'
-                className='font-serif text-white md:ml-5 text-[22px]'
+                className='item-center font-sansCjk text-white md:ml-5 text-[22px] group'
               >
-                <span className='block' style={{ letterSpacing: '1em' }}>
+                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
+                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
                   聯絡文域
                 </span>
               </Link>
               <Link
                 href='#1'
-                className='text-white font-serif md:ml-5 text-[22px] md:-mr-1'
+                className='items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group'
               >
-                <span className='block' style={{ letterSpacing: '1em' }}>
+               <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
+                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
                   媒體報導
                 </span>
               </Link>
               <Link
                 href='#1'
-                className=' text-white font-serif md:ml-5 lg:ml-[100px] text-[22px]'
+                className='items-center text-white font-sansCjk md:ml-5 lg:ml-[100px] text-[22px] group'
               >
-                <span className='block' style={{ letterSpacing: '0.6em' }}>
+                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
+                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '0.6em' }}>
                   服務與流程
                 </span>
               </Link>
               <Link
                 href='#1'
-                className=' text-white font-serif md:ml-5 text-[22px]'
+                className='items-center text-white font-sansCjk md:ml-5 text-[22px] group'
               >
-                <span className='block' style={{ letterSpacing: '1em' }}>
+                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
+                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
                   作品欣賞
                 </span>
               </Link>
               <Link
                 href='#1'
-                className='text-white font-serif md:ml-5 text-[22px] md:-mr-1'
+                className='items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group'
               >
-                <span className='block' style={{ letterSpacing: '1em' }}>
+                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
+                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
                   關於文域
                 </span>
               </Link>
@@ -70,26 +76,26 @@ export default function Footer() {
           </div>
         </div> 
         {/* Bottom area */}
-        <div className='flex flex-col justify-center items-center md:-mt-20 md:flex md:flex-row md:items-center md:justify-between py-4 md:px-[45px] lg:px-[40px] xl:px-[120px] md:py-12 '>
+        <div className='flex flex-col justify-center items-center md:-mt-10 md:flex md:flex-row md:items-center md:justify-between py-4 md:px-[45px] lg:px-[40px] xl:px-[120px] md:py-12 '>
           {/* Social as */}
           <div className='flex mb-4 md:order-1 sx:ml-4 md:mb-0'>
             <Link
               href='https://www.instagram.com/chs_interior/'
-              className='flex justify-center items-center text-white '
+              className='flex justify-center items-center text-white hover:text-[#888888]'
               aria-label='IG'
             >
               <IconIg className='text-[32px]' />
             </Link>
             <Link
               href='https://www.facebook.com/CHSPACE'
-              className='flex justify-center items-center ml-4 text-white'
+              className='flex justify-center items-center ml-4 text-white hover:text-[#888888]'
               aria-label='Fb'
             >
               <IconFb className='text-[32px]' />
             </Link>
             <Link
               href='#0'
-              className='flex justify-center items-center ml-4 text-white'
+              className='flex justify-center items-center ml-4 text-white hover:text-[#888888]'
               aria-label='Share'
             >
               <IconShare className='text-[30px]' />

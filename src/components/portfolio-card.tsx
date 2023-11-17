@@ -13,12 +13,12 @@ interface PortfolioProps {
 const PortfolioCard = ({ imageSrc, title, location,link, isImageLeft }: PortfolioProps) => {
 
   return (
-     <div className={`max-w-8xl mx-auto lg:mt-[97px] mb-2 lg:mb-[212px] flex flex-1 flex-col md:flex-row md:grid md:grid-cols-2 ${isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'}`}>
+     <div className={`max-w-8xl mx-auto lg:mt-[97px] mb-[20px] lg:mb-[212px] flex flex-1 flex-col md:flex-row md:grid md:grid-cols-2 ${isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'}`}>
       {isImageLeft && (
         <Image className='mx-auto rounded-md' src={imageSrc} alt={title} width={768} height={486} />
       )}
-      <div className='md:flex md:flex-col  justify-between md:justify-center items-center mx-4 mt-8 md:mt-[70px] lg:mt-20 -mb-2 md:m-10 '>
-        <div className='flex flex-col md:justify-start items-start text-primary w-full md:w-[250px] lg:ml-[20px] lg:mr-[150px] '>
+      <div className='md:flex md:flex-col justify-between md:justify-center items-center mx-4 mt-8 md:mt-[40px] lg:mt-20 -mb-2 md:m-10 '>
+        <div className='flex flex-col md:justify-start items-start text-primary w-full md:w-[250px] md:ml-[25px] lg:ml-[20px] lg:mr-[150px] '>
         <p className='text-[18px] md:text-[22px] font-sansCjk font-medium md:font-semibold md:py-0 py-[14px]'>
           {title}
         </p>
