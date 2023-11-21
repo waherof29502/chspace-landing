@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import Carousel from '@/src/components/carousel'
-import CarouselText from '@/src/components/carousel-text'
+import Carousel from '@/src/components/utils/carousel'
+import CarouselText from '@/src/components/utils/carousel-text'
 import ProjectCard from './project-feature-card';
 import NewsBg from '@/public/images/bg-2.png';
 import ProjectOtherCard from './project-others-card'
@@ -12,7 +12,7 @@ import IconFb from '@/public/svg/fb-solid.svg'
 import IconIg from '@/public/svg/ig-solid.svg'
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import CustomBtn02 from '../../custom-btn02';
+import CustomBtn02 from '@/src/components/ui/custom-btn02';
 
 export default function project01() {
   const [curr, setCurr] = useState(0)
@@ -39,7 +39,7 @@ export default function project01() {
       />  
         <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox}>
            {SLIDERS01.map((item)=>(
-                <Image key={item.id} src={item.src} width={2560} height="1270" alt="12" className='2xl:h-[1280px] wide:h-[1270px] wider:h-[1720px]' />
+                <Image key={item.id} src={item.src} width={2560} height="1270" alt="12" className='2xl:h-[1270px] wide:h-[1560px] wider:h-[1720px]' />
            ))}
         </Carousel>
       </div>
@@ -52,7 +52,7 @@ export default function project01() {
                     ))}
                 </div>
             </div>
-        <div className='hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:-mt-[120px] lg:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px]'>
+        <div className='hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:-mt-[120px] 2md:-mt-[50px] 3md:-mt-[200px] lg:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]'>
                 <div className='flex items-center justify-center gap-2 z-10'>
                     {SLIDERS01.map((_, i) => (
                         <div key={i} className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[18px] lg:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 
@@ -81,19 +81,19 @@ export default function project01() {
                 <Image  src={item.src} width={1920} height="1270" alt="12" className="rounded-xl"/>
                 </div>
            ))}
-             <div className='text-primary flex flex-row justify-end items-center mt-10 md:mt-10 md:mb-[100px] '>
+             <div className='text-primary flex flex-row justify-end items-center mt-10 md:mt-10 md:mb-[100px] wider:mr-[200px]'>
                 <Link href={"https://www.facebook.com/CHSPACE"} target="_blank" rel="noopener noreferrer">
-                <IconFb className='text-[34px] mr-2' />
+                <IconFb className='text-[34px] mr-2 text-[#7A7A7A] hover:text-[#4e4e4e]' />
                 </Link>
                 <Link href={" https://www.instagram.com/chs_interior/"} target="_blank" rel="noopener noreferrer">
-                <IconIg className='text-[34px]'/>
+                <IconIg className='text-[34px] text-[#7A7A7A] hover:text-[#4e4e4e]'/>
                </Link>
             </div>
-            <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px]  border-t-[1.5px] border-[#D6D6D6] border-solid'>
-              <h1 className='py-10 xl:py-[100px] font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize'>
+            <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px] border-t-[1.5px] border-[#D6D6D6] border-solid'>
+              <h2 className='py-10 xl:pt-[80px] xl:pb-[10px] font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize'>
                recommend
-              </h1>
-              <span className='pl-4 mt-1.5 font-san text-[#545351] text-[18px]'>
+              </h2>
+              <span className='pl-4 xl:pt-[80px] xl:pb-[10px] mt-1.5 font-san text-[#545351] text-[18px]'>
                 其他作品
               </span>
             </div>
@@ -111,7 +111,6 @@ export default function project01() {
           <div className="hidden lg:flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
              <CarouselText autoSlide={false} setCurr={setCurrText} curr={currText}>
            {OTHERSPROJECT01.map((item)=>(
-              // <Image src={item.src} width={427} height="273" alt={item.title} className='mr-10'/>
           <ProjectOtherCard 
                   key={item.id}
                   dataIndex= {item.id}
@@ -124,15 +123,6 @@ export default function project01() {
         <div className='flex flex-row items-center wide:mt-[100px] lg:ml-[100px] lg:mr-[50px]'onClick={()=> setCurrText(currText == 0 ? currText +1 : 0)} > 
                      <CustomBtn02 title={"view more"} fontType={'font-syne'} />
             </div>
-           {/* {OTHERSPROJECT01.map((item) => (
-            <ProjectOtherCard 
-                  key={item.id}
-                  dataIndex= {item.id}
-                  src={item.src}  
-                  title={item.title}
-                  desc={item.desc}
-                />
-                   ))} */}
             </div>
           
              <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px]'>
@@ -144,15 +134,12 @@ export default function project01() {
               </span>
             </div>
            
-        {/* <div className='flex flex-col justify-start items-start h-auto'>
-          {NEWS01.map((item) => (<div key={item.id}>
-            <p className='mb-[20px] text-primary text-[14px] md:text-[16px] font-semibold text-center hover:text-[#4b4b4b]'>{item.content}</p></div>))}
-          </div> */}
         </div>
-        <div className='relative bg-cover bg-center w-full h-auto pb-10' style={{ backgroundImage: `url(${NewsBg.src})` }}>
+        <div className='relative bg-cover bg-center w-full h-[400px] pb-10' style={{ backgroundImage: `url(${NewsBg.src})` }}>
         <div className='flex flex-col justify-start item-center'>
-          {NEWS01.map((item) => (<div key={item.id}>
-            <p className='mx-[10px] md:mx-[50px] lg:mx-[100px] xl:mx-[125px] wide:mx-[220px] my-[60px] mb-0 text-primary text-[14px] md:text-[16px] font-semibold px-2'>{item.content}</p></div>))}
+          {NEWS01.map((item) => (<div key={item.id} >
+            <p className={`mx-[10px] md:mx-[50px] lg:mx-[100px] xl:mx-[125px] wide:mx-[220px] ${item.id ==1 ?"mt-[60px]" :" mt-[10px]"} mb-[40px] text-primary text-[14px] md:text-[16px] font-semibold  ${item.id == NEWS01.length  ?" border-b-[0px] -mb-[25px]" :" border-b-[3px]"} border-[#fff] border-solid pb-[50px]`}>{item.content}</p>
+</div>))}
         </div>
         </div>
     

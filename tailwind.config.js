@@ -102,8 +102,21 @@ module.exports = {
         '-1': '-1',
       },
       screens:{
+        "ss":'320px',
+        '2ss':'410px',
         "xs": '425px',
-        "3xl":'1580px',
+        '2xs':'480px',
+        'sm':'600px',
+        'md':'768px',
+        '2md':'850px',
+        '3md':'991px',
+        'lg':'1024px',
+        '2lg':'1199px',
+        'xl':'1280px',
+        'xxl':'1366px',
+        'xxxl':'1440px',
+        '2xl':'1560px',
+        "3xl":'1680px',
         "wide":'1920px',
         "wider":'2560px'
       }

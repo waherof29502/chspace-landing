@@ -1,6 +1,6 @@
 'use client'
 import PortfolioCard from './portfolio-card';
-import { PORTFOLIO_ITEMS } from '../constants';
+import { PORTFOLIO_ITEMS } from '@/src/constants';
 import { useState, useRef, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 export default function Portfolio() {
@@ -22,7 +22,7 @@ export default function Portfolio() {
       <section className='relative overflow-hidden'>
         <div className='relative max-w-8xl mx-auto px-4 sm:px-6 md:px-[50px] xl:px-[100px] 2xl:px-[235px] '>
           <div className='py-2 md:py-20'>
-            <div className='text-primary flex flex-row md:flex-row justify-start items-center mt-10 md:mt-0 mb-[60px] md:mb-0 wider:ml-[200px]'>
+            <div className='text-primary flex flex-row md:flex-row justify-start items-center mt-10 md:mt-0 mb-[60px] md:mb-0 2xl:-ml-[75px] wide:ml-[15px] wider:ml-[30px]'>
               <h2 className='text-[38px] font-syne md:text-[48px] font-normal capitalize'>
                 Portfolio
               </h2>

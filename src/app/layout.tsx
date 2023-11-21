@@ -3,9 +3,9 @@ import { Syne ,Noto_Sans_TC } from 'next/font/google';
 import localFonts from 'next/font/local';
 import {cn} from '@/src/utils/utils'
 
-import Banner from '@/src/components/banner';
+import Banner from '@/src/components/ui/banner';
 import Footer from '@/src/components/ui/footer';
-import ContactUs from '@/src/components/contact-us';
+import ContactUs from '@/src/components/ui/contact-us';
 const syne = Syne({
   subsets: ['latin'],
   variable: '--font-syne',

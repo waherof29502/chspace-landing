@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
 import Award from '@/public/svg/award.svg'
 import WorkDataCard from './project-data-card';
+import {PROJECTDETAIL} from '@/src/constants'
 interface WorkFeatureProps {
   imageSrc: string;
   title: string;
@@ -11,9 +11,7 @@ interface WorkFeatureProps {
   desc?:string;
   awards?:string
 }
-const PROJECTDETAIL =[
-  {id:1,category:'住宅設計',spaceType:'臥室|客廳｜書房',houseStatus:'公寓老屋翻新',familyMember:'夫妻+2子女',houseSpace:'約29坪',designStyle:'實木皮、實木地板、礦物塗料、玻璃磚'}
-]
+
 
 const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: WorkFeatureProps) => {
 
@@ -43,7 +41,7 @@ const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: Wo
          </div>
         </div>
         <div className=''>
-         <div className='flex flex-row md:flex-row md:justify-start items-center mt-[50px] md:-mb-[45px]'>
+         <div className='flex flex-row md:flex-row md:justify-start items-center mt-[50px] md:-mb-[45px] '>
               <h2 className='font-syne text-[30px] md:text-[48px] font-normal capitalize'>
                Data
               </h2>
@@ -54,7 +52,7 @@ const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: Wo
            
             </div>
             
-      <div className='flex-1 w-full xl:w-[1300px] justify-between'>
+      <div className='flex-1 w-full xl:w-[1300px] justify-between md:mt-[86px]'>
        {PROJECTDETAIL.slice(0, 1).map((item) => (
             <WorkDataCard key={item.id} category={item.category} spaceType={item.spaceType} houseStatus={item.houseStatus} familyMember={item.familyMember} houseSpace={item.houseSpace} designStyle={item.designStyle}/> 
             ))}

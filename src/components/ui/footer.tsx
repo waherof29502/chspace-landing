@@ -22,8 +22,8 @@ export default function Footer() {
           <div>
             <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
               <Link href='#1' className='item-center font-sansCjk text-white text-[22px] group'>
-                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in group-hover:translate-y-1 duration-1000" />
-                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1.6em' }}>
+                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in group-hover:translate-y-1 duration-500" />
+                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '1.6em' }}>
                   文・域
                 </span>
               </Link>
@@ -31,8 +31,8 @@ export default function Footer() {
                 href='#1'
                 className='item-center font-sansCjk text-white md:ml-5 text-[22px] group'
               >
-                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
-                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
+                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
+                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '1em' }}>
                   聯絡文域
                 </span>
               </Link>
@@ -40,8 +40,8 @@ export default function Footer() {
                 href='#1'
                 className='items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group'
               >
-               <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
-                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
+               <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
+                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '1em' }}>
                   媒體報導
                 </span>
               </Link>
@@ -49,8 +49,8 @@ export default function Footer() {
                 href='#1'
                 className='items-center text-white font-sansCjk md:ml-5 lg:ml-[100px] text-[22px] group'
               >
-                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
-                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '0.6em' }}>
+                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
+                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '0.6em' }}>
                   服務與流程
                 </span>
               </Link>
@@ -58,8 +58,8 @@ export default function Footer() {
                 href='#1'
                 className='items-center text-white font-sansCjk md:ml-5 text-[22px] group'
               >
-                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
-                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
+                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
+                <span className='block  group-hover:translate-y-6 duration-500' style={{ letterSpacing: '1em' }}>
                   作品欣賞
                 </span>
               </Link>
@@ -67,8 +67,8 @@ export default function Footer() {
                 href='#1'
                 className='items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group'
               >
-                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-1000" />
-                <span className='block group-hover:translate-y-6 duration-1000' style={{ letterSpacing: '1em' }}>
+                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
+                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '1em' }}>
                   關於文域
                 </span>
               </Link>

@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import LogoWhite from '@/public/images/logo-white.png';
-import LogoBlack from '@/public/images/logo-black.png';
 import MobileMenu from './mobile-menu';
 import Image from 'next/image';
 import { NAV_ITEMS } from '@/src/constants';
@@ -34,24 +32,13 @@ export default function OtherHeader() {
 
           {/* Desktop navigation */}
           <nav className='hidden md:flex md:grow'>
-            {/* <Logo top={top}/> */}
-            {/* <Link href='/'>
-            <div className='shrink-0 mr-4 mt-4'>
-              <Image
-                className='rounded-lg'
-                src={!top ? LogoBlack : LogoWhite}
-                width={183}
-                height='183'
-                alt='logo'
-              />
-            </div>
-            </Link> */}
-            <ul className='flex grow font-syne justify-end items-center -mt-[43px] text-[16px]'>
+           
+            <ul className='flex grow font-syne justify-end items-center -mt-[43px] text-[16px] md:text-[14px] lg:text-[16px]'>
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={`font-normal px-2 2xl:px-5 3xl:px-10 py-3 flex xl:tracking-[6.4px] items-center transition duration-150 ease-in-out ${
+                    className={`font-normal px-2 2md:px-[14px] 3md:px-4 2xl:px-5 3xl:px-10 flex md:tracking-[3.2px] xl:tracking-[6.4px] items-center transition duration-150 ease-in-out ${
                       !top ? 'text-slate-600' : ''
                     }`}
                   >

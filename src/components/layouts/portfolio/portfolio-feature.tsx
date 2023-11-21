@@ -18,7 +18,7 @@ export default function PortfolioFeature() {
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 600 ? setTop(false) : window.pageYOffset  >280 ? setTop(false) :setTop(true);
+    window.pageYOffset > 280 ? setTop(false) : window.pageYOffset > 600 ? setTop(false) :setTop(true);
   };
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function PortfolioFeature() {
         <div className='relative max-w-6xl mx-auto px-4 sm:px-6'>
           <div className='py-2 lg:py-20'>
             <div className={`text-primary grid grid-cols-2  md:flex md:flex-row justify-center items-center font-serif mt-10 md:mt-10 md:-mb-[40px] lg:mb-[100px] ${
-        !top ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[250px] md:h-20 w-full z-20 flex flex-row justify-center items-center py-4 px-2' : ''
+        !top ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[250px] md:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2' : ''
       }`}>
               {FILTER_LISTS.map((item)=>(
                  <button

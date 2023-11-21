@@ -35,20 +35,6 @@ export default function Features() {
   return (
     <section className='relative overflow-hidden'>
       {/* Section 1 */}
-       {/* <div  className='transition-all'  data-aos="zoom-y-out" ref={tabs}>
-      <Transition
-                    show={tab === 1}
-                    appear={true}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}                     
-                  > */}
       <div className='relative pr-10 pl-10'>
         <div className='flex items-center justify-center min-h-screen wider:min-h-max wider:mt-[220px] '>
           <div className='shrink-0 md:w-[700px] 2xl:w-[852px] -ml-[80px] mr-[10px] md:ml-[420px] 2xl:ml-[210px] md:mt-[19px] md:mr-[2px] 2xl:mr-[10px]  relative z-10'>
@@ -84,11 +70,9 @@ export default function Features() {
          
         </div>
       </div>
-      {/* </Transition> */}
     
       {/* Section 2 */}
       
-       
       <div className='relative pr-10 pl-10 -mt-[20px] md:mt-[20px]'>
         <div className='flex items-center justify-center min-h-screen'>
           <div className='shrink-0 w-[208px] ml-[2px] md:ml-[550px] -mt-[300px] md:-mt-[320px] md:mr-[20px] mr-[120px] 2xl:ml-[50px] 2xl:-mt-[490px] relative z-10'>
@@ -127,7 +111,7 @@ export default function Features() {
               alt='img01'
             />
           </div>
-          <div className='flex inset-0 justify-start ml-[80px] md:ml-[100px] lg:ml-[190px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20'>
+          <div className='flex inset-0 justify-start ml-[80px] 2xs:ml-[120px] sm:ml-[180px] md:ml-[100px] 3md:ml-[150px] lg:ml-[190px] 2lg:ml-[240px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20'>
           <div className='text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
               <span className='block font-sansCjk' style={{ letterSpacing: '0.5em' }}>為一個家的圓</span>
               <span className='block font-sansCjk' style={{ letterSpacing: '0.5em' }}>
@@ -145,22 +129,10 @@ export default function Features() {
       </div>
      
        {/* Section 3*/}
-        {/* <Transition
-                    show={tab === 1}
-                    appear={true}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}                     
-                  > */}
+        
       <div className='relative pr-10 pl-10 -mt-[20px] md:mt-[120px] 2xl:-mt-[140px] mb-[50px]'>
         <div className='flex items-center justify-center min-h-screen'>
-          <div className='shrink-0 w-[262px] ml-[2px] mr-[120px] -mt-[300px] md:ml-[550px] md:-mt-[320px] md:mr-[20px] 2xl:ml-[280px] 2xl:-mt-[1200px] relative z-10'>
+          <div className='shrink-0 w-[262px] ml-[2px] mr-[120px] -mt-[300px] md:ml-[550px] md:-mt-[320px] md:mr-[20px]  2xl:ml-[280px] 2xl:-mt-[1200px] relative z-10'>
             <Image
               className='rounded-lg'
               src={Image07}
@@ -205,7 +177,7 @@ export default function Features() {
               alt='img01'
             />
           </div>
-          <div className='flex inset-0 justify-end mr-[65px] -mt-[50px] md:mr-[100px] lg:mr-[240px] xl:mr-[450px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] wider:mr-[900px] wider:-mt-[800px]  items-center absolute z-20'>
+          <div className='flex inset-0 justify-end mr-[65px] -mt-[50px] 2xs:mr-[80px] sm:mr-[160px] md:mr-[100px] 3md:mr-[260px] lg:mr-[240px] 2lg:mr-[290px] xl:mr-[450px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] wider:mr-[900px] wider:-mt-[800px]  items-center absolute z-20'>
           <div className='text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose'>
               <div className="relative left-4 right-1 bottom-10 w-px p-[0.5px] h-20 bg-gray-500 transform translate-y-1/2"></div>
               <span className='block font-sansCjk' style={{ letterSpacing: '0.5em' }}>
@@ -222,8 +194,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-      {/* </Transition> */}
-    {/* </div> */}
     </section>
   );
 }

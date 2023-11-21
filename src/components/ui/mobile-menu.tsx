@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Transition } from '@headlessui/react';
-import LogoBlack from '@/public/images/logo-black.png';
 import LogoWhite from '@/public/images/logo-white.png';
 import Logo from './logo'
 import Link from 'next/link';
@@ -44,7 +42,7 @@ export default function MobileMenu() {
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 750 ? setTop(false) : setTop(true);
+    window.pageYOffset > 600 ? setTop(false) : setTop(true);
   };
 
   useEffect(() => {
@@ -101,7 +99,7 @@ export default function MobileMenu() {
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={`font-normal text-white tracking-[10px] text-[20px] px-5 py-3 flex justify-center items-center transition duration-150 ease-in-out`}
+                    className={`font-normal text-white tracking-[10px] text-[20px] px-5 py-3 flex justify-center items-center `}
                   >
                     {item.navItems}
                   </Link>
@@ -133,42 +131,6 @@ export default function MobileMenu() {
           </div>
           </div>
         ) : null}
-        {/* <Transition
-          show={mobileNavOpen}
-          as='nav'
-          id='mobile-nav'
-          className='absolute top-0 h-screen pb-16 z-20 left-0 w-full overflow-scroll bg-white'
-          enter='transition ease-out duration-200 transform'
-          enterFrom='opacity-0 -translate-x-2'
-          enterTo='opacity-100 translate-x-0'
-          leave='transition ease-out duration-200'
-          leaveFrom='opacity-100'
-          leaveTo='opacity-0'
-        >
-          <>
-            <div className='shrink-0 ml-4 pr-2 pl-1 pt-1'>
-              <Image
-                className='rounded-lg'
-                src={LogoBlack}
-                width={100}
-                height='100'
-                alt='logo'
-              />
-            </div>
-            <ul className='px-5 mt-1 font-sansCjk'>
-              {NAV_ITEMS.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.link}
-                    className={` font-medium text-black px-5 py-3 flex items-center transition duration-150 ease-in-out`}
-                  >
-                    {item.navItems}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </>
-        </Transition> */}
       </div>
     </div>
   );

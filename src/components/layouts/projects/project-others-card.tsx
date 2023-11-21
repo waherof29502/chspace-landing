@@ -2,8 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { RefObject } from 'react';
 import Image from 'next/image';
-import img1 from '@/public/images/hero-image.png'
-import img2 from '@/public/images/hero-image.png'
+
 interface ProjectOthersCardProps {
   dataIndex:number;
   src: string;
@@ -64,7 +63,7 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
   return (
       <div ref={carouselRef} onScroll={handleScroll}>
           <div
-            className={`w-60 xl:w-[350px] wide:w-[435px] p-2 ${
+            className={`w-60 3md:w-[300px] xl:w-[350px] wide:w-[435px] p-2 ${
               dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
             }  rounded-lg cursor-pointer`}
             onClick={(e) => handleClick(e, dataIndex)}
@@ -78,15 +77,12 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
             height={267}
             className='w-full object-contain'
           />      
-          <div className='flex flex-col items-start mt-6 lg:mt-2 xl:flex-row xl:items-center'>
+          <div className='flex flex-col items-start mt-6 lg:mt-2 xl:flex-row xl:items-center 3xl:flex-col 3xl:items-start '>
           <p className='text-[12px] md:text-[14px] 3xl:text-[18px] mt-2 text-primary font-semibold tracking-[1.8px]'>{title}</p>
-           <p className='mt-2 md:mt-0 xl:mt-[12px] xl:ml-2 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
+           <p className='mt-2 md:mt-0 xl:mt-[12px] xl:ml-2 3xl:ml-0 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
            </div>
-
-
           </div>
-      <div className='absolute inset-0 flex flex-col justify-center items-center p-0 md:p-6 '>
-      
+      <div className='absolute inset-0 flex flex-col justify-center items-center p-0 md:p-6 '>   
       </div>
     </div>
           </div>

@@ -1,15 +1,13 @@
 export const metadata = {
-  title: '文域首頁',
-  description: '首頁',
+  title: '文域設計 ｜首頁',
+  description: '深耕"人文藝術文化場域"以設計閱讀世界。',
 };
 
-import Hero from '@/src/components/hero';
-import Features from '@/src/components/features';
-import FeaturesBlocks from '@/src/components/service';
-import Testimonials from '@/src/components/testimonials';
-import Newsletter from '@/src/components/newsletter';
-import Service from '@/src/components/service';
-import Portfolio from '@/src/components/portfolio';
+import Hero from '@/src/components/layouts/home/hero';
+import Features from '@/src/components/layouts/home/features';
+import Newsletter from '@/src/components/layouts/home/newsletter';
+import Service from '@/src/components/layouts/home/service';
+import Portfolio from '@/src/components/layouts/home/portfolio';
 export default function Home() {
   return (
     <>
@@ -18,7 +16,6 @@ export default function Home() {
       <Newsletter />
       <Portfolio />
       <Service />
-      {/* <Service /> */}
     </>
   );
 }
