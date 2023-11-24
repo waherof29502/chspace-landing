@@ -9,7 +9,7 @@ import Header from '@/src/components/ui/header';
 
 import ThanksBg from '@/public/images/thanks-page.png';
 
-export default function Redirection() {
+export default function Success() {
   return (
     <>
           <Header />

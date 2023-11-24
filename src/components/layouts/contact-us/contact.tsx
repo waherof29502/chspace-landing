@@ -1,171 +1,161 @@
 'use client'
-import {useState,useEffect} from 'react'
 
+import { useRouter } from "next/navigation";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-export default function Contact() {
-    const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      country: "United Kingdom",
-      terms: "",
-    },
 
-    validationSchema: Yup.object({
-      name: Yup.string()
-        .max(20, "Name must be 20 characters or less.")
-        .required("Name is required"),
-      email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      terms: Yup.array().required("Terms of service must be checked"),
+interface FormValues {
+  name: string;
+  phone: string;
+  email: string;
+  line?: string;
+  message?: string;
+}
+
+export default function ContactUs() {
+    const router = useRouter();
+    const formik = useFormik<FormValues>({
+        initialValues:{
+            name:'',
+            phone:'',
+            email:'',
+            line:'',
+            message:''
+        },
+         validationSchema:Yup.object({
+        name:Yup.string().max(5,"請輸入正確姓名格式").required("名稱為必填欄位。"),
+        phone:Yup.string().max(10,"請輸入正確手機格式").required('手機為必填欄位。'),
+        email: Yup.string()
+        .email("錯誤的Email格式")
+        .required("Email為必填欄位"),
+        line:Yup.string().max(10,"請輸入正確Line帳號格式"),
+        message:Yup.string().max(400,"文字敘述上限400字").required('需求說明為必填欄位。')
     }),
-
     onSubmit: (values) => {
-      console.log("form submitted");
-      console.log(values);
+      console.log("form submitted",values);
+       const queryParams:FormValues = {
+        name: values.name,
+        phone: values.phone,
+        email: values.email,
+        line: values.line,
+        message: values.message,
+      };
+      router.push("/success");
     },
-  });
-
+    });
+    const OnSubmit = (e:React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    formik.handleSubmit();
+  };
   return (
-    <>
-     <section className='relative overflow-hidden'>
-        <div className='max-w-8xl mx-auto px-4 sm:px-6 md:px-[50px] xl:px-[100px] 2xl:px-[235px] '>
-          <div className='py-2 md:py-20'>
+          <section className='relative overflow-hidden'>
+            <div className='py-2 md:py-20'>
             <div className='text-primary flex flex-col items-center justify-center'>
-              <h1 className='text-[22px] font-sansCjk font-normal capitalize'>
+              <h1 className='text-[16px] md:text-[22px] font-sansCjk font-normal tracking-[3.3px] capitalize pt-8 md:pb-10 px-8'>
                 請填寫並發送下面的諮詢表單，服務專員將盡快與您聯繫
               </h1>
-             <form
-          onSubmit={formik.handleSubmit}
-          className="bg-white flex rounded-lg w-full font-latoRegular"
-        >
-          <div className="flex-1 text-gray-700  p-20">
-            <h1 className="text-3xl pb-2 font-latoBold">
-              Let's get started 👋
-            </h1>
-            <p className="text-lg  text-gray-500">
-              Join our E-learning platform today and unlock over 500+ courses
-              and digital assets ready to download.
-            </p>
-            <div className="mt-6 ">
-              {/* Name input field */}
-              <div className="pb-4">
-                <label
-                  htmlFor="name"
-                  className={`block font-latoBold text-sm pb-2 ${
-                    formik.touched.name && formik.errors.name
-                      ? "text-red-400"
-                      : ""
-                  } `}
-                >
-                  {formik.touched.name && formik.errors.name
+              <form onSubmit={formik.handleSubmit} className="flex flex-col md:flex-row rounded-lg flex-1 w-full lg:w-3/4 3xl:w-2/3 justify-center items-center  mb-10">
+                <div className="flex-1 w-full text-[#1b1b1b] px-5 xxxl:px-20 ">
+                  <div className="mt-6 p-5 lg:p-0">
+                    {/* Name input field */}
+                    <div className="pb-4 mb-10">
+                      <label htmlFor="email" className="block pb-2">
+                        <span className="font-syne text-[18px] mr-2">Name</span>
+                        <span className="font-sansCjk text-[14px]"> 姓名 <span className="text-red-400 pl-1">※</span></span>
+                      </label>
+                      <input
+                        className="border-[#CBCBCB]  border-b-1 border-t-0 border-r-0 border-l-0 p-2 w-full focus:border-b-1 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-[#1b1b1b] focus:ring-transparent"
+                        type="text"
+                        name="name"
+                        onChange={formik.handleChange}
+                        value={formik.values.name}
+                        onBlur={formik.handleBlur}
+                      />
+                     <span className={` font-sansCjk text-[10px] tracking-wide ${formik.touched.name && formik.errors.name ? 'text-red-400' :''} `}> {formik.touched.name && formik.errors.name
                     ? formik.errors.name
-                    : "Name"}
-                </label>
-                <p className="text-sm font-latoBold text-red-400 "></p>
-                <input
-                  className="border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500 "
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  onChange={formik.handleChange}
-                  value={formik.values.name}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-              {/* Email input field */}
-              <div className="pb-4">
-                <label
-                  htmlFor="email"
-                  className={`block font-latoBold text-sm pb-2 ${
-                    formik.touched.email && formik.errors.email
-                      ? "text-red-400"
-                      : ""
-                  }`}
-                >
-                  {formik.touched.email && formik.errors.email
+                    : ""}</span>
+                    </div>
+                      {/* Email input field */}
+                    <div className="pb-4 mb-10">
+                        <label htmlFor="email" className="block pb-2">
+                          <span className="font-syne text-[18px] mr-2">Phone</span>
+                          <span className="font-sansCjk text-[14px]">電話 <span className="text-red-400 pl-1">※</span></span>
+                        </label>
+                        <input
+                          className="border-[#CBCBCB]  border-b-1 border-t-0 border-r-0 border-l-0 p-2 w-full focus:border-b-1 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-[#1b1b1b] focus:ring-transparent"
+                          type="text"
+                          name="phone"
+                          onChange={formik.handleChange}
+                          value={formik.values.phone}
+                          onBlur={formik.handleBlur}
+                        />
+                         <span className={` font-sansCjk text-[10px] tracking-wide ${formik.touched.phone && formik.errors.phone ? 'text-red-400' :''} `}> {formik.touched.phone && formik.errors.phone
+                    ? formik.errors.phone
+                    : ""}</span>
+                      </div>
+
+                {/* Email input field */}
+                    <div className="pb-4 mb-10">
+                      <label htmlFor="email" className="block pb-2">
+                          <span className="font-syne text-[18px] mr-2">E-Mail</span>
+                          <span className="font-sansCjk text-[14px]">信箱 <span className="text-red-400 pl-1">※</span></span>
+                        </label>
+                        <input
+                          className="border-[#CBCBCB]  border-b-1 border-t-0 border-r-0 border-l-0 p-2 w-full focus:border-b-1 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-[#1b1b1b] focus:ring-transparent"
+                          type="email"
+                          name="email"
+                          onChange={formik.handleChange}
+                          value={formik.values.email}
+                          onBlur={formik.handleBlur}
+                        />
+                         <span className={` font-sansCjk text-[10px] tracking-wide ${formik.touched.email && formik.errors.email ? 'text-red-400' :''} `}> {formik.touched.email && formik.errors.email
                     ? formik.errors.email
-                    : "Email"}
-                </label>
-
-                <p></p>
-                <input
-                  className="border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500"
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  onChange={formik.handleChange}
-                  value={formik.values.email}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-              {/* Country input field */}
-              <div className="pb-4">
-                <label
-                  htmlFor="country"
-                  className="block font-latoBold text-sm pb-2"
-                >
-                  Country
-                </label>
-                <select
-                  className="border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500"
-                  name="country"
-                  onChange={formik.handleChange}
-                  value={formik.values.country}
-                >
-                  <option>United States</option>
-                  <option>United Kingdom</option>
-                  <option>Germany</option>
-                </select>
-              </div>
-              {/* Terms of service*/}
-              <div className="pb-4">
-                <label
-                  htmlFor="terms"
-                  className={`block font-latoBold text-sm pb-2 ${
-                    formik.touched.terms && formik.errors.terms
-                      ? "text-red-400"
-                      : ""
-                  }`}
-                >
-                  {formik.touched.terms && formik.errors.terms
-                    ? formik.errors.terms
-                    : "Terms of service"}
-                </label>
-
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    name="terms"
-                    value="checked"
+                    : ""}</span>
+                      </div>
+                {/* Line input field */}
+                      <div className="pb-4 mb-10">
+                        <label htmlFor="email" className="block pb-2">
+                          <span className="font-syne text-[18px] mr-2">Line ID</span>
+                        </label>
+                        <input
+                          className="border-[#CBCBCB]  border-b-1 border-t-0 border-r-0 border-l-0 p-2 w-full focus:border-b-1 focus:border-t-0 focus:border-r-0 focus:border-l-0 focus:border-b-[#1b1b1b] focus:ring-transparent"
+                          type="text"
+                          name="line"
+                          onChange={formik.handleChange}
+                          value={formik.values.line}
+                          onBlur={formik.handleBlur}
+                        />
+                        
+                      </div>
+                    </div>
+                  </div>
+                 {/* Message input field */}
+                    <div className="w-full md:w-1/2  h-[400px] pb-6 lg:ml-8 px-10 lg:px-8">
+                    <label htmlFor="email" className="block pb-6">
+                      <span className="font-syne mr-2">Message</span>
+                      <span className="font-sansCjk">需求說明<span className="text-red-400 pl-1">※</span></span>
+                    
+                    </label>
+                      
+                    <textarea
+                    className="w-full h-full bg-[#F8F8F8] border-[#CBCBCB] focus:border-[#1b1b1b] focus:ring-[#1b1b1b]"
+                    name="message"
                     onChange={formik.handleChange}
+                    value={formik.values.message}
                     onBlur={formik.handleBlur}
-                    className="h-5 w-5 text-teal-500 border-2  background-gray-500 focus:border-teal-500 focus:ring-teal-500"
-                  />
-                  <p className="text-sm font-latoBold text-gray-500">
-                    I agree to the Terms and Service that my data will be taken
-                    and sold.
-                  </p>
-                </div>
-              </div>
-              <button
-                type="submit"
-                className="bg-teal-500 font-latoBold text-sm text-white py-3 mt-6 rounded-lg w-full"
-              >
-                Start learning today!
-              </button>
-            </div>
-          </div>
-          <div className="relative flex-1">
-        
-          </div>
-        </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+                    />
+                   <span className={`mt-0 font-sansCjk text-[10px] tracking-wide ${formik.touched.message && formik.errors.message ? 'text-red-400' :''} `}> {formik.touched.message && formik.errors.message
+                    ? formik.errors.message
+                    : ""}</span>
+                    </div>
+                    </form>
+                    <button  type="submit" className='flex items-center justify-center bg-[#1b1b1b]  my-14 lg:my-0 p-4 w-1/2 lg:w-1/4 xl:w-1/6 rounded-xl group' onClick={OnSubmit}>
+                                <div className="w-0 group-hover:w-10 h-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-x-2 duration-1000" />
+                                <p className='font-syne font-bold text-white text-[14px] lg:text-[16px] translate-x-0 transform transition-transform group-hover:translate-x-3 md:group-hover:translate-x-6 duration-1000'>Send Now</p>
+                    </button>
+                        </div>
+                      </div>  
+          </section>
   );
 }
+
