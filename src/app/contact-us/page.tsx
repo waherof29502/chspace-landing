@@ -4,14 +4,15 @@ export const metadata = {
   
 };
 
-import PortfolioFeature from '@/src/components/layouts/portfolio/portfolio-feature';
-import PortfolioHero from '@/src/components/layouts/portfolio/portfolio-hero';
 
+import OtherHero from '@/src/components/ui/other-hero';
+import PortfolioBg from '@/public/images/portfolio-bg.png';
+import Contact from '@/src/components/layouts/contact-us/contact'
 export default function ContactUs() {
   return (
     <>
-      <PortfolioHero />
-      <PortfolioFeature/>
+     <OtherHero src={PortfolioBg} title={"聯絡文域"} desc={"Contact Us"}/>
+     <Contact/>
     </>
   );
 }
