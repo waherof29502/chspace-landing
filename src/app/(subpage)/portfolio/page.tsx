@@ -5,12 +5,13 @@ export const metadata = {
 };
 
 import PortfolioFeature from '@/src/components/layouts/portfolio/portfolio-feature';
-import PortfolioHero from '@/src/components/layouts/portfolio/portfolio-hero';
+import HeroBg from '@/public/images/bg-3.png';
+import OtherHero from '@/src/components/ui/other-hero';
 
 export default function Portfolio() {
   return (
     <>
-      <PortfolioHero />
+      <OtherHero src={HeroBg} title={"作品欣賞"} desc={"Portfolio"}/>
       <PortfolioFeature/>
     </>
   );

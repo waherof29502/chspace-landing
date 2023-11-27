@@ -1,17 +1,17 @@
 // 共用組件內容（Menu,Footer）
 export const NAV_ITEMS = [
-  { id: 1, navItems: '關於文域', link: '#1' },
+  { id: 1, navItems: '關於文域', link: '/about-us' },
   { id: 2, navItems: '作品欣賞', link: '/portfolio' },
-  { id: 3, navItems: '服務與流程', link: '#2' },
-  { id: 4, navItems: '媒體報導', link: '#3' },
-  { id: 5, navItems: '文・域', link: '#4' },
-  { id: 6, navItems: '聯絡文域', link: '#5' },
+  { id: 3, navItems: '服務與流程', link: '/services' },
+  { id: 4, navItems: '媒體報導', link: '/new' },
+  { id: 5, navItems: '文・域', link: '/chspace' },
+  { id: 6, navItems: '聯絡文域', link: '/contact-us' },
 ];
 
 export const FOOTER_ITEMS = [
-  { id: 1, navItems: '關於文域', link: '#1' },
+  { id: 1, navItems: '關於文域', link: '/about-us' },
   { id: 2, navItems: '作品欣賞', link: '/portfolio' },
-  { id: 3, navItems: '服務與流程', link: '#2' },
+  { id: 3, navItems: '服務與流程', link: '/services' },
 ];
 
 // 首頁內容

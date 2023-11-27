@@ -4,13 +4,13 @@ export const metadata = {
   
 };
 import OtherHero from '@/src/components/ui/other-hero';
-import PortfolioBg from '@/public/images/portfolio-bg.png';
+import HeroBg from '@/public/images/bg-8.png';
 import Contact from '@/src/components/layouts/contact-us/contact'
 export default function ContactUs() {
 
   return (
     <>
-     <OtherHero src={PortfolioBg} title={"聯絡文域"} desc={"Contact Us"}/>
+     <OtherHero src={HeroBg} title={"聯絡文域"} desc={"Contact Us"}/>
      <Contact/>
     </>
   );
