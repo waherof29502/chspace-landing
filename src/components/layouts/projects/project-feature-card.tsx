@@ -1,8 +1,8 @@
 
 import Award from '@/public/svg/award.svg'
-import WorkDataCard from './project-data-card';
+import ProjectDataCard from './project-data-card';
 import {PROJECTDETAIL} from '@/src/constants'
-interface WorkFeatureProps {
+interface ProjectFeatureProps {
   imageSrc: string;
   title: string;
   location: string;
@@ -13,7 +13,7 @@ interface WorkFeatureProps {
 }
 
 
-const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: WorkFeatureProps) => {
+const ProjectFeatureCard = ({ imageSrc, title, location,link, category,desc,awards}: ProjectFeatureProps) => {
 
   return (
      <div className={`mx-auto mb-10 md:mb-[160px] flex flex-1 flex-col`}>  
@@ -54,7 +54,7 @@ const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: Wo
             
       <div className='flex-1 w-full xl:w-[1300px] justify-between md:mt-[86px]'>
        {PROJECTDETAIL.slice(0, 1).map((item) => (
-            <WorkDataCard key={item.id} category={item.category} spaceType={item.spaceType} houseStatus={item.houseStatus} familyMember={item.familyMember} houseSpace={item.houseSpace} designStyle={item.designStyle}/> 
+            <ProjectDataCard key={item.id} category={item.category} spaceType={item.spaceType} houseStatus={item.houseStatus} familyMember={item.familyMember} houseSpace={item.houseSpace} designStyle={item.designStyle}/> 
             ))}
             </div>
         </div>
@@ -63,4 +63,4 @@ const ProjectCard = ({ imageSrc, title, location,link, category,desc,awards}: Wo
   );
 };
 
-export default ProjectCard;
+export default ProjectFeatureCard;

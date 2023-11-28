@@ -12,7 +12,7 @@ interface FormValues {
   message?: string;
 }
 
-export default function ContactUs() {
+export default function ContactForm() {
     const router = useRouter();
     const formik = useFormik<FormValues>({
         initialValues:{
@@ -48,12 +48,7 @@ export default function ContactUs() {
     formik.handleSubmit();
   };
   return (
-          <section className='relative overflow-hidden'>
-            <div className='py-2 md:py-20'>
-            <div className='text-primary flex flex-col items-center justify-center'>
-              <h1 className='text-[16px] md:text-[22px] font-sansCjk font-normal tracking-[3.3px] capitalize pt-8 md:pb-10 px-8'>
-                請填寫並發送下面的諮詢表單，服務專員將盡快與您聯繫
-              </h1>
+    <>
               <form onSubmit={formik.handleSubmit} className="flex flex-col md:flex-row rounded-lg flex-1 w-full lg:w-3/4 3xl:w-2/3 justify-center items-center  mb-10">
                 <div className="flex-1 w-full text-[#1b1b1b] px-5 xxxl:px-20 ">
                   <div className="mt-6 p-5 lg:p-0">
@@ -153,9 +148,7 @@ export default function ContactUs() {
                                 <div className="w-0 group-hover:w-10 h-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-x-2 duration-1000" />
                                 <p className='font-syne font-bold text-white text-[14px] lg:text-[16px] translate-x-0 transform transition-transform group-hover:translate-x-3 md:group-hover:translate-x-6 duration-1000'>Send Now</p>
                     </button>
-                        </div>
-                      </div>  
-          </section>
+             </>         
   );
 }
 

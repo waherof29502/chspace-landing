@@ -5,8 +5,8 @@ import Image from 'next/image';
 import Carousel from '@/src/components/utils/carousel'
 import CarouselText from '@/src/components/utils/carousel-text'
 import ProjectCard from './project-feature-card';
+import OtherCard from '@/src/components/utils/other-card';
 import NewsBg from '@/public/images/bg-2.png';
-import ProjectOtherCard from './project-others-card'
 import {PORTFOLIO_PAGE_ITEMS,SLIDERS01,OTHERSPROJECT01,NEWS01} from '@/src/constants'
 import IconFb from '@/public/svg/fb-solid.svg'
 import IconIg from '@/public/svg/ig-solid.svg'
@@ -26,7 +26,6 @@ export default function project01() {
 
   return (
     <section className='relative'>
-
        <div className="max-w-8xl md:min-h-screen p-2 ">
         <Lightbox
         open={openLightBox}
@@ -99,7 +98,7 @@ export default function project01() {
             </div>
           <div className="lg:hidden flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
             {OTHERSPROJECT01.map((item) => (
-            <ProjectOtherCard 
+            <OtherCard 
                   key={item.id}
                   dataIndex= {item.id}
                   src={item.src}  
@@ -111,7 +110,7 @@ export default function project01() {
           <div className="hidden lg:flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
              <CarouselText autoSlide={false} setCurr={setCurrText} curr={currText}>
            {OTHERSPROJECT01.map((item)=>(
-          <ProjectOtherCard 
+          <OtherCard 
                   key={item.id}
                   dataIndex= {item.id}
                   src={item.src}  
@@ -141,11 +140,7 @@ export default function project01() {
             <p className={`mx-[10px] md:mx-[50px] lg:mx-[100px] xl:mx-[125px] wide:mx-[220px] ${item.id ==1 ?"mt-[60px]" :" mt-[10px]"} mb-[40px] text-primary text-[14px] md:text-[16px] font-semibold  ${item.id == NEWS01.length  ?" border-b-[0px] -mb-[25px]" :" border-b-[3px]"} border-[#fff] border-solid pb-[50px]`}>{item.content}</p>
 </div>))}
         </div>
-        </div>
-    
-           
-     
-           
+        </div>    
     </section>
   );
 }

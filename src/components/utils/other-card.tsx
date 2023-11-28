@@ -3,14 +3,17 @@ import React, { useState, useRef, useEffect } from 'react';
 import type { RefObject } from 'react';
 import Image from 'next/image';
 
-interface ProjectOthersCardProps {
+interface OthersCardProps {
   dataIndex:number;
   src: string;
-  title:string;
-  desc:string
+  title?:string;
+  otherTitle?:string;
+  date?:string;
+  desc?:string;
+  tag?:string
 }
 
-const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) => {
+const OtherCard = ({ dataIndex,src,title,otherTitle,desc,date,tag}: OthersCardProps ) => {
     const TOTAL_CAROUSEL_COUNT = dataIndex;
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef: RefObject<HTMLDivElement> = useRef(null);
@@ -76,9 +79,15 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
             width={427}
             height={267}
             className='w-full object-contain'
-          />      
+          />  
+          <div className='flex pt-3'>
+          <span className='text-[#464646] font-syne text-[14px] tracking-[0.42px] pr-2'>{tag}</span>
+          <span className='text-[#464646] font-syne text-[14px] tracking-[0.42px] '>{date}</span>
+          </div>
+         {/* <p className='text-[12px] md:text-[14px] 3xl:text-[16px] mt-[6px] text-primary font-semibold tracking-[1.8px]'>{otherTitle}</p> */}
+
           <div className='flex flex-col items-start mt-6 lg:mt-2 xl:flex-row xl:items-center 3xl:flex-col 3xl:items-start '>
-          <p className='text-[12px] md:text-[14px] 3xl:text-[18px] mt-2 text-primary font-semibold tracking-[1.8px]'>{title}</p>
+          <p className='text-[12px] md:text-[14px] 3xl:text-[16px] mt-2 text-primary font-semibold tracking-[1.8px]'>{title}</p>
            <p className='mt-2 md:mt-0 xl:mt-[12px] xl:ml-2 3xl:ml-0 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
            </div>
           </div>
@@ -91,4 +100,4 @@ const ProjectOtherCard = ({ dataIndex,src,title,desc}: ProjectOthersCardProps ) 
   );
 };
 
-export default ProjectOtherCard;
+export default OtherCard;

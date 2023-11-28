@@ -1,18 +1,10 @@
 'use client'
 import {useState,useEffect} from 'react'
-import PortfolioCard from './portfolio-feature-card';
-import {PORTFOLIO_PAGE_ITEMS} from '@/src/constants'
+import PortfolioCard from '../ui/portfolio-feature-card';
+import {PORTFOLIO_PAGE_ITEMS,PORTFOLIO_FILTER_LISTS} from '@/src/constants'
 
-const FILTER_LISTS =[
-  {id:1,title:'All',category:'All'},
-  {id:2,title:'住宅設計',category:'住宅設計'},
-  {id:3,title:'辦公室設計',category:'辦公室設計'},
-  {id:4,title:'文化場域設計',category:'文化場域設計'},
-  {id:5,title:'商空設計',category:'商空設計'},
-  {id:6,title:'展場設計',category:'展場設計'},
 
-]
-export default function PortfolioFeature() {
+export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All")
    const [top, setTop] = useState<boolean>(true);
 
@@ -52,12 +44,12 @@ export default function PortfolioFeature() {
             <div className={`text-primary grid grid-cols-2  md:flex md:flex-row justify-center items-center font-serif mt-10 md:mt-10 md:-mb-[40px] lg:mb-[100px] ${
         !top ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[250px] md:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2' : ''
       }`}>
-              {FILTER_LISTS.map((item)=>(
+              {PORTFOLIO_FILTER_LISTS.map((item)=>(
                  <button
                   key={item.id}
                   onClick={() => setActiveCategory(item.category)}
                    className={`px-8 ${
-                    item.id !== FILTER_LISTS[FILTER_LISTS.length - 1].id
+                    item.id !== PORTFOLIO_FILTER_LISTS[PORTFOLIO_FILTER_LISTS.length - 1].id
                     ? 'md:border-r-[1px] border-[#9c9c9c] border-solid mb-10 md:mb-0'
                     : 'mb-10 md:mb-0'
                     }`}

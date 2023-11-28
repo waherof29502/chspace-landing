@@ -5,13 +5,23 @@ export const metadata = {
 };
 import OtherHero from '@/src/components/ui/other-hero';
 import HeroBg from '@/public/images/bg-8.png';
-import Contact from '@/src/components/layouts/contact-us/contact'
+import ContactForm from '@/src/components/utils/contact-form';
 export default function ContactUs() {
 
   return (
     <>
-     <OtherHero src={HeroBg} title={"聯絡文域"} desc={"Contact Us"}/>
-     <Contact/>
+    <OtherHero src={HeroBg} title={"聯絡文域"} desc={"Contact Us"}/>
+    <section className='relative overflow-hidden'>
+      <div className='py-2 md:py-20'>
+        <div className='text-primary flex flex-col items-center justify-center'>
+          <span className='text-[16px] md:text-[22px] font-sansCjk font-normal tracking-[3.3px] capitalize pt-8 md:pb-10 px-8'>
+                請填寫並發送下面的諮詢表單，服務專員將盡快與您聯繫
+          </span>
+            <ContactForm />
+      </div>
+        </div>  
+    </section>
+
     </>
   );
 }

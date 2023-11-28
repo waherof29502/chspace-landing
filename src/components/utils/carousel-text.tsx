@@ -25,7 +25,7 @@ const CarouselText = ({ children, autoSlide = false, autoSlideInterval = 3000 ,c
 
     return (
         <div className='overflow-x-hidden overflow-y-visible relative rounded-lg' >
-            <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${curr * 45}%)` }}  >
+            <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${curr * 42}%)` }}  >
                 {children}
             </div>
             <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10">

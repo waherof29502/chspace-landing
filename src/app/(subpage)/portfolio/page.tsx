@@ -4,7 +4,7 @@ export const metadata = {
   
 };
 
-import PortfolioFeature from '@/src/components/layouts/portfolio/portfolio-feature';
+import PortfolioFeature from '@/src/components/layouts/portfolio';
 import HeroBg from '@/public/images/bg-3.png';
 import OtherHero from '@/src/components/ui/other-hero';
 
