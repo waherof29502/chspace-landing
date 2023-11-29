@@ -26,8 +26,8 @@ const Carousel = ({ children, autoSlide = false, autoSlideInterval = 3000 ,curr,
 
 
     return (
-        <div className='overflow-x-hidden overflow-y-visible relative rounded-lg' >
-            <div className='flex transition-transform ease-out duration-500' style={{ transform: `translateX(-${curr * 100}%)` }}  >
+        <div className='overflow-x-hidden overflow-y-hidden relative rounded-lg' >
+            <div className='flex transition-transform ease-out duration-500 h-[100vh]' style={{ transform: `translateX(-${curr * 100}%)` }}  >
                 {children}
             </div>
             <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10">

@@ -23,7 +23,7 @@ export default function Footer() {
             <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
               <Link href='#1' className='item-center font-sansCjk text-white text-[22px] group'>
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in group-hover:translate-y-1 duration-500" />
-                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '1.6em' }}>
+                <span className='block group-hover:translate-y-6 duration-500 tracking-[43.5px]' >
                   文・域
                 </span>
               </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
                 className='items-center text-white font-sansCjk md:ml-5 lg:ml-[100px] text-[22px] group'
               >
                  <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
-                <span className='block group-hover:translate-y-6 duration-500' style={{ letterSpacing: '0.6em' }}>
+                <span className='block group-hover:translate-y-6 duration-500 tracking-[11.2px]' >
                   服務與流程
                 </span>
               </Link>

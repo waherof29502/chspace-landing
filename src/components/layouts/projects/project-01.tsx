@@ -38,7 +38,7 @@ export default function project01() {
       />  
         <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox}>
            {SLIDERS01.map((item)=>(
-                <Image key={item.id} src={item.src} width={2560} height="1270" alt="12" className='2xl:h-[1270px] wide:h-[1560px] wider:h-[1720px]' />
+                <Image key={item.id} src={item.src} width={2560} height="1270" alt="12" className='object-cover 2lg:h-[860px] 2xl:h-[1120px] wide:h-[1560px] wider:h-[1720px] ' />
            ))}
         </Carousel>
       </div>
@@ -51,7 +51,7 @@ export default function project01() {
                     ))}
                 </div>
             </div>
-        <div className='hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:-mt-[120px] 2md:-mt-[50px] 3md:-mt-[200px] lg:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]'>
+        <div className='hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:mt-[100px] lg:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]'>
                 <div className='flex items-center justify-center gap-2 z-10'>
                     {SLIDERS01.map((_, i) => (
                         <div key={i} className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[18px] lg:h-[18px] bg-black rounded-full  ${curr === i ? "p-0.5 bg-[#545351]" : "bg-opacity-20"}`} 

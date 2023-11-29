@@ -2,7 +2,6 @@
 import {useState} from 'react';
 import {SERVICESFILTER} from '@/src/constants'
 import Image from 'next/image';
-import { IconHouse } from '@/public/svg';
 const PROCESSINFO = [
     {id:1,title:'初步溝通',desc:'彙整基本需求後，將由專人電訪與諮詢',contact:'TEL:+886-2-27386876 | FAX:+886-2-27386878'},
     {id:2,title:'設計合約',desc:'簽訂設計合約，進行細部空間規劃'},
@@ -36,7 +35,13 @@ export default function Service() {
     <section>Service
     <div className='min-h-screen flex flex-col w-full justify-start mx-auto'>
     <div className='min-h-fit w-full flex justify-center'>
-          <div className={` flex flex-row justify-center items-center font-serif mt-5 md:mt-10 md:mb-[100px] `}>
+    <div className={` flex flex-row justify-center items-center font-serif mt-5 md:mt-10 md:mb-[100px] `}>
+        <div className="flex items-start">
+            <div className='w-1/3 px-2'>
+            {filterProjects().map((item) =>(
+                <Image src={item.src} width={500} height={400} alt={item.title} />
+             ))}
+             </div>
               {SERVICESFILTER.map((item)=>(
                  <button
                   key={item.id}
@@ -52,6 +57,8 @@ export default function Service() {
                 </button>
               ))}
             </div>
+         </div>
+
     </div>
     <div className='grid grid-cols-2 gap-[200px] pl-[100px]'>
         <ul>

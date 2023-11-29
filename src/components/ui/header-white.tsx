@@ -34,7 +34,7 @@ export default function HeaderWhite() {
                 <li key={item.id}>
                   <Link
                     href={item.link}
-                    className={`font-normal px-2 2md:px-[14px] 3md:px-4 2xl:px-5 3xl:px-10  py-3 flex items-center md:tracking-[3.2px] xl:tracking-[6.4px] transition duration-150 ease-in-out text-slate-600 `}
+                    className={`font-normal px-2 2md:px-[14px] 3md:px-4 2xl:px-5 3xl:px-10  py-3 flex items-center md:tracking-[3.2px] xl:tracking-[6.4px] transition duration-150 ease-in-out text-[#1B1B1B] `}
                   >
                     {item.navItems}
                   </Link>

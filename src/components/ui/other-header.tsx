@@ -39,7 +39,7 @@ export default function OtherHeader() {
                   <Link
                     href={item.link}
                     className={`font-normal px-2 2md:px-[14px] 3md:px-4 2xl:px-5 3xl:px-10 flex md:tracking-[3.2px] xl:tracking-[6.4px] items-center transition duration-150 ease-in-out ${
-                      !top ? 'text-slate-600' : ''
+                      !top ? 'text-[#1B1B1B]' : ''
                     }`}
                   >
                     {item.navItems}
