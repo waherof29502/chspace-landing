@@ -1,3 +1,6 @@
+import { IconHouse,IconBag,IconCube,IconLeaf,IconCup } from "@/public/svg";
+
+import React from "react";
 // 共用組件內容（Menu,Footer）
 export const NAV_ITEMS = [
   { id: 1, navItems: '關於文域', link: '/about-us' },
@@ -15,12 +18,19 @@ export const FOOTER_ITEMS = [
 ];
 
 // 首頁內容
+// export const SERVICE_ITEMS = [
+//   { id: 1, src: '/images/3-1.png', title: '住宅設計', icon: '/svg/house.svg' },
+//   { id: 2, src: '/images/3-2.png', title: '辦公室設計', icon: '/svg/bag.svg' },
+//   { id: 3, src: '/images/3-3.png', title: '文化場域設計', icon: '/svg/leaf.svg' },
+//   { id: 4, src: '/images/3-4.png', title: '商空設計', icon: '/svg/cup.svg' },
+//   { id: 5, src: '/images/3-5.png', title: '展場設計', icon: '/svg/cube.svg' },
+// ];
 export const SERVICE_ITEMS = [
-  { id: 1, src: '/images/3-1.png', title: '住宅設計', icon: '/svg/house.svg' },
-  { id: 2, src: '/images/3-2.png', title: '辦公室設計', icon: '/svg/bag.svg' },
-  { id: 3, src: '/images/3-3.png', title: '文化場域設計', icon: '/svg/leaf.svg' },
-  { id: 4, src: '/images/3-4.png', title: '商空設計', icon: '/svg/cup.svg' },
-  { id: 5, src: '/images/3-5.png', title: '展場設計', icon: '/svg/cube.svg' },
+  { id: 1, src: '/images/3-1.png', title: '住宅設計', icon: React.createElement(IconHouse) },
+  { id: 2, src: '/images/3-2.png', title: '辦公室設計', icon: React.createElement(IconBag) },
+  { id: 3, src: '/images/3-3.png', title: '文化場域設計', icon: React.createElement(IconLeaf) },
+  { id: 4, src: '/images/3-4.png', title: '商空設計', icon: React.createElement(IconCup) },
+  { id: 5, src: '/images/3-5.png', title: '展場設計', icon: React.createElement(IconCube) },
 ];
 
 export const PORTFOLIO_ITEMS = [
@@ -70,6 +80,15 @@ export const NEWS01 = [
   {id:1,content:'【2022 iF獎設計】放緩生活步調享受日光、木質的洗禮'},
   {id:2,content:'「專訪」日日時光一起生活的初心！'},
   {id:3,content:'【SHOW AWARDS】文域設計 獲2022 年―書店 | 別墅 | 住宅 | 辦公空間―4 項IF 設計大獎'},
+]
+
+// services page
+export const SERVICESFILTER = [
+    {id:1,title:'住宅設計',category:'住宅設計',src:"/images/services/1-1.png",icon:React.createElement(IconHouse)},
+    {id:2,title:'辦公室設計',category:'辦公室設計',src:"/images/services/1-2.png",icon:React.createElement(IconBag) },
+    {id:3,title:'文化場域設計',category:'文化場域設計',src:"/images/services/1-3.png",icon: React.createElement(IconLeaf)},
+    {id:4,title:'商空設計',category:'商空設計',src:"/images/services/1-4.png", icon: React.createElement(IconCup)},
+    {id:5,title:'展場設計',category:'展場設計',src:"/images/services/1-5.png",icon: React.createElement(IconCube)}
 ]
 
 //media report page
