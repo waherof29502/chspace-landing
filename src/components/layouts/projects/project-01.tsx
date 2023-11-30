@@ -138,7 +138,7 @@ export default function project01() {
         <div className='flex flex-col justify-start item-center'>
           {NEWS01.map((item) => (<div key={item.id} >
             <p className={`mx-[10px] md:mx-[50px] lg:mx-[100px] xl:mx-[125px] wide:mx-[220px] ${item.id ==1 ?"mt-[60px]" :" mt-[10px]"} mb-[40px] text-primary text-[14px] md:text-[16px] font-semibold  ${item.id == NEWS01.length  ?" border-b-[0px] -mb-[25px]" :" border-b-[3px]"} border-[#fff] border-solid pb-[50px]`}>{item.content}</p>
-</div>))}
+        </div>))}
         </div>
         </div>    
     </section>

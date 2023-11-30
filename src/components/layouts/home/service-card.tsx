@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react';
+import React, {ReactElement , useState, useRef, useEffect } from 'react';
 import type { RefObject } from 'react';
 import Image from 'next/image';
 
@@ -7,7 +7,7 @@ interface ServiceProps {
  dataIndex:number;
   src: string;
   title: string;
-  icon: string;
+  icon: ReactElement;
 }
 
 const ServiceCard = ({ dataIndex,src, title, icon }: ServiceProps) => {
