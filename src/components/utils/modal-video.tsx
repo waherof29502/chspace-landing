@@ -8,11 +8,7 @@ interface ModalVideoProps {
   videoHeight: number;
 }
 
-export default function ModalVideo({
-  video,
-  videoWidth,
-  videoHeight,
-}: ModalVideoProps) {
+export default function ModalVideo({ video, videoWidth, videoHeight }: ModalVideoProps) {
   const videoEl = useRef<HTMLVideoElement>(null);
   const attemptPlay = () => {
     videoEl &&
@@ -26,16 +22,16 @@ export default function ModalVideo({
   }, []);
 
   return (
-    <div className='relative w-full h-screen'>
+    <div className="relative w-full h-screen">
       <video
-        className='p-3 rounded-2xl absolute inset-0 w-full h-full object-cover'
+        className="p-3 rounded-2xl absolute inset-0 w-full h-full object-cover"
         ref={videoEl}
         width={videoWidth}
         height={videoHeight}
         muted
         loop
       >
-        <source src={video} type='video/mp4' />
+        <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

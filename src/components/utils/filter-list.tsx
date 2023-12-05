@@ -1,14 +1,11 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import { useState } from 'react';
 
+export default function FilterList({ FilterList }: any) {
+  const [activeCategory, setActiveCategory] = useState('All');
 
-export default function FilterList({
-  FilterList
-}: any) {
-const [activeCategory, setActiveCategory] = useState("All")
-
-const filterProjects = () => {
+  const filterProjects = () => {
     if (activeCategory === 'All') {
       return FilterList;
     } else {
@@ -16,11 +13,12 @@ const filterProjects = () => {
     }
   };
 
-
-   return (
+  return (
     <div
       className={`text-primary grid grid-cols-2  md:flex md:flex-row justify-center items-center font-serif mt-10 md:mt-10 md:-mb-[40px] lg:mb-[100px] ${
-        !top ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[250px] md:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2' : ''
+        !top
+          ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[250px] md:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2'
+          : ''
       }`}
     >
       {FilterList.map((item: any) => (

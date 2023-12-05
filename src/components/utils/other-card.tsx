@@ -1,20 +1,20 @@
-'use client'
+'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import type { RefObject } from 'react';
 import Image from 'next/image';
 
 interface OthersCardProps {
-  dataIndex:number;
-  src: string;
-  title?:string;
-  otherTitle?:string;
-  date?:string;
-  desc?:string;
-  tag?:string
+  dataIndex: number;
+  imageUrl: string;
+  title?: string;
+  otherTitle?: string;
+  date?: string;
+  desc?: string;
+  tag?: string;
 }
 
-const OtherCard = ({ dataIndex,src,title,otherTitle,desc,date,tag}: OthersCardProps ) => {
-    const TOTAL_CAROUSEL_COUNT = dataIndex;
+const OtherCard = ({ dataIndex, imageUrl, title, otherTitle, desc, date, tag }: OthersCardProps) => {
+  const TOTAL_CAROUSEL_COUNT = dataIndex;
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef: RefObject<HTMLDivElement> = useRef(null);
 
@@ -26,9 +26,7 @@ const OtherCard = ({ dataIndex,src,title,otherTitle,desc,date,tag}: OthersCardPr
     e.preventDefault();
 
     if (carouselRef.current) {
-      const scrollLeft = Math.floor(
-        (carouselRef.current.scrollWidth * 0.7) * (i /  dataIndex)
-      );
+      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / dataIndex));
 
       scroll(carouselRef.current, scrollLeft);
     }
@@ -36,11 +34,7 @@ const OtherCard = ({ dataIndex,src,title,otherTitle,desc,date,tag}: OthersCardPr
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      const index = Math.round(
-        (carouselRef.current.scrollLeft /
-          (carouselRef.current.scrollWidth * 0.7)) *
-           dataIndex
-      );
+      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * dataIndex);
 
       setActiveItem(index);
     }
@@ -50,9 +44,9 @@ const OtherCard = ({ dataIndex,src,title,otherTitle,desc,date,tag}: OthersCardPr
   // Avoids a bug where content is covered up if coming from a smaller screen
   useEffect(() => {
     const handleResize = () => {
-     if (carouselRef.current) {
-    scroll(carouselRef.current, 0);
-  }
+      if (carouselRef.current) {
+        scroll(carouselRef.current, 0);
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -61,42 +55,43 @@ const OtherCard = ({ dataIndex,src,title,otherTitle,desc,date,tag}: OthersCardPr
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  
 
   return (
-      <div ref={carouselRef} onScroll={handleScroll}>
-          <div
-            className={`w-60 3md:w-[300px] xl:w-[350px] wide:w-[435px] p-2 ${
-              dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
-            }  rounded-lg cursor-pointer`}
-            onClick={(e) => handleClick(e, dataIndex)}
-          >
-           <div className='relative overflow-hidden rounded-lg'>
-          <div className='flex flex-col'>
-          <Image
-            src={src}
-            alt={dataIndex.toString()}
-            width={427}
-            height={267}
-            className='w-full object-contain'
-          />  
-          <div className='flex pt-3'>
-          <span className='text-[#464646] font-syne text-[14px] tracking-[0.42px] pr-2'>{tag}</span>
-          <span className='text-[#464646] font-syne text-[14px] tracking-[0.42px] '>{date}</span>
-          </div>
-         {/* <p className='text-[12px] md:text-[14px] 3xl:text-[16px] mt-[6px] text-primary font-semibold tracking-[1.8px]'>{otherTitle}</p> */}
+    <div ref={carouselRef} onScroll={handleScroll}>
+      <div
+        className={`w-60 3md:w-[300px] xl:w-[350px] wide:w-[435px] p-2 ${
+          dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
+        }  rounded-lg cursor-pointer`}
+        onClick={(e) => handleClick(e, dataIndex)}
+      >
+        <div className="relative overflow-hidden rounded-lg">
+          <div className="flex flex-col">
+            <Image
+              src={imageUrl}
+              alt={dataIndex.toString()}
+              width={427}
+              height={267}
+              className="w-full object-contain"
+            />
+            <div className="flex pt-3">
+              <span className="text-[#464646] font-syne text-[14px] tracking-[0.42px] pr-2">{tag}</span>
+              <span className="text-[#464646] font-syne text-[14px] tracking-[0.42px] ">{date}</span>
+            </div>
+            {/* <p className='text-[12px] md:text-[14px] 3xl:text-[16px] mt-[6px] text-primary font-semibold tracking-[1.8px]'>{otherTitle}</p> */}
 
-          <div className='flex flex-col items-start mt-6 lg:mt-2 xl:flex-row xl:items-center 3xl:flex-col 3xl:items-start '>
-          <p className='text-[12px] md:text-[14px] 3xl:text-[16px] mt-2 text-primary font-semibold tracking-[1.8px]'>{title}</p>
-           <p className='mt-2 md:mt-0 xl:mt-[12px] xl:ml-2 3xl:ml-0 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]'>{desc}</p>
-           </div>
+            <div className="flex flex-col items-start mt-6 lg:mt-2 xl:flex-row xl:items-center 3xl:flex-col 3xl:items-start ">
+              <p className="text-[12px] md:text-[14px] 3xl:text-[16px] mt-2 text-primary font-semibold tracking-[1.8px]">
+                {title}
+              </p>
+              <p className="mt-2 md:mt-0 xl:mt-[12px] xl:ml-2 3xl:ml-0 text-[10px] md:text-[12px] font-sansCjk font-normal  text-[#464646]">
+                {desc}
+              </p>
+            </div>
           </div>
-      <div className='absolute inset-0 flex flex-col justify-center items-center p-0 md:p-6 '>   
+          <div className="absolute inset-0 flex flex-col justify-center items-center p-0 md:p-6 "></div>
+        </div>
       </div>
     </div>
-          </div>
-      
-      </div>
   );
 };
 

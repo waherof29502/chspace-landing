@@ -6,11 +6,7 @@ import { useEffect } from 'react';
 // import 'aos/dist/aos.css';
 
 import OtherHeader from '@/src/components/ui/other-header';
-export default function PortfolioLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PortfolioLayout({ children }: { children: React.ReactNode }) {
   // useEffect(() => {
   //   AOS.init({
   //     once: true,
@@ -23,7 +19,7 @@ export default function PortfolioLayout({
   return (
     <>
       <OtherHeader />
-      <main className='grow'>{children}</main>
+      <main className="grow">{children}</main>
     </>
   );
 }

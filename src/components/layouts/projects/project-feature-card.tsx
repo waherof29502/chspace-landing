@@ -1,62 +1,64 @@
-
-import Award from '@/public/svg/award.svg'
+import Award from '@/public/svg/award.svg';
 import ProjectDataCard from './project-data-card';
-import {PROJECTDETAIL} from '@/src/constants'
+import { PROJECTDETAIL } from '@/src/constants';
 interface ProjectFeatureProps {
-  imageSrc: string;
+  imageUrl?: string;
   title: string;
   location: string;
-  link:string;
+  link: string;
   category: string;
-  desc?:string;
-  awards?:string
+  desc?: string;
+  awards?: string;
 }
 
-
-const ProjectFeatureCard = ({ imageSrc, title, location,link, category,desc,awards}: ProjectFeatureProps) => {
-
+const ProjectFeatureCard = ({ imageUrl, title, location, link, category, desc, awards }: ProjectFeatureProps) => {
   return (
-     <div className={`mx-auto mb-10 md:mb-[160px] flex flex-1 flex-col`}>  
-      <div className='flex justify-start items-center mt-2 p-2 md:p-0'>
-        <div className='text-primary font-sans w-full md:w-[920px] pt-8 md:pt-[50px]'>
-        <div className='flex flex-col max-w-2xl'>
-        <h1 className='text-[32px] font-sansCjk md:text-[38px] font-semibold py-[3px]'>
-          {title}
-        </h1>
-         <span className='text-[#1b1b1b] text-[24px] font-medium mt-[20px] tracking-wide font-sansCjk '>{location}</span>
-          <span className='text-[#1b1b1b] text-[16px] font-medium mt-[50px] tracking-[1.76px] font-sansCjk leading-[39px]'> {desc}</span>
-          <div className='flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:-mb-[45px]'>
-              <h2 className='font-syne text-[30px] md:text-[48px] font-normal capitalize'>
-               Awards
-              </h2>
-              <span className='pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]'>
-                獲獎事蹟
-              </span>
+    <div className={`mx-auto mb-10 md:mb-[160px] flex flex-1 flex-col`}>
+      <div className="flex justify-start items-center mt-2 p-2 md:p-0">
+        <div className="text-primary font-sans w-full md:w-[920px] pt-8 md:pt-[50px]">
+          <div className="flex flex-col max-w-2xl">
+            <h1 className="text-[32px] font-sansCjk md:text-[38px] font-semibold py-[3px]">{title}</h1>
+            <span className="text-[#1b1b1b] text-[24px] font-medium mt-[20px] tracking-wide font-sansCjk ">
+              {location}
+            </span>
+            <span className="text-[#1b1b1b] text-[16px] font-medium mt-[50px] tracking-[1.76px] font-sansCjk leading-[39px]">
+              {' '}
+              {desc}
+            </span>
+            <div className="flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:-mb-[45px]">
+              <h2 className="font-syne text-[30px] md:text-[48px] font-normal capitalize">Awards</h2>
+              <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]">獲獎事蹟</span>
             </div>
-         <div className='flex flex-1 flex-col md:flex-row max-w-2xl items-start md:items-center mt-[30px] mb-[30px] md:mb-0 md:mt-[86px]'>
-         <Award className='text-[52px] md:text-[104px] mr-10'/>
-         <div className='text-primary md:border-l-[1.2px] border-[#D6D6D6] border-solid md:pl-6 mt-[20px] '>
-          <span className='text-[#1b1b1b] text-[16px] font-sansCjk font-medium tracking-[1.76px] leading-[35px] '> {awards}</span>
+            <div className="flex flex-1 flex-col md:flex-row max-w-2xl items-start md:items-center mt-[30px] mb-[30px] md:mb-0 md:mt-[86px]">
+              <Award className="text-[52px] md:text-[104px] mr-10" />
+              <div className="text-primary md:border-l-[1.2px] border-[#D6D6D6] border-solid md:pl-6 mt-[20px] ">
+                <span className="text-[#1b1b1b] text-[16px] font-sansCjk font-medium tracking-[1.76px] leading-[35px] ">
+                  {' '}
+                  {awards}
+                </span>
+              </div>
+            </div>
           </div>
-         </div>
-        </div>
-        <div className=''>
-         <div className='flex flex-row md:flex-row md:justify-start items-center mt-[50px] md:-mb-[45px] '>
-              <h2 className='font-syne text-[30px] md:text-[48px] font-normal capitalize'>
-               Data
-              </h2>
-              <span className='pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]'>
-                空間資料
-              </span>
+          <div className="">
+            <div className="flex flex-row md:flex-row md:justify-start items-center mt-[50px] md:-mb-[45px] ">
+              <h2 className="font-syne text-[30px] md:text-[48px] font-normal capitalize">Data</h2>
+              <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]">空間資料</span>
             </div>
-           
-            </div>
-            
-      <div className='flex-1 w-full xl:w-[1300px] justify-between md:mt-[86px]'>
-       {PROJECTDETAIL.slice(0, 1).map((item) => (
-            <ProjectDataCard key={item.id} category={item.category} spaceType={item.spaceType} houseStatus={item.houseStatus} familyMember={item.familyMember} houseSpace={item.houseSpace} designStyle={item.designStyle}/> 
+          </div>
+
+          <div className="flex-1 w-full xl:w-[1300px] justify-between md:mt-[86px]">
+            {PROJECTDETAIL.slice(0, 1).map((item) => (
+              <ProjectDataCard
+                key={item.id}
+                category={item.category}
+                spaceType={item.spaceType}
+                houseStatus={item.houseStatus}
+                familyMember={item.familyMember}
+                houseSpace={item.houseSpace}
+                designStyle={item.designStyle}
+              />
             ))}
-            </div>
+          </div>
         </div>
       </div>
     </div>

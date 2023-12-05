@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import MobileMenu from './mobile-menu';
 import { NAV_ITEMS } from '@/src/constants';
-import Logo from './logo'
+import Logo from './logo';
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 600 ? setTop(false) :  window.pageYOffset >700 ?setTop(false) :setTop(true);
+    window.pageYOffset > 600 ? setTop(false) : window.pageYOffset > 700 ? setTop(false) : setTop(true);
   };
 
   useEffect(() => {
@@ -25,12 +25,12 @@ export default function Header() {
         !top ? 'bg-white ease-in ' : ''
       }`}
     >
-      <div className='h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-8 xl:px-[140px]'>
-        <div className='flex items-center justify-between h-16 pt-6 pr-2 md:h-[170px]'>
-              <Logo top={top}/>
+      <div className="h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-8 xl:px-[140px]">
+        <div className="flex items-center justify-between h-16 pt-6 pr-2 md:h-[170px]">
+          <Logo top={top} />
           {/* Desktop navigation */}
-          <nav className='hidden md:flex md:grow'>
-            <ul className='flex grow font-syne justify-end items-center -mt-[55px] text-[16px] md:text-[14px] lg:text-[16px]'>
+          <nav className="hidden md:flex md:grow">
+            <ul className="flex grow font-syne justify-end items-center -mt-[55px] text-[16px] md:text-[14px] lg:text-[16px]">
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <Link
