@@ -66,9 +66,9 @@ export default function News() {
                     <span className="font-sansCjk text-[14px] text-primary tracking-[0.42px] pt-5">{item.tag}</span>
                     <span className="font-syne text-[14px] text-primary tracking-[0.42px] pt-5">{item.date}</span>
                   </div>
-                  <h1 className="font-sansCjk text-[16px] font-semibold text-primary tracking-[1.76px] pt-6">
+                  <p className="font-sansCjk text-[16px] font-semibold text-primary tracking-[1.76px] pt-6">
                     {item.title}
-                  </h1>
+                  </p>
                 </Link>
               </div>
             ))}

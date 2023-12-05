@@ -1,6 +1,4 @@
-import Logo from '@/public/images/logo-1.png';
-import Image from 'next/image';
-import { IconFb, IconIg, IconShare } from '@/public/svg';
+import { IconFb, IconIg, IconShare,LogoVWhite } from '@/public/svg';
 import Link from 'next/link';
 export default function Footer() {
   return (
@@ -9,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col justify-center items-center mb-2 md:mb-4 md:flex-row md:items-center md:justify-between p-10 xl:px-[120px] py-4 md:py-12">
           {/* Logo */}
           <div className="md:-mt-[30px] ">
-            <Image className="rounded-lg" src={Logo} width={184} height="184" alt="logo" />
+            <LogoVWhite className="text-[184px]"/>
           </div>
 
           {/* Service Nav as */}

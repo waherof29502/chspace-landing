@@ -9,7 +9,7 @@ import News from '@/src/components/layouts/news';
 export default function MediaReport() {
   return (
     <>
-      <OtherHero src={HeroBg} title={'媒體報導'} desc={'Media Reports'} />
+      <OtherHero imageUrl={HeroBg} title={'媒體報導'} desc={'Media Reports'} />
       <News />
     </>
   );

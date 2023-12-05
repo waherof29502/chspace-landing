@@ -11,3 +11,9 @@ export {default as IconBag} from './bag.svg';
 export {default as IconCup} from './cup.svg';
 export {default as IconLeaf} from './leaf.svg';
 export {default as IconCube} from './cube.svg';
+
+
+export {default as LogoHWhite} from './logo-h-w.svg';
+export {default as LogoHBlack} from './logo-h-b.svg';
+export {default as LogoVWhite} from './logo-v-w.svg';
+export {default as LogoVBlack} from './logo-v-b.svg'

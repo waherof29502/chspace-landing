@@ -10,7 +10,7 @@ import OtherHero from '@/src/components/ui/other-hero';
 export default function Portfolio() {
   return (
     <>
-      <OtherHero src={HeroBg} title={'作品欣賞'} desc={'Portfolio'} />
+      <OtherHero imageUrl={HeroBg} title={'作品欣賞'} desc={'Portfolio'} />
       <PortfolioFeature />
     </>
   );

@@ -8,7 +8,7 @@ import ContactForm from '@/src/components/utils/contact-form';
 export default function ContactUs() {
   return (
     <>
-      <OtherHero src={HeroBg} title={'聯絡文域'} desc={'Contact Us'} />
+      <OtherHero imageUrl={HeroBg} title={'聯絡文域'} desc={'Contact Us'} />
       <section className="relative overflow-hidden">
         <div className="py-2 md:py-20">
           <div className="text-primary flex flex-col items-center justify-center">

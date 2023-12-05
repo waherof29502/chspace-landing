@@ -10,7 +10,7 @@ import Service from '@/src/components/layouts/service';
 export default function Services() {
   return (
     <>
-      <OtherHero src={PortfolioBg} title={'服務與流程'} desc={'Services & processes'} />
+      <OtherHero imageUrl={PortfolioBg} title={'服務與流程'} desc={'Services & processes'} />
       <Service />
     </>
   );

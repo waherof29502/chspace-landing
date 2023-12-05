@@ -10,7 +10,7 @@ import Link from 'next/link';
 export default function ChSpace() {
   return (
     <>
-      <OtherHero src={HeroBg} title={'文・域'} desc={'C.H.Space'} />
+      <OtherHero imageUrl={HeroBg} title={'文・域'} desc={'C.H.Space'} />
       <section className="relative overflow-hidden">
         <div className="py-2 md:p-20 w-full">
           <div className="mt-10 columns-1 md:columns-2 lg:columns-3 w-auto space-y-10 items-center">

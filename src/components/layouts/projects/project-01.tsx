@@ -42,7 +42,7 @@ export default function project01() {
               width={2560}
               height="1270"
               alt="12"
-              className="object-cover 2lg:h-[860px] 2xl:h-[1120px] wide:h-[1560px] wider:h-[1720px] "
+              className="object-cover lg:h-[860px] xl:h-[1120px] wide:h-[1560px] wider:h-[1720px] "
             />
           ))}
         </Carousel>

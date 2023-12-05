@@ -1,5 +1,5 @@
 export const metadata = {
-  title: '關於我們',
+  title: '文域設計｜關於文域',
   description: 'Page description'
 };
 
@@ -10,7 +10,7 @@ import About from '@/src/components/layouts/about';
 export default function AboutUs() {
   return (
     <>
-      <OtherHero src={HeroBg} title={'關於文域'} desc={'About Us'} />
+      <OtherHero imageUrl={HeroBg} title={'關於文域'} desc={'About Us'} />
       <About />
     </>
   );

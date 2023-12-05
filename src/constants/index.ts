@@ -201,7 +201,7 @@ export const TEAMIMAGE = [
     title: '謝鎮宇｜Jarvis',
     category: '設計總監',
     src: '/images/about/2-3.png',
-    desc: '「文化創生」是文域設計一貫秉持的理念，在設計中打 造與品牌關聯的文化意涵，在公益與商業之間達到完美的平衡是我所努力的方向。'
+    desc: '「文化創生」是文域設計一貫秉持的理念，在設計中打造與品牌關聯的文化意涵，在公益與商業之間達到完美的平衡是我所努力的方向。'
   },
   { id: 2, title: '張惠茹｜Rita', category: '主任設計師', src: '/images/about/2-4.png' },
   { id: 3, title: '林意婷｜Yiting', category: '燈光設計師', src: '/images/about/2-5.png' },

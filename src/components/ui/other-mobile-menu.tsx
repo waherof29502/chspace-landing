@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import {LogoHWhite} from '@/public/svg';
+import { LogoHWhite} from '@/public/svg';
 import Link from 'next/link';
 import { NAV_ITEMS } from '@/src/constants';
 import { IconFb, IconIg, IconShare } from '@/public/svg';
-export default function MobileMenu() {
+export default function OtherMobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
@@ -36,7 +36,7 @@ export default function MobileMenu() {
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 600 ? setTop(false) : setTop(true);
+    window.pageYOffset > 280 ? setTop(false) : setTop(true);
   };
 
   useEffect(() => {
@@ -71,10 +71,7 @@ export default function MobileMenu() {
         {mobileNavOpen ? (
           <div id="mobile-nav" className="absolute top-0 h-screen pb-16 z-100 left-0 w-full overflow-scroll bg-primary">
             <div className="shrink-0 ml-4 pr-2 pl-1 pt-1 w-1/3">
-              <LogoHWhite className="text-[100px] md:text-[183px]"/>
-              {/* <Link href="/">
-                <Image className="rounded-lg" src={LogoWhite} width={100} height="100" alt="logo" />
-              </Link> */}
+              <LogoHWhite className="text-[100px]"/>
             </div>
             <ul className="px-5 mt-[45px] font-syne">
               {NAV_ITEMS.map((item) => (
