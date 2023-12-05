@@ -13,6 +13,9 @@ export default function Logo({top}:any) {
                 width={183}
                 height='183'
                 alt='logo'
+                quality="95"
+                priority={true}
+
               />
             </div>
   </Link>)

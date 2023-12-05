@@ -21,14 +21,14 @@ export default function Footer() {
           {/* Service Nav as */}
           <div>
             <div className='hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]'>
-              <Link href='#1' className='item-center font-sansCjk text-white text-[22px] group'>
+              <Link href='/chspace' className='item-center font-sansCjk text-white text-[22px] group'>
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in group-hover:translate-y-1 duration-500" />
                 <span className='block group-hover:translate-y-6 duration-500 tracking-[43.5px]' >
                   文・域
                 </span>
               </Link>
               <Link
-                href='#1'
+                href='/contact-us'
                 className='item-center font-sansCjk text-white md:ml-5 text-[22px] group'
               >
                  <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
@@ -37,7 +37,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='#1'
+                href='/news'
                 className='items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group'
               >
                <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
@@ -46,7 +46,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='#1'
+                href='/services'
                 className='items-center text-white font-sansCjk md:ml-5 lg:ml-[100px] text-[22px] group'
               >
                  <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
@@ -55,7 +55,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='#1'
+                href='/portfolio'
                 className='items-center text-white font-sansCjk md:ml-5 text-[22px] group'
               >
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
@@ -64,7 +64,7 @@ export default function Footer() {
                 </span>
               </Link>
               <Link
-                href='#1'
+                href='/about-us'
                 className='items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group'
               >
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />

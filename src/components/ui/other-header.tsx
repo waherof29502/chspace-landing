@@ -23,7 +23,7 @@ export default function OtherHeader() {
   return (
     <header
       className={`fixed w-full z-30 md:bg-opacity-100 transition duration-300 ease-in-out ${
-        !top ? 'bg-white ease-in ' : ''
+        !top ? 'bg-white ease-in duration-0' : ''
       }`}
     >
       <div className='h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-8 xl:px-[140px]'>

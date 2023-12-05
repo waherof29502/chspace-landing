@@ -22,8 +22,9 @@ export default function Content() {
     <div className='flex flex-col justify-start px-10 lg:px-[150px] 3xl:px-[350px] pb-10 3xl:pb-[60px]'>
       <h1 className="text-primary text-[24px] font-sansCjk tracking-[2.64px] font-semibold pb-4">{CHSPACE[0].title}</h1>
       <span className="text-primary text-[16px] font-syne tracking-[0.48px]">{CHSPACE[0].date}</span>
+      <div className="relative left-16 bottom-3  h-px p-[0.5px] w-10 bg-[#C4C4C4] " />
     </div>
-    <div className="px-10 lg:px-[180px] 3xl:px-[420px]">
+    <div className="px-10 lg:px-[180px] 3xl:px-[420px] py-5">
     <Image className='mx-auto rounded-md wider:w-[1920px]' src={CONTENTIMG[0]} alt="chspace-content" width={1090} height={647} />
      <div className='flex flex-col justify-start'>
       <h2 className="text-primary text-[20px] font-medium tracking-[2.2px] pt-10 pb-6">{CHSPACE[0].content?.title[0]}</h2>

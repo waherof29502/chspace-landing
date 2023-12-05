@@ -1,12 +1,25 @@
 'use client'
 import Image from "next/image";
 import {MEDIAREPORT,NEWS_FILTER_LISTS} from "@/src/constants"
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Link from "next/link";
 
 
 export default function News() {
-  const [activeCategory, setActiveCategory] = useState("影音專區")
+  const [activeCategory, setActiveCategory] = useState("影音專區");
+  const [top, setTop] = useState<boolean>(true);
+
+  // detect whether user has scrolled the page down by 10px
+  const scrollHandler = () => {
+    window.pageYOffset > 280 ? setTop(false) : window.pageYOffset > 600 ? setTop(false) :setTop(true);
+  };
+
+  useEffect(() => {
+    scrollHandler();
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [top]);
+
   const filterProjects = () => {
     if(activeCategory == "媒體專訪") {
       return MEDIAREPORT.filter((item) => item.tag === "媒體專訪")
@@ -20,7 +33,9 @@ export default function News() {
     <>
       <section className='relative overflow-hidden'>
             <div className='py-4 xl:p-20 w-full'>
-            <div className={`text-primary flex flex-row justify-center items-center font-serif mt-5 md:mt-10 md:mb-[100px] `}>
+            <div className={`text-primary flex flex-row justify-center items-center font-serif mt-5 md:mt-10 md:mb-[100px] ${
+        !top ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[120px] md:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2' : ''
+      }`}>
               {NEWS_FILTER_LISTS.map((item)=>(
                  <button
                   key={item.id}

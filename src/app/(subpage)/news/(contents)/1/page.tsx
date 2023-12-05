@@ -29,7 +29,7 @@ export default function Content() {
 
       </div>
     </div>
-    <div className="px-10 lg:px-[180px] 3xl:px-[420px]">
+    <div className="px-10 lg:px-[180px] 3xl:px-[420px] py-5">
     <Image className='mx-auto rounded-md wider:w-[1920px]' src={MEDIACONTENTIMG[0]} alt="MEDIAREPORT-content" width={1090} height={647} />
      <div className='flex flex-col justify-start'>
       <h2 className="text-primary text-[20px] font-medium tracking-[2.2px] pt-10 pb-6">{MEDIAREPORT[0].content?.title[0]}</h2>

@@ -81,6 +81,37 @@ export const NEWS01 = [
   {id:2,content:'「專訪」日日時光一起生活的初心！'},
   {id:3,content:'【SHOW AWARDS】文域設計 獲2022 年―書店 | 別墅 | 住宅 | 辦公空間―4 項IF 設計大獎'},
 ]
+//about page 
+export const FEATUREIMG=[
+'@/public/images/about/1-3.png', '@/public/images/about/1-2.png','@/public/images/about/1-4.png', '@/public/images/about/1-1.png','@/public/images/about/1-5.png','@/public/images/about/2-1.png','@/public/images/about/2-2.png']
+
+export const ANNUALEVENTS =[
+{id:1,year:'2022',desc:"德國iF DESIGN AWARD設計獎"},
+{id:2,year:'2021',desc:['台灣 金邸獎網路人氣獎', '台灣 金點設計獎']},
+{id:3,year:'2020',desc:['義大利A’Design Awards銀獎', '中國  艾特獎 商業空間 -  銅獎','台灣  亞洲設計大獎Grand Prize 入圍','中國 金外灘商業空間 - 優秀獎']},
+{id:4,year:'2019',desc:['美國IDA設計大獎', '美國MUSE 設計獎 - 金獎','台灣 金點設計獎 - 年度最佳空間']},
+]
+export const AWARDRECORDS =[
+{id:1,year:'2022',desc:"德國iF DESIGN AWARD設計獎"},
+{id:2,year:'2021',desc:['台灣 金邸獎網路人氣獎', '台灣 金點設計獎']},
+{id:3,year:'2020',desc:['義大利A’Design Awards銀獎', '中國  艾特獎 商業空間 -  銅獎','台灣  亞洲設計大獎Grand Prize 入圍','中國 金外灘商業空間 - 優秀獎']},
+{id:4,year:'2019',desc:['美國IDA設計大獎', '美國MUSE 設計獎 - 金獎','台灣 金點設計獎 - 年度最佳空間']},
+]
+export const TEAMIMAGE = [
+  {id:1, title:'謝鎮宇｜Jarvis',category:'設計總監',src:'/images/about/2-3.png',desc:'「文化創生」是文域設計一貫秉持的理念，在設計中打 造與品牌關聯的文化意涵，在公益與商業之間達到完美的平衡是我所努力的方向。'},
+  {id:2, title:'張惠茹｜Rita',category:'主任設計師',src:'/images/about/2-4.png'},
+  {id:3, title:'林意婷｜Yiting',category:'燈光設計師',src:'/images/about/2-5.png'},
+  {id:4, title:'林家帆｜Abby',category:'工程顧問',src:'/images/about/2-6.png'},
+  {id:5, title:'方境鴻｜Hung',category:'設計師',src:'/images/about/2-7.png'},
+  {id:6, title:'郭姮均｜Jean',category:'設計師',src:'/images/about/2-8.png'},
+  {id:7, title:'宋宇禮｜Yuli',category:'設計師',src:'/images/about/2-9.png'},
+  {id:8, title:'蔡心瑜｜Hsin',category:'設計師',src:'/images/about/2-10.png'},
+  {id:9, title:'林采誼｜Shirley',category:'助理設計師',src:'/images/about/2-11.png'},
+  {id:10, title:'曾琬雯｜Tammy',category:'助理設計師',src:'/images/about/2-12.png'},
+  {id:11, title:'陳淑妍｜Cheryl',category:'秘書',src:'/images/about/2-13.png'},
+
+
+]
 
 // services page
 export const SERVICESFILTER = [
@@ -90,7 +121,16 @@ export const SERVICESFILTER = [
     {id:4,title:'商空設計',category:'商空設計',src:"/images/services/1-4.png", icon: React.createElement(IconCup)},
     {id:5,title:'展場設計',category:'展場設計',src:"/images/services/1-5.png",icon: React.createElement(IconCube)}
 ]
-
+export const PROCESSINFO = [
+    {id:1,title:'初步溝通',desc:'彙整基本需求後，將由專人電訪與諮詢',contact:'TEL:+886-2-27386876 | FAX:+886-2-27386878'},
+    {id:2,title:'設計合約',desc:'簽訂設計合約，進行細部空間規劃'},
+    {id:3,title:'現場丈量',desc:'約至案件現場進行細部會勘與丈量'},
+    {id:4,title:'設計圖面配置',desc:'設計概念發想+平面圖配置規劃'},
+    {id:5,title:'工程合約',desc:'依據合約預算及工期按圖施作'},
+    {id:6,title:'工程施工',desc:'專業工程實施，並由工程師確實監造及紀錄'},
+    {id:7,title:'完工交屋',desc:'現場清潔進行驗收、完工案例拍攝'},
+    {id:8,title:'售後服務',desc:'確保每個案場的服務品質，進行案件執行後的觀察'},
+]
 //media report page
 export const NEWS_FILTER_LISTS =[
   {id:1,title:'影音專區',category:'影音專區'},

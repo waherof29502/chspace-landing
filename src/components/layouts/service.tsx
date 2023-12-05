@@ -1,20 +1,11 @@
 'use client'
 import {useState} from 'react';
-import {SERVICESFILTER} from '@/src/constants';
+import {SERVICESFILTER,PROCESSINFO} from '@/src/constants';
 import NewsBg from '@/public/images/services/bg-1.png';
 import Link from 'next/link';
 import CustomBtn from '@/src/components/ui/custom-btn';
 import Image from 'next/image';
-const PROCESSINFO = [
-    {id:1,title:'初步溝通',desc:'彙整基本需求後，將由專人電訪與諮詢',contact:'TEL:+886-2-27386876 | FAX:+886-2-27386878'},
-    {id:2,title:'設計合約',desc:'簽訂設計合約，進行細部空間規劃'},
-    {id:3,title:'現場丈量',desc:'約至案件現場進行細部會勘與丈量'},
-    {id:4,title:'設計圖面配置',desc:'設計概念發想+平面圖配置規劃'},
-    {id:5,title:'工程合約',desc:'依據合約預算及工期按圖施作'},
-    {id:6,title:'工程施工',desc:'專業工程實施，並由工程師確實監造及紀錄'},
-    {id:7,title:'完工交屋',desc:'現場清潔進行驗收、完工案例拍攝'},
-    {id:8,title:'售後服務',desc:'確保每個案場的服務品質，進行案件執行後的觀察'},
-]
+
 
 export default function Service() {
     const [activeCategory, setActiveCategory] = useState("住宅設計")
@@ -43,7 +34,7 @@ export default function Service() {
         <div className="hidden lg:flex lg:pl-10 xl:pl-12 3xl:pl-0 xl:justify-center pt-[80px]">
             <div className='w-1/2 xl:w-1/3 h-auto object-cover'>
             {filterProjects().map((item) =>(
-                <Image src={item.src} width={500} height={550} alt={item.title} />
+                <Image key={item.id} src={item.src} width={500} height={550} alt={item.title} />
              ))}
              </div>
              <div className='w-full xl:w-1/2 flex flex-col justify-start pl-10 wide:pl-0 3xl:pr-10 flex-wrap'>
@@ -90,14 +81,14 @@ export default function Service() {
               </span>
             </div>
             <div className='flex flex-row'>
-            <div className='w-2/3 h-[500px] px-10'>
+            <div className='w-2/3 h-[500px] pl-5 sm:px-10'>
             {filterProjects().map((item) =>(
                 <div className='bg-cover bg-center w-full h-[500px] pb-10' style={{ backgroundImage: `url(${item.src})` }}>
                </div>
              ))}
              </div>
              <div className='px-4 py-2'>
-            <div className='flex flex-col justify-between h-full'>
+            <div className='flex flex-col justify-between h-full' >
               {SERVICESFILTER.map((item)=>(
                  <button
                   key={item.id}
@@ -105,7 +96,7 @@ export default function Service() {
                    className='px-1'>  
                 <div className="flex flex-col justify-center items-center group">
                 <div className='text-[40px] text-[#D9D9D9] group-hover:text-[#1B1B1B] pb-4'>{item.icon}</div>
-                <span className="tracking-[2.4px] font-sansCjk text-[16px] text-primary font-medium ">
+                <span className="tracking-[2.4px] font-sansCjk text-[16px] text-primary font-medium whitespace-pre">
                     {item.title}
                 </span>
                 </div>
@@ -143,9 +134,9 @@ export default function Service() {
                 <p className='font-semibold text-[14px] lg:text-[20px] tracking-[3px] py-2'>{item.title}</p>
                 <p className='text-[12px] lg:text-[16px] tracking-[1.76px] py-1'>{item.desc}</p>
                 {/* <span className='flex py-2 text-[12px]'>{item.contact}</span> */}
-                <div className='md:flex lg:hidden flex-row py-2'>
-                <span className='text-[10px]'>{item.contact?.slice(0,20)}</span>
-                <span className='text-[10px] pl-1'>{item.contact?.slice(20,40)}</span>
+                <div className='md:flex lg:hidden flex flex-row py-2'>
+                <span className='text-[8px] xs:text-[10px]'><a href='tel:+886-2-27386876' >{item.contact?.slice(0,20)}</a></span>
+                <span className='text-[8px] xs:text-[10px] pl-1'>{item.contact?.slice(20,40)}</span>
                 </div>
             </div>
             </li>
@@ -165,7 +156,7 @@ export default function Service() {
                 <p className='text-[12px] lg:text-[16px] tracking-[1.76px] py-1'>{item.desc}</p>
                 {/* <span className='flex py-2 text-[12px]'>{item.contact}</span> */}
                 <div className='md:flex lg:hidden flex-row py-2'>
-                <span className='text-[10px]'>{item.contact?.slice(0,20)}</span>
+                <span className='text-[10px]'><a href='tel:+886-2-27386876' >{item.contact?.slice(0,20)}</a></span>
                 <span className='text-[10px] pl-1'>{item.contact?.slice(20,40)}</span>
                 </div>
             </div>

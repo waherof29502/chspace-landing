@@ -1,5 +1,6 @@
 import { IconPhone, IconLocation } from '@/public/svg';
 import CustomBtn from './custom-btn';
+import Link from 'next/link';
 
 export default function ContactUs() {
   return (
@@ -23,7 +24,9 @@ export default function ContactUs() {
               </span>
             </div>
             <div className='mr-1 xl:mr-[100px] wider:mr-[100px] md:mt-6 flex justify-end'>
+              <Link href="/contact-us">
               <CustomBtn title={"立即諮詢"} fontType={"font-sansCjk"} />
+              </Link>
             </div>
           </div>
           <div className='flex flex-row md:w-full lg:w-auto md:flex-row justify-start md:justify-center items-center ml-[21px] md:ml-0 lg:ml-0 md:border-l-[#c3c3c3] md:border-l-[0.8px] md:border-t-0 md:border-t-[#c3c3c3] border-t-[1px] md:border-b-0 border-b-[#c3c3c3] md:border-r-[#c3c3c3] border-b-[1px] md:border-r-[0.8px] wide:w-[420px] wider:w-[500px]'>

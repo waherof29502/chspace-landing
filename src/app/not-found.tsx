@@ -4,9 +4,9 @@ import HeaderWhite from '@/src/components/ui/header-white';
 import ErrorImg from '@/public/images/404.png'
 export default function NotFound() {
   return (
-<>
+  <>
    <HeaderWhite/>
-<div className="flex flex-col flex-1 justify-between items-center min-h-fit mt-[300px] mb-[100px]"> 
+  <div className="flex flex-col flex-1 justify-between items-center min-h-fit mt-[300px] mb-[100px]"> 
   <Image src={ErrorImg} width={529} height="223" alt='error'/> 
   <div>
   <h1 className="text-black font-sansCjk mt-[60px] text-[22px] tracking-[3.3px] font-semibold">OOPS!頁面發生錯誤!!</h1> 
@@ -14,6 +14,9 @@ export default function NotFound() {
   </div>
   </div>
   </>
-
   )
 }
+// import {redirect} from 'next/navigation';
+// export default function NotFoundPage(){
+//   redirect('/')
+// }
