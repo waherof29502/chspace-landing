@@ -20,9 +20,9 @@ export default function About() {
           <div className={`w-full mx-auto flex flex-col xl:grid xl:grid-cols-2 `}>
             <div className="pt-10 flex justify-center mb-0 xl:mb-20 xl:mt-[10px] 3xl:mt-[100px]">
               <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start text-primary w-full lg:w-[90%] ">
-                <h1 className="text-[16px] md:text-[24px] font-sansCjk font-medium tracking-[2.08px] md:tracking-[2.4px]">
+                <h2 className="text-[16px] md:text-[24px] font-sansCjk font-medium tracking-[2.08px] md:tracking-[2.4px]">
                   文域設計創立於2017年，深耕文化場域
-                </h1>
+                </h2>
                 <p className="text-[#464646] text-[16px] font-sansCjk font-normal tracking-[1.76px] leading-[39px] xl:pr-[100px] py-5 md:pt-10 md:pb-0 xxxl:py-20">
                   以”文化創生”為核心理念，致力於文化、藝術和商業的有機融合，建構室內外的空間場域，藉由場域精神傳達文化價值，提升生活美學及品味。
                   我們專注於高端商業的綜合服務，包括商業空間升級以打造城市文化地標、文化空間企劃與設計、文化內容策劃等，透過淬鏈、創意、多元的設計概念及操作手法，以最純粹的方式，表現品牌價值及故事。

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from "react";
 import CustomBtn from '@/src/components/ui/custom-btn';
+import { motion, useScroll, useTransform } from "framer-motion";
 interface PortfolioProps {
   imageSrc: string;
   title: string;
@@ -10,8 +12,21 @@ interface PortfolioProps {
 }
 
 const PortfolioCard = ({ imageSrc, title, location, link, isImageLeft }: PortfolioProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <div
+    <motion.div
+     ref={ref}
+      style={{
+        scale: scaleProgess,
+        opacity: opacityProgess,
+      }}
       className={`max-w-8xl mx-auto lg:mt-[97px] mb-[20px] lg:mb-[212px] flex flex-1 flex-col md:flex-row md:grid md:grid-cols-2 ${
         isImageLeft ? 'md:grid-flow-col' : 'flex-col-reverse'
       }`}
@@ -34,7 +49,7 @@ const PortfolioCard = ({ imageSrc, title, location, link, isImageLeft }: Portfol
       {!isImageLeft && (
         <Image className="max-w-8xl mx-auto my-4 rounded-md" src={imageSrc} alt={title} width={768} height={486} />
       )}
-    </div>
+    </motion.div>
   );
 };
 

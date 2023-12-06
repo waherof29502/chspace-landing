@@ -1,11 +1,20 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef  } from 'react';
 import PortfolioCard from '../ui/portfolio-feature-card';
 import { PORTFOLIO_PAGE_ITEMS, PORTFOLIO_FILTER_LISTS } from '@/src/constants';
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [top, setTop] = useState<boolean>(true);
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {

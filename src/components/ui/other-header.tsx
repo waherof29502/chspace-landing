@@ -41,7 +41,7 @@ export default function OtherHeader() {
                       !top ? 'text-[#1B1B1B]' : ''
                     }`}
                   >
-                    {item.navItems}
+                    {item.name}
                   </Link>
                 </li>
               ))}

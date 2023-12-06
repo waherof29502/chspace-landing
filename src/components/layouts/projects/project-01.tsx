@@ -13,13 +13,28 @@ import IconIg from '@/public/svg/ig-solid.svg';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import CustomBtn02 from '@/src/components/ui/custom-btn02';
+import {motion} from 'framer-motion';
 
 export default function project01() {
   const [curr, setCurr] = useState(0);
   const [currText, setCurrText] = useState(0);
   const [openLightBox, setOpenLightBox] = React.useState(false);
   const toggleLightBoxOpen = (state: boolean) => () => setOpenLightBox(state);
-
+  const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x:0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
   const updateIndex = ({ index: current }: { index: number }) => setCurr(current);
 
   return (
@@ -79,9 +94,17 @@ export default function project01() {
           <ProjectCard key={item.id} {...item} />
         ))}
         {SLIDERS01.map((item) => (
-          <div key={item.id} className="mt-10">
+          <motion.div key={item.id} className="mt-10"
+          variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={item.id}
+          >
             <Image src={item.src} width={1920} height="1270" alt="12" className="rounded-xl" />
-          </div>
+          </motion.div>
         ))}
         <div className="text-primary flex flex-row justify-end items-center mt-10 md:mt-10 md:mb-[100px] wider:mr-[200px]">
           <Link href={'https://www.facebook.com/CHSPACE'} target="_blank" rel="noopener noreferrer">

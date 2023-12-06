@@ -80,7 +80,7 @@ export default function OtherMobileMenu() {
                     href={item.link}
                     className={`font-normal text-white tracking-[10px] text-[20px] px-5 py-3 flex justify-center items-center `}
                   >
-                    {item.navItems}
+                    {item.name}
                   </Link>
                 </li>
               ))}

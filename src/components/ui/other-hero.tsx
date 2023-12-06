@@ -9,7 +9,7 @@ export default function OtherHero({ imageUrl, title, desc }: any) {
       </div>
 
       <div className="absolute inset-0 flex flex-col justify-center items-center">
-        <h2 className="mt-2 font-sansCjk text-white text-[18px] 2xl:text-[24px]">{title}</h2>
+        <h1 className="mt-2 font-sansCjk text-white text-[18px] 2xl:text-[24px]">{title}</h1>
         <span className="text-white font-syne text-[30px] md:text-[48px] 2xl:text-[68px] font-normal capitalize tracking-[0.9px] md:tracing-[2.04px]">
           {desc}
         </span>

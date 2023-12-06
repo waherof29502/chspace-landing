@@ -39,7 +39,7 @@ export default function Header() {
                       !top ? 'text-[#1B1B1B]' : ''
                     }`}
                   >
-                    {item.navItems}
+                    {item.name}
                   </Link>
                 </li>
               ))}

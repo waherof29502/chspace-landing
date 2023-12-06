@@ -20,7 +20,7 @@ export default function ArticleHeader() {
                     href={item.link}
                     className={`font-normal px-2 2md:px-[14px] 3md:px-4 2xl:px-5 3xl:px-10 flex md:tracking-[3.2px] xl:tracking-[6.4px] items-center transition duration-150 ease-in-out text-slate-600`}
                   >
-                    {item.navItems}
+                    {item.name}
                   </Link>
                 </li>
               ))}

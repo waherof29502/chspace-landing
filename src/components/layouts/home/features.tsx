@@ -16,9 +16,10 @@ import Image10 from '@/public/images/1-10.jpg';
 import Image11 from '@/public/images/1-11.jpg';
 import Image12 from '@/public/images/1-12.jpg';
 import Text from './text';
-
+import {motion,useScroll,useTransform} from 'framer-motion';
 export default function Features() {
   const [tab, setTab] = useState<number>(1);
+   const ref = useRef<HTMLDivElement>(null);
 
   const tabs = useRef<HTMLDivElement>(null);
 
@@ -31,20 +32,76 @@ export default function Features() {
     heightFix();
   }, []);
 
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x:0,
+    y: 100,
+  },
+  initial2: {
+    opacity: 0,
+    x:100,
+    y: 0,
+  },
+  initial3: {
+    opacity: 0,
+    x:  0,
+    y: -200,
+  },
+  initial4: {
+    opacity: 0,
+    x: -200,
+    y: 0,
+  },
+  initial5: {
+    opacity: 0,
+    x: 0,
+    y: 200,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      delay: 0.125 * index,
+    },
+  }),
+};
   return (
     <section className="relative overflow-hidden">
       {/* Section 1 */}
-      <div className="relative pr-10 pl-10">
+      <div className="relative pr-10 pl-10" >
         <div className="flex items-center justify-center min-h-screen wider:min-h-max wider:mt-[220px] ">
-          <div className="shrink-0 md:w-[700px] 2xl:w-[852px] -ml-[80px] mr-[10px] md:ml-[420px] 2xl:ml-[210px] md:mt-[19px] md:mr-[2px] 2xl:mr-[10px]  relative z-10">
+          <motion.div className="shrink-0 md:w-[700px] 2xl:w-[852px] -ml-[80px] mr-[10px] md:ml-[420px] 2xl:ml-[210px] md:mt-[19px] md:mr-[2px] 2xl:mr-[10px]  relative z-10" 
+            variants={fadeInAnimationVariants}
+            initial="initial4"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={1}>
             <Image className="rounded-lg" src={Image01} width={852} height="568" alt="img01" />
-          </div>
-          <div className="flex shrink-0 ml-[280px] md:left-[50px] 2xl:left-[210px] -top-[250px] 2xl:-top-[330px] relative z-10">
+          </motion.div>
+          <motion.div className="flex shrink-0 ml-[280px] md:left-[50px] 2xl:left-[210px] -top-[250px] 2xl:-top-[330px] relative z-10" 
+            variants={fadeInAnimationVariants}
+            initial="initial3"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}>
             <Image className="rounded-lg" src={Image02} width={269} height="422" alt="img02" />
-          </div>
-          <div className="flex shrink-0 -left-[260px] 2xl:-left-[150px] top-[160px] md:top-[230px] relative z-10">
+          </motion.div>
+          <motion.div className="flex shrink-0 -left-[260px] 2xl:-left-[150px] top-[160px] md:top-[230px] relative z-10" 
+            variants={fadeInAnimationVariants}
+            initial="initial2"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={3}>
             <Image className="rounded-lg" src={Image03} width={518} height="179" alt="img01" />
-          </div>
+          </motion.div>
           <div className="flex inset-0 justify-center md:ml-[350px] 2xl:ml-[370px] items-center absolute z-20">
             <Text />
           </div>
@@ -53,20 +110,57 @@ export default function Features() {
 
       {/* Section 2 */}
 
-      <div className="relative pr-10 pl-10 -mt-[20px] md:mt-[20px]">
+      <motion.div className="relative pr-10 pl-10 -mt-[20px] md:mt-[20px]"
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={2}>
         <div className="flex items-center justify-center min-h-screen">
-          <div className="shrink-0 w-[208px] ml-[2px] md:ml-[550px] -mt-[300px] md:-mt-[320px] md:mr-[20px] mr-[120px] 2xl:ml-[50px] 2xl:-mt-[490px] relative z-10">
+          <motion.div className="shrink-0 w-[208px] ml-[2px] md:ml-[550px] -mt-[300px] md:-mt-[320px] md:mr-[20px] mr-[120px] 2xl:ml-[50px] 2xl:-mt-[490px] relative z-10"
+           variants={fadeInAnimationVariants}
+            initial="initial3"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}
+          >
             <Image className="rounded-lg" src={Image04} width={208} height="260" alt="img01" />
-          </div>
-          <div className="flex w-[202px] md:w-[404px] shrink-0 ml-[1px] md:ml-[300px] -top-[100px] md:-top-[50px] 2xl:-top-[320px] 2xl:left-[200px] relative z-10">
+          </motion.div>
+          <motion.div className="flex w-[202px] md:w-[404px] shrink-0 ml-[1px] md:ml-[300px] -top-[100px] md:-top-[50px] 2xl:-top-[320px] 2xl:left-[200px] relative z-10"
+           variants={fadeInAnimationVariants}
+            initial="initial4"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}>
             <Image className="rounded-lg" src={Image05} width={404} height="605" alt="img02" />
-          </div>
-          <div className="flex shrink-0 -left-[200px] md:-left-[550px] top-[450px] md:top-[380px] 2xl:-left-[400px] 2xl:top-[120px] relative z-10">
+          </motion.div>
+          <motion.div className="flex shrink-0 -left-[200px] md:-left-[550px] top-[450px] md:top-[380px] 2xl:-left-[400px] 2xl:top-[120px] relative z-10"
+           variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}>
             <Image className="rounded-lg" src={Image09} width={356} height="536" alt="img01" />
-          </div>
-          <div className="flex shrink-0 -left-[170px] md:-left-[210px] -top-[170px] md:-top-[70px] 2xl:-left-[25px] 2xl:-top-[190px] relative z-8">
+          </motion.div>
+          <motion.div className="flex shrink-0 -left-[170px] md:-left-[210px] -top-[170px] md:-top-[70px] 2xl:-left-[25px] 2xl:-top-[190px] relative z-8"
+           variants={fadeInAnimationVariants}
+            initial="initial2"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}
+          >
             <Image className="rounded-lg" src={Image06} width={468} height="314" alt="img01" />
-          </div>
+          </motion.div>
           <div className="flex inset-0 justify-start ml-[80px] 2xs:ml-[120px] sm:ml-[180px] md:ml-[100px] 3md:ml-[150px] lg:ml-[190px] 2lg:ml-[240px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20">
             <div className="text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose">
               <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
@@ -84,24 +178,53 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Section 3*/}
 
-      <div className="relative pr-10 pl-10 -mt-[20px] md:mt-[120px] 2xl:-mt-[140px] mb-[50px]">
+      <motion.div className="relative pr-10 pl-10 -mt-[20px] md:mt-[120px] 2xl:-mt-[140px] mb-[50px]"
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={3}>
         <div className="flex items-center justify-center min-h-screen">
-          <div className="shrink-0 w-[262px] ml-[2px] mr-[120px] -mt-[300px] md:ml-[550px] md:-mt-[320px] md:mr-[20px]  2xl:ml-[280px] 2xl:-mt-[1200px] relative z-10">
+          <motion.div className="shrink-0 w-[262px] ml-[2px] mr-[120px] -mt-[300px] md:ml-[550px] md:-mt-[320px] md:mr-[20px]  2xl:ml-[280px] 2xl:-mt-[1200px] relative z-10" 
+           variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}
+          >
             <Image className="rounded-lg" src={Image07} width={262} height="427" alt="img01" />
-          </div>
-          <div className="flex w-[202px] md:w-[259px] h-[265px] shrink-0 ml-[1px] md:ml-[120px] -top-[100px] md:-top-[50px] 2xl:-top-[350px] 2xl:ml-[40px] relative z-10">
+          </motion.div>
+          <motion.div className="flex w-[202px] md:w-[259px] h-[265px] shrink-0 ml-[1px] md:ml-[120px] -top-[100px] md:-top-[50px] 2xl:-top-[350px] 2xl:ml-[40px] relative z-10"
+           variants={fadeInAnimationVariants}
+            initial="initial3"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}>
             <Image className="rounded-lg" src={Image08} width={259} height="265" alt="img02" />
-          </div>
+          </motion.div>
           <div className="flex shrink-0 -left-[200px] md:-left-[400px] top-[450px] md:top-[280px] 2xl:top-[20px] relative z-10">
             <Image className="rounded-lg" src={Image11} width={579} height="407" alt="img01" />
           </div>
-          <div className="flex shrink-0 w-[289px] md:w-[579px] md:w-[579px]-left-[170px] md:-left-[2px] -top-[170px] md:-top-[70px] 2xl:left-[300px] 2xl:-top-[260px]  relative z-8">
+          <motion.div className="flex shrink-0 w-[289px] md:w-[579px] md:w-[579px]-left-[170px] md:-left-[2px] -top-[170px] md:-top-[70px] 2xl:left-[300px] 2xl:-top-[260px]  relative z-8"
+           variants={fadeInAnimationVariants}
+            initial="initial3"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}>
             <Image className="rounded-lg" src={Image10} width={579} height="467" alt="img01" />
-          </div>
+          </motion.div>
           <div className="flex shrink-0 -left-[270px] md:-left-[110px] top-[170px] md:top-[470px] 2xl:top-[300px] 2xl:-left-[620px] relative z-8">
             <Image className="rounded-lg" src={Image12} width={513} height="127" alt="img01" />
           </div>
@@ -121,7 +244,7 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

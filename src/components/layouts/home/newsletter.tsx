@@ -1,13 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import NewsBg from '@/public/images/bg-2.png';
-
 const NewsLetter = () => {
   return (
     <section className="relative overflow-hidden">
       <div className="w-full h-[485px] object-cover">
         <Image className="rounded-lg" src={NewsBg} fill alt="News bg" />
-        <div className="absolute inset-0 flex flex-col justify-center items-center p-2">
+        <div className="absolute inset-0 flex flex-col justify-center items-center p-2" >
           <h1 className="mb-2 text-primary font-sansCjk text-[18px] md:text-[26px] font-medium md:font-semibold text-center">
             以「文化創意」底蘊做設計
             <br />

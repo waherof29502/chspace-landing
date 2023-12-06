@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import CustomBtn from '@/src/components/ui/custom-btn';
+import {useRef} from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
+
 interface PortfolioProps {
   imageSrc: string;
   title: string;
@@ -10,8 +13,22 @@ interface PortfolioProps {
 }
 
 const PortfolioCard = ({imageSrc, title, location, link, category }: PortfolioProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
   return (
-    <div className={`mx-auto md:mt-[97px] mb-10 md:mb-[100px] flex flex-1 flex-col`}>
+    <motion.div  
+      ref={ref}
+      style={{
+        scale: scaleProgess,
+        opacity: opacityProgess,
+      }}
+      className={`mx-auto md:mt-[97px] mb-10 md:mb-[100px] flex flex-1 flex-col`}>
       <Link href={link}>
       <Image className="mx-auto rounded-md" src={imageSrc} alt={title} width={1090} height={647} />
       </Link>
@@ -59,7 +76,7 @@ const PortfolioCard = ({imageSrc, title, location, link, category }: PortfolioPr
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
