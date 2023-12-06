@@ -1,4 +1,3 @@
-import ServiceGridCard from './service-grid-card';
 import Image from 'next/image';
 import NewsBg from '@/public/images/bg-2.png';
 import ServiceCard from './service-card';

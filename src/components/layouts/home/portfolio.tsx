@@ -1,21 +1,7 @@
 'use client';
 import PortfolioCard from './portfolio-card';
 import { PORTFOLIO_ITEMS } from '@/src/constants';
-import { useState, useRef, useEffect } from 'react';
-import { Transition } from '@headlessui/react';
 export default function Portfolio() {
-  const [tab, setTab] = useState<number>(1);
-  const tabs = useRef<HTMLDivElement>(null);
-
-  const heightFix = () => {
-    if (tabs.current && tabs.current.parentElement)
-      tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`;
-  };
-
-  useEffect(() => {
-    heightFix();
-  }, []);
-
   return (
     <>
       <section id="portfolio" className="scroll-mt-28 relative overflow-hidden">
@@ -29,19 +15,6 @@ export default function Portfolio() {
             {PORTFOLIO_ITEMS.map((item) => (
               <div className="transition-all" key={item.id}>
                 <div className="relative flex flex-col text-center lg:text-right">
-                  {/* <Transition
-                    show={tab === 1}
-                    appear={true}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  > */}
                     <PortfolioCard
                       key={item.id}
                       imageSrc={item.src}
@@ -50,7 +23,6 @@ export default function Portfolio() {
                       link={item.link}
                       isImageLeft={item.isImageLeft}
                     />
-                  {/* </Transition> */}
                 </div>
               </div>
             ))}
