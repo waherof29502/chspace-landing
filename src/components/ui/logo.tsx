@@ -1,8 +1,5 @@
 import Link from 'next/link';
-// import LogoWhite from '@/public/svg/logo-h-w.svg';
 import {LogoHBlack, LogoHWhite} from '@/public/svg/index';
-import LogoBlack from '@/public/images/logo-black.png';
-import Image from 'next/image';
 
 export default function Logo({ top }: any) {
   return (

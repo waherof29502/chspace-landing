@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
-import { Transition } from '@headlessui/react';
 import Image from 'next/image';
 import Image01 from '@/public/images/1-1.jpg';
 import Image02 from '@/public/images/1-2.png';
@@ -16,22 +14,8 @@ import Image10 from '@/public/images/1-10.jpg';
 import Image11 from '@/public/images/1-11.jpg';
 import Image12 from '@/public/images/1-12.jpg';
 import Text from './text';
-import {motion,useScroll,useTransform} from 'framer-motion';
+import {motion} from 'framer-motion';
 export default function Features() {
-  const [tab, setTab] = useState<number>(1);
-   const ref = useRef<HTMLDivElement>(null);
-
-  const tabs = useRef<HTMLDivElement>(null);
-
-  const heightFix = () => {
-    if (tabs.current && tabs.current.parentElement)
-      tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`;
-  };
-
-  useEffect(() => {
-    heightFix();
-  }, []);
-
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,

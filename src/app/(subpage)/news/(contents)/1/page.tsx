@@ -1,5 +1,5 @@
 export const metadata = {
-  title: '文域設計 | 文・域',
+  title: '文域設計 | 媒體報導',
   description: '住宅設計 | 辦公室設計 | 文化場域設計 | 商空設計 | 展場設計'
 };
 import Image from 'next/image';
@@ -8,7 +8,6 @@ import { MEDIAREPORT, MEDIACONTENTIMG } from '@/src/constants';
 import ArticleHeader from '@/src/components/ui/article-header';
 import IconFb from '@/public/svg/fb-solid.svg';
 import IconIg from '@/public/svg/ig-solid.svg';
-import { OTHERCONTENTS01 } from '@/src/constants';
 import OtherInfoCard from '@/src/components/ui/other-info-card';
 
 export default function Content() {

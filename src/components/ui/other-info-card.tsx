@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
 import CustomBtn02 from '@/src/components/ui/custom-btn02';
 import OtherCard from '@/src/components/utils/other-card';
 import CarouselText from '@/src/components/utils/carousel-text';

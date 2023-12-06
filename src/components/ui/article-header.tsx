@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import MobileMenu from './mobile-menu-white';
-import Image from 'next/image';
 import { NAV_ITEMS } from '@/src/constants';
 import Logo from './logo';
 export default function ArticleHeader() {

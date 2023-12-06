@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import OtherMobileMenu from './other-mobile-menu';
-import Image from 'next/image';
 import { NAV_ITEMS } from '@/src/constants';
 import Logo from './logo';
 export default function OtherHeader() {

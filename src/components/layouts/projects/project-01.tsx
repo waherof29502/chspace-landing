@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Carousel from '@/src/components/utils/carousel';
@@ -31,6 +31,7 @@ export default function project01() {
     x: 0,
     y: 0,
     transition: {
+      ease: "linear",
       delay: 0.05 * index,
     },
   }),
