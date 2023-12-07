@@ -13,6 +13,7 @@ interface PortfolioProps {
 
 const PortfolioCard = ({ imageSrc, title, location, link, isImageLeft }: PortfolioProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
