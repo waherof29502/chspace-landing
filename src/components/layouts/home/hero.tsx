@@ -1,7 +1,7 @@
 import ModalVideo from '@/src/components/utils/modal-video';
 import Image from 'next/image';
-import HeroBg from '@/public/images/hero-image.png';
-import Slogan from '@/public/images/slogan.png';
+import HeroBg from '@/public/images/home/hero-image.png';
+import Slogan from '@/public/images/home/slogan.png';
 export default function Hero() {
   return (
     <section className="relative">

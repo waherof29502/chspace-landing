@@ -96,7 +96,7 @@ export default function Content() {
                 </p>
               </div>
 
-              <div className="text-primary flex flex-row justify-end items-center pt-[50px] md:mt-10 wider:mr-[200px]">
+              <div className="text-primary flex flex-row justify-end items-center pt-[50px] md:mt-10 wider:mr-[10px]">
                 <Link href={'https://www.facebook.com/CHSPACE'} target="_blank" rel="noopener noreferrer">
                   <IconFb className="text-[34px] mr-2 text-[#7A7A7A] hover:text-[#4e4e4e]" />
                 </Link>
@@ -106,7 +106,8 @@ export default function Content() {
               </div>
               {/* content end */}
             </div>
-            <div className="px-5 2md:px-[55px] xl:px-[120px] 3xl:px-[170px] wide:px-[230px] flex flex-row md:flex-row md:justify-start items-center mt-[50px] mb-[10px] md:mb-[45px] border-t-[1.5px] border-[#D6D6D6] border-solid">
+            <div className="w-[90%] xl:w-[85%] 3xl:w-[80%] mt-[50px] border-t-[1.5px] border-[#D6D6D6] border-solid mx-auto" />
+            <div className="px-5 2md:px-[55px] xl:px-[120px] 3xl:px-[170px] wide:px-[230px] flex flex-row md:flex-row md:justify-start items-center  mb-[10px] md:mb-[45px] ">
               <h2 className="py-10 xl:pt-[80px] xl:pb-[10px] font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize">
                 Other articles
               </h2>

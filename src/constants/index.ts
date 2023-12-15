@@ -26,17 +26,17 @@ export const FOOTER_ITEMS = [
 //   { id: 5, src: '/images/3-5.png', title: '展場設計', icon: '/svg/cube.svg' },
 // ];
 export const SERVICE_ITEMS = [
-  { id: 1, src: '/images/3-1.png', title: '住宅設計', icon: React.createElement(IconHouse) },
-  { id: 2, src: '/images/3-2.png', title: '辦公室設計', icon: React.createElement(IconBag) },
-  { id: 3, src: '/images/3-3.png', title: '文化場域設計', icon: React.createElement(IconLeaf) },
-  { id: 4, src: '/images/3-4.png', title: '商空設計', icon: React.createElement(IconCup) },
-  { id: 5, src: '/images/3-5.png', title: '展場設計', icon: React.createElement(IconCube) }
+  { id: 1, src: '/images/home/3-1.png', title: '住宅設計', icon: React.createElement(IconHouse) },
+  { id: 2, src: '/images/home/3-2.png', title: '辦公室設計', icon: React.createElement(IconBag) },
+  { id: 3, src: '/images/home/3-3.png', title: '文化場域設計', icon: React.createElement(IconLeaf) },
+  { id: 4, src: '/images/home/3-4.png', title: '商空設計', icon: React.createElement(IconCup) },
+  { id: 5, src: '/images/home/3-5.png', title: '展場設計', icon: React.createElement(IconCube) }
 ];
 
 export const PORTFOLIO_ITEMS = [
   {
     id: 1,
-    src: '/images/2-1.png',
+    src: '/images/home/2-1.png',
     title: '三重陳宅｜寧靜致遠',
     location: '新北市 三重',
     link: '/portfolio/work01',
@@ -44,7 +44,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 2,
-    src: '/images/2-2.png',
+    src: '/images/home/2-2.png',
     title: '內湖羅宅｜漫光滋養',
     location: '台北市 內湖',
     link: '/portfolio/work02',
@@ -52,7 +52,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 3,
-    src: '/images/2-3.png',
+    src: '/images/home/2-3.png',
     title: '陽明山李宅｜山嵐藝廊',
     location: '台北市 陽明山',
     link: '/portfolio/work03',
@@ -63,7 +63,7 @@ export const PORTFOLIO_ITEMS = [
 export const PORTFOLIO_PAGE_ITEMS = [
   {
     id: 1,
-    src: '/images/2-1.png',
+    src: '/images/home/2-1.png',
     title: '三重陳宅｜寧靜致遠',
     location: '新北市 三重',
     link: '/portfolio/work01',
@@ -75,7 +75,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
   },
   {
     id: 2,
-    src: '/images/2-2.png',
+    src: '/images/home/2-2.png',
     title: '內湖羅宅｜漫光滋養',
     location: '台北市 內湖',
     link: '/portfolio/work02',
@@ -83,7 +83,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
   },
   {
     id: 3,
-    src: '/images/2-3.png',
+    src: '/images/home/2-3.png',
     title: '陽明山李宅｜山嵐藝廊',
     location: '台北市 陽明山',
     link: '/portfolio/work03',
@@ -91,7 +91,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
   },
   {
     id: 4,
-    src: '/images/2-4.png',
+    src: '/images/home/2-4.png',
     title: '台灣室內設計週｜漢斯希爾展館',
     location: '南港展覽館1館',
     link: '/portfolio/work04',
@@ -99,7 +99,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
   },
   {
     id: 5,
-    src: '/images/2-5.png',
+    src: '/images/home/2-5.png',
     title: '金灣閱潮書店｜閱潮咖啡區',
     location: '廣州珠海 金灣市',
     link: '/portfolio/work05',
@@ -107,7 +107,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
   },
   {
     id: 6,
-    src: '/images/2-6.png',
+    src: '/images/home/2-6.png',
     title: '心之所憩｜生活的模樣',
     location: '台北市 中山區',
     link: '/portfolio/work06',

@@ -18,7 +18,7 @@ export default function About() {
       <section className="relative overflow-hidden">
         <div className="relative w-[90%] md:w-[80%] mx-auto">
           <div className={`w-full mx-auto flex flex-col xl:grid xl:grid-cols-2 `}>
-            <div className="pt-10 flex justify-center mb-0 xl:mb-20 xl:mt-[10px] 3xl:mt-[100px]">
+            <div className="pt-10 flex justify-center mb-0 xl:mb-20 mt-5 xl:mt-[30px] 3xl:mt-[100px]">
               <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start text-primary w-full lg:w-[90%] ">
                 <h2 className="text-[16px] md:text-[24px] font-sansCjk font-medium tracking-[2.08px] md:tracking-[2.4px]">
                   文域設計創立於2017年，深耕文化場域
@@ -81,7 +81,7 @@ export default function About() {
           </div>
           {/* Section 以設計閱讀世界  desktop*/}
           <div className="relative pr-10 pl-10 pb-[40px]">
-            <div className="hidden lg:flex items-center justify-center min-h-screen wider:min-h-max -mt-[120px] wider:mt-[220px] ">
+            <div className="hidden lg:flex items-center justify-center min-h-max mb-[200px] wider:mb-[180px] mt-[180px] lg:mt-[120px] xl:mt-[20px] 3xl:mt-[100px]  wider:mt-[220px] ">
               <div className="shrink-0 md:w-[700px] 2xl:w-[60%] md:mt-[19px] relative z-10 ">
                 <Image className="rounded-lg" src={Image01} width={573} height="383" alt="img01" />
               </div>
@@ -91,12 +91,12 @@ export default function About() {
               <div className="flex shrink-0 w-2/3 lg:w-auto -left-[260px] 2xl:-left-[100px] top-[160px] md:top-[200px] relative z-10">
                 <Image className="rounded-lg" src={Image03} width={263} height="307" alt="img01" />
               </div>
-              <div className="flex flex-col inset-0 justify-center w-full mt-[200px] items-center absolute z-20">
+              <div className="flex flex-col inset-0 justify-center w-full mt-10 items-center absolute z-20">
                 <div className="relative left-0 right-1 bottom-10 w-px p-[0.5px] h-10 bg-gray-500 transform translate-y-1/2"></div>
                 <div className="text-[24px] wider:text-[24px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-[60px]">
                   <span className="block font-sansCjk tracking-[20px]">世界</span>
                   <span className="block font-sansCjk tracking-[20px]">閱讀</span>
-                  <span className="block font-sansCjk tracking-[20px]">以設計，</span>
+                  <span className="block relative font-sansCjk tracking-[20px]">以設計<span className="absolute right-[2px]">，</span></span>
                 </div>
                 <div className="text-[18px] wider:text-[24px] text-[#1b1b1b] font-normal mt-10">
                   <Image className="rounded-lg" src={Logo} width={110} height={110} alt="logo" />
@@ -114,7 +114,7 @@ export default function About() {
           className="relative bg-fit w-full h-auto lg:h-[991px] mt-[120px]"
           style={{ backgroundImage: `url(${NewsBg.src})` }}
         >
-          <div className="flex flex-col justify-start item-center w-[80%] mx-auto pb-10">
+          <div className="flex flex-col justify-start item-center w-[80%] mx-auto py-12">
             <div className="flex flex-row md:justify-start items-center pt-[50px] pb-[10px] lg:py-[50px]">
               <h2 className="font-syne text-[30px] md:text-[48px] tracking-[1.44px] text-primary font-normal capitalize">
                 Design History
@@ -200,7 +200,7 @@ export default function About() {
           </div>
 
           <div className="flex pb-[100px] pt-20 wide:pt-[230px] w-full wider:w-[80%] justify-center items-center mx-auto">
-            <div className="w-full wide:w-2/3 flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-row items-center lg:items-start">
+            <div className="w-full wide:w-2/3 flex flex-col md:grid md:grid-cols-2 3md:flex 3md:flex-row 3md:pl-10 items-center lg:items-start">
               <Image
                 src={TEAMIMAGE[0].src}
                 width={285}
@@ -208,7 +208,7 @@ export default function About() {
                 alt={TEAMIMAGE[0].title}
                 className="rounded-sm lg:ml-14 xl:ml-0"
               />
-              <div className="flex flex-col p-4 md:p-10 lg:p-20 items-center lg:items-start">
+              <div className="flex flex-col p-4 md:p-10 lg:p-20 items-start">
                 <div className="flex flex-row items-center">
                   <p className="text-primary tracking-[12.98px] text-[18px] pt-4 [writing-mode:vertical-lr] ">
                     {TEAMIMAGE[0].title.slice(0, 3)}
@@ -227,7 +227,7 @@ export default function About() {
               <Image className="rounded-lg" src={Image07} width={546} height="364" alt="img05" />
             </div>
           </div>
-          <div className="text-primary grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-10 ">
+          <div className="text-primary grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-10 wider:px-[200px]">
             {TEAMIMAGE.slice(1, 11).map((item) => (
               <div className="flex flex-col justify-center items-center font-sansCjk" key={item.id}>
                 <Image src={item.src} width={285} height={367} alt={item.title} className="rounded-sm" />

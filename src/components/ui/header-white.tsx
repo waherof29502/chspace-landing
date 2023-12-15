@@ -21,7 +21,7 @@ export default function HeaderWhite() {
 
   return (
     <header
-      className={`fixed w-full z-30 md:bg-opacity-100 transition duration-300 ease-in-out bg-white 
+      className={`fixed w-full z-30 md:bg-opacity-100 transition duration-300 ease-in-out bg-[#F5F5F5]
       }`}
     >
       <div className="h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-8 xl:px-[140px]">

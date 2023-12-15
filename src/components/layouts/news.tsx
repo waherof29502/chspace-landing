@@ -31,29 +31,50 @@ export default function News() {
     <>
       <section className="relative overflow-hidden">
         <div className="py-4 xl:p-20 w-full">
-          <div
-            className={`text-primary flex flex-row justify-center items-center font-serif mt-5 md:mt-10 md:mb-[100px] ${
-              !top
-                ? 'fixed bg-white top-[60px] md:top-[110px] -left-[2px] md:-left-[8px] h-[120px] md:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2'
-                : ''
-            }`}
-          >
-            {NEWS_FILTER_LISTS.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => setActiveCategory(item.category)}
-                className={`px-8 ${
-                  item.id !== NEWS_FILTER_LISTS[NEWS_FILTER_LISTS.length - 1].id
-                    ? 'border-r-[1px] border-[#9c9c9c] border-solid'
-                    : ''
-                }`}
-              >
-                <span className="tracking-wider font-sansCjk text-[18px] md:text-[22px] text-[#888] font-semibold hover:text-primary">
-                  {item.title}
-                </span>
-              </button>
-            ))}
-          </div>
+            {/* desktop filter button */}
+            <div
+              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 -mb-[40px] lg:mb-[100px] ${
+                !top
+                  ? 'fixed bg-white top-[60px] lg:top-[35px] 3xl:top-[90px] -left-[8px] h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2'
+                  : ''
+              }`}
+            >
+              {NEWS_FILTER_LISTS.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveCategory(item.category)}
+                  className={`px-8 ${
+                    item.id !== NEWS_FILTER_LISTS[NEWS_FILTER_LISTS.length - 1].id
+                      ? 'md:border-r-[1px] border-[#9c9c9c] border-solid mb-5 md:mb-0'
+                      : 'mb-5 md:mb-0'
+                  }`}
+                >
+                  <span className={`tracking-wider font-sansCjk text-[18px] md:text-[12px] lg:text-[16px] wide:text-[22px]  ${activeCategory ===item.category ?"text-primary" :'text-[#888]'}  text-[#888] font-semibold hover:text-primary`}>
+                    {item.title}
+                  </span>
+                </button>
+              ))}
+            </div>
+            {/* mobile filter button */}
+            <div
+              className={`md:hidden grid grid-cols-2 gap-y-5 font-serif text-primary my-5 items-start ${
+                !top
+                  ? 'fixed bg-white top-[70px] -left-[2px] h-fit w-full z-10 py-3'
+                  : ''
+              }`}
+            >
+              {NEWS_FILTER_LISTS.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveCategory(item.category)}
+                 >
+                  <span className={`tracking-wider font-sansCjk text-[18px] md:text-[12px] lg:text-[16px] wide:text-[22px]  ${activeCategory ===item.category ?"text-primary" :'text-[#888]'}  text-[#888] font-semibold hover:text-primary`}>
+                    {item.title}
+                  </span>
+                </button>
+              ))}
+            </div>
+
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 w-auto gap-10  ">
             {filterProjects().map((item) => (
               <div

@@ -24,11 +24,17 @@ const CarouselText = ({ children, autoSlide = false, autoSlideInterval = 3000, c
   return (
     <div className="overflow-x-hidden overflow-y-visible relative rounded-lg">
       <div
-        className="flex transition-transform ease-out duration-500"
-        style={{ transform: `translateX(-${curr * 42}%)` }}
+        className="flex transition-transform ease-out duration-500 gap-4 lg:w-[100%] xl:w-[90%] xxxl:w-[75%] 3xl:w-[70%] wide:w-[80%] wider:w-[57%]"
+        style={{ transform: `translateX(-${curr * 52}%)`, marginLeft: `${curr===0 ?'0px':curr===1?'-12px':'-16px'}`}}>
+          {children}
+        </div>
+
+      {/* <div
+        className="flex transition-transform ease-out duration-500 gap-4"
+        style={{ transform: `translateX(-${curr*446}px)` , marginLeft: `${curr===0 ?'0px':'-14px'}`}}
       >
         {children}
-      </div>
+      </div> */}
       <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10"></div>
     </div>
   );

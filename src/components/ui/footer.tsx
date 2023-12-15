@@ -4,15 +4,16 @@ export default function Footer() {
   return (
     <footer>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 bg-background rounded-xl -my-3 lg:m-[8px] py-20">
-        <div className="flex flex-col justify-center items-center mb-2 md:mb-4 md:flex-row md:items-center md:justify-between p-10 xl:px-[120px] py-4 md:py-12">
-          {/* Logo */}
-          <div className="md:-mt-[30px] ">
-            <LogoVWhite className="text-[184px]"/>
-          </div>
+        <div className="flex flex-col mb-2 md:mb-4 p-10 xl:px-[120px] py-4 md:py-12">
+          <div className="md:hidden flex justify-center items-center">
+             <LogoVWhite  className="text-[120px] pb-2"/>
 
-          {/* Service Nav as */}
-          <div>
-            <div className="hidden mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]">
+          </div>
+          <div className="hidden md:flex justify-between w-full">
+            {/* Logo */}
+            <LogoVWhite  className="text-[140px] ml-8"/>
+            {/* Service Nav as */}
+            <div className="mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]">
               <Link href="/chspace" className="item-center font-sansCjk text-white text-[22px] group">
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in group-hover:translate-y-1 duration-500" />
                 <span className="block group-hover:translate-y-6 duration-500 tracking-[43.5px]">文・域</span>

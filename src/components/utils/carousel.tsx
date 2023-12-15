@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import IconArrowLeft from '@/public/svg/left-arrow.svg';
 import IconArrowRight from '@/public/svg/right-arrow.svg';
-
 type CarouselProps = {
   children: React.ReactNode;
   autoSlide?: boolean;
@@ -34,8 +33,8 @@ const Carousel = ({
   return (
     <div className="overflow-x-hidden overflow-y-hidden relative rounded-lg">
       <div
-        className="flex transition-transform ease-out duration-500 h-[100vh]"
-        style={{ transform: `translateX(-${curr * 100}%)` }}
+        className="flex lg:items-center transition-transform ease-out duration-500 h-[80vh] lg:h-[83vh]"
+        style={{ transform: `translateX(-${curr * 100}%)`}}
       >
         {children}
       </div>

@@ -32,11 +32,11 @@ export default function Service() {
             <div className="hidden lg:flex lg:pl-10 xl:pl-12 3xl:pl-0 xl:justify-center pt-[80px]">
               <div className="w-1/2 xl:w-1/3 h-auto object-cover">
                 {filterProjects().map((item) => (
-                  <Image key={item.id} src={item.src} width={500} height={550} alt={item.title} />
+                  <Image key={item.id} src={item.src} width={500} height={550} alt={item.title} className='rounded-xl' />
                 ))}
               </div>
               <div className="w-full xl:w-1/2 flex flex-col justify-start pl-10 wide:pl-0 3xl:pr-10 flex-wrap">
-                <div className="flex flex-row md:justify-start items-center px-0 xl:px-8 wide:px-10 xl:pt-4">
+                <div className="flex flex-row md:justify-start items-center px-0 xl:px-5 xl:pt-4">
                   <h2 className="font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize">Service</h2>
                   <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[16px] xl:text-[18px]">服務項目</span>
                 </div>
@@ -45,13 +45,13 @@ export default function Service() {
                     <button
                       key={item.id}
                       onClick={() => setActiveCategory(item.category)}
-                      className={`pr-3 xl:px-3 3xl:pl-2 3xl:pr-6 wide:px-6`}
+                      className={`pr-8 2lg:pr-16 xl:px-3 3xl:pl-2 3xl:pr-10 wide:pr-14 wider:pr-[100px]`}
                     >
                       <div className="flex flex-col justify-center items-center group">
-                        <div className="text-[30px] xl:text-[40px] text-[#D9D9D9] group-hover:text-[#1B1B1B] pb-4">
+                        <div className={`text-[30px] xl:text-[40px] ${activeCategory=== item.category ?'text-[#1B1B1B]' :'text-[#D9D9D9]'} group-hover:text-[#1B1B1B]  pb-4`}>
                           {item.icon}
                         </div>
-                        <span className="tracking-[3px] font-sansCjk text-[16px] xxxl:text-[20px] text-primary font-medium ">
+                        <span className="tracking-[3px] font-sansCjk text-[16px] xxxl:text-[20px] text-primary font-medium whitespace-pre">
                           {item.title}
                         </span>
                       </div>
@@ -74,16 +74,16 @@ export default function Service() {
             <h2 className="font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize">Service</h2>
             <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]">服務項目</span>
           </div>
-          <div className="flex flex-row">
-            <div className="w-2/3 h-[500px] pl-5 sm:px-10">
+          <div className="flex flex-row w-full">
+            <div className="w-2/3 h-[500px] pl-5 sm:pl-10 sm:pr-0">
               {filterProjects().map((item) => (
                 <div
-                  className="bg-cover bg-center w-full h-[500px] pb-10"
+                  className="bg-cover bg-center w-full h-[500px] pb-10 rounded-xl"
                   style={{ backgroundImage: `url(${item.src})` }}
                 ></div>
               ))}
             </div>
-            <div className="px-4 py-2">
+            <div className="w-1/3 mx-auto py-2">
               <div className="flex flex-col justify-between h-full">
                 {SERVICESFILTER.map((item) => (
                   <button key={item.id} onClick={() => setActiveCategory(item.category)} className="px-1">
@@ -105,8 +105,8 @@ export default function Service() {
             <CustomBtn title={'觀看作品'} fontType={'font-syne'} />
           </Link>
         </div>
-
-        <div className="px-10 lg:px-10 py-20 xl:px-[160px] xl:py-[200px]">
+          {/* process section */}
+        <div className="px-10 lg:px-10 py-20 xl:px-[160px] wider:pl-[340px] xl:py-[200px]">
           <div className="flex flex-row md:justify-start items-center ">
             <h2 className="font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize">Process</h2>
             <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[18px]">服務流程</span>

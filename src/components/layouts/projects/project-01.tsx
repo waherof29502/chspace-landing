@@ -40,7 +40,7 @@ export default function project01() {
 
   return (
     <section className="relative">
-      <div className="max-w-8xl md:min-h-screen p-2 ">
+      <div className="max-w-8xl min-h-fit p-2 ">
         <Lightbox
           open={openLightBox}
           close={toggleLightBoxOpen(false)}
@@ -50,15 +50,15 @@ export default function project01() {
           animation={{ fade: 0 }}
           controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
         />
-        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox}>
+        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox} >
           {SLIDERS01.map((item) => (
             <Image
               key={item.id}
               src={item.src}
               width={2560}
               height="1270"
-              alt="12"
-              className="object-cover lg:h-[860px] xl:h-[1120px] wide:h-[1560px] wider:h-[1720px] "
+              alt="bg-img"
+              className="object-cover md:h-[860px] xl:h-[1120px] 3xl:h-[1560px] wider:h-[1720px] "
             />
           ))}
         </Carousel>
@@ -76,7 +76,7 @@ export default function project01() {
           ))}
         </div>
       </div>
-      <div className="hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:mt-[100px] lg:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]">
+      <div className="hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:mt-[50px] 3md:mt-[40px] 3xl:mt-[60px] wide:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]">
         <div className="flex items-center justify-center gap-2 z-10">
           {SLIDERS01.map((_, i) => (
             <div

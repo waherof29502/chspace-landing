@@ -29,16 +29,36 @@ export default function ContactForm() {
       line: Yup.string().max(10, '請輸入正確Line帳號格式'),
       message: Yup.string().max(400, '文字敘述上限400字').required('需求說明為必填欄位。')
     }),
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
+      //  const queryParams: FormValues = {
+      //   name: values.name,
+      //   phone: values.phone,
+      //   email: values.email,
+      //   line: values.line,
+      //   message: values.message
+      // };
+      try {
+        // Add your API POST logic here
+        const response = await fetch('your-email-api-endpoint', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        });
+
+        if (response.ok) {
+          console.log('Email sent successfully');
+          router.push('/success');
+        } else {
+          console.error('Failed to send email');
+          // Handle error case, e.g., show an error message to the user
+        }
+      } catch (error) {
+        console.error('Error occurred while sending email', error);
+        // Handle error case, e.g., show an error message to the user
+      }
       console.log('form submitted', values);
-      const queryParams: FormValues = {
-        name: values.name,
-        phone: values.phone,
-        email: values.email,
-        line: values.line,
-        message: values.message
-      };
-      router.push('/success');
     }
   });
   const OnSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -49,7 +69,7 @@ export default function ContactForm() {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className="flex flex-col md:flex-row rounded-lg flex-1 w-full lg:w-3/4 3xl:w-2/3 justify-center items-center  mb-10"
+        className="flex flex-col md:flex-row rounded-lg flex-1 w-full lg:w-3/4 3xl:w-2/3 justify-center items-center  mb-10 md:mb-2 lg:mb-10"
       >
         <div className="flex-1 w-full text-[#1b1b1b] px-5 xxxl:px-20 ">
           <div className="mt-6 p-5 lg:p-0">
@@ -174,7 +194,7 @@ export default function ContactForm() {
       </form>
       <button
         type="submit"
-        className="flex items-center justify-center bg-[#1b1b1b]  my-14 lg:my-0 p-4 w-1/2 lg:w-1/4 xl:w-1/6 rounded-xl group"
+        className="flex items-center justify-center bg-[#1b1b1b]  my-14 md:my-0 p-4 w-1/2 lg:w-1/4 xl:w-1/6 rounded-xl group"
         onClick={OnSubmit}
       >
         <div className="w-0 group-hover:w-10 h-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-x-2 duration-1000" />

@@ -1,22 +1,23 @@
 'use client';
 
 import Image from 'next/image';
-import Image01 from '@/public/images/1-1.jpg';
-import Image02 from '@/public/images/1-2.png';
-import Image03 from '@/public/images/1-3.png';
-import Image04 from '@/public/images/1-4.png';
-import Image05 from '@/public/images/1-5.png';
-import Image06 from '@/public/images/1-6.png';
-import Image07 from '@/public/images/1-7.jpg';
-import Image08 from '@/public/images/1-8.jpg';
-import Image09 from '@/public/images/1-9.jpg';
-import Image10 from '@/public/images/1-10.jpg';
-import Image11 from '@/public/images/1-11.jpg';
-import Image12 from '@/public/images/1-12.jpg';
+import Image01 from '@/public/images/home/1-1.jpg';
+import Image02 from '@/public/images/home/1-2.png';
+import Image03 from '@/public/images/home/1-3.png';
+import Image04 from '@/public/images/home/1-4.png';
+import Image05 from '@/public/images/home/1-5.png';
+import Image06 from '@/public/images/home/1-6.png';
+import Image07 from '@/public/images/home/1-7.jpg';
+import Image08 from '@/public/images/home/1-8.jpg';
+import Image09 from '@/public/images/home/1-9.jpg';
+import Image10 from '@/public/images/home/1-10.jpg';
+import Image11 from '@/public/images/home/1-11.jpg';
+import Image12 from '@/public/images/home/1-12.jpg';
 import Text from './text';
-import {motion} from 'framer-motion';
+import {easeIn, motion} from 'framer-motion';
 export default function Features() {
 const fadeInAnimationVariants = {
+  // bottom to up
   initial: {
     opacity: 0,
     x:0,
@@ -27,27 +28,20 @@ const fadeInAnimationVariants = {
     x:100,
     y: 0,
   },
+  // up to bottom
   initial3: {
     opacity: 0,
     x:  0,
     y: -200,
-  },
-  initial4: {
-    opacity: 0,
-    x: -200,
-    y: 0,
-  },
-  initial5: {
-    opacity: 0,
-    x: 0,
-    y: 200,
   },
   animate: (index: number) => ({
     opacity: 1,
     x: 0,
     y: 0,
     transition: {
-      delay: 0.125 * index,
+      duration: 1,
+      motion:easeIn,
+      delay: 0.25 * index,
     },
   }),
 };
@@ -58,7 +52,7 @@ const fadeInAnimationVariants = {
         <div className="flex items-center justify-center min-h-screen wider:min-h-max wider:mt-[220px] ">
           <motion.div className="shrink-0 md:w-[700px] 2xl:w-[852px] -ml-[80px] mr-[10px] md:ml-[420px] 2xl:ml-[210px] md:mt-[19px] md:mr-[2px] 2xl:mr-[10px]  relative z-10" 
             variants={fadeInAnimationVariants}
-            initial="initial4"
+            initial="initial"
             whileInView="animate"
             viewport={{
               once: false,
@@ -116,7 +110,7 @@ const fadeInAnimationVariants = {
           </motion.div>
           <motion.div className="flex w-[202px] md:w-[404px] shrink-0 ml-[1px] md:ml-[300px] -top-[100px] md:-top-[50px] 2xl:-top-[320px] 2xl:left-[200px] relative z-10"
            variants={fadeInAnimationVariants}
-            initial="initial4"
+            initial="initial"
             whileInView="animate"
             viewport={{
               once: false,
@@ -124,7 +118,7 @@ const fadeInAnimationVariants = {
             custom={2}>
             <Image className="rounded-lg" src={Image05} width={404} height="605" alt="img02" />
           </motion.div>
-          <motion.div className="flex shrink-0 -left-[200px] md:-left-[550px] top-[450px] md:top-[380px] 2xl:-left-[400px] 2xl:top-[120px] relative z-10"
+          <motion.div className="flex shrink-0 -left-[200px] md:-left-[550px] top-[450px] md:top-[400px] 2xl:-left-[400px] 2xl:top-[120px] relative z-10"
            variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -145,7 +139,7 @@ const fadeInAnimationVariants = {
           >
             <Image className="rounded-lg" src={Image06} width={468} height="314" alt="img01" />
           </motion.div>
-          <div className="flex inset-0 justify-start ml-[80px] 2xs:ml-[120px] sm:ml-[180px] md:ml-[100px] 3md:ml-[150px] lg:ml-[190px] 2lg:ml-[240px] xl:ml-[390px] 2xl:ml-[400px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20">
+          <div className="flex inset-0 justify-start ml-[80px] 2xs:ml-[120px] sm:ml-[180px] md:ml-[100px] 3md:ml-[150px] lg:ml-[190px] 2lg:ml-[240px] xl:ml-[390px] 2xl:ml-[350px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20">
             <div className="text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose">
               <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 為一個家的圓
@@ -188,7 +182,7 @@ const fadeInAnimationVariants = {
           </motion.div>
           <motion.div className="flex w-[202px] md:w-[259px] h-[265px] shrink-0 ml-[1px] md:ml-[120px] -top-[100px] md:-top-[50px] 2xl:-top-[350px] 2xl:ml-[40px] relative z-10"
            variants={fadeInAnimationVariants}
-            initial="initial3"
+            initial="initial"
             whileInView="animate"
             viewport={{
               once: false,
@@ -196,23 +190,39 @@ const fadeInAnimationVariants = {
             custom={2}>
             <Image className="rounded-lg" src={Image08} width={259} height="265" alt="img02" />
           </motion.div>
-          <div className="flex shrink-0 -left-[200px] md:-left-[400px] top-[450px] md:top-[280px] 2xl:top-[20px] relative z-10">
-            <Image className="rounded-lg" src={Image11} width={579} height="407" alt="img01" />
-          </div>
-          <motion.div className="flex shrink-0 w-[289px] md:w-[579px] md:w-[579px]-left-[170px] md:-left-[2px] -top-[170px] md:-top-[70px] 2xl:left-[300px] 2xl:-top-[260px]  relative z-8"
-           variants={fadeInAnimationVariants}
-            initial="initial3"
+          <motion.div className="flex shrink-0 -left-[200px] md:-left-[400px] top-[450px] md:top-[280px] 2xl:top-[20px] relative z-10"
+          variants={fadeInAnimationVariants}
+            initial="initial"
             whileInView="animate"
             viewport={{
               once: false,
             }}
             custom={2}>
+            <Image className="rounded-lg" src={Image11} width={579} height="407" alt="img01" />
+          </motion.div>
+          <motion.div className="flex shrink-0 w-[289px] md:w-[579px] -left-[10px] md:-left-[2px] -top-[170px] md:-top-[70px] 2xl:left-[300px] 2xl:-top-[260px]  relative z-8"
+            variants={fadeInAnimationVariants}
+            initial="initial2"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}
+           >
             <Image className="rounded-lg" src={Image10} width={579} height="467" alt="img01" />
           </motion.div>
-          <div className="flex shrink-0 -left-[270px] md:-left-[110px] top-[170px] md:top-[470px] 2xl:top-[300px] 2xl:-left-[620px] relative z-8">
+          <motion.div className="flex shrink-0 -left-[270px] md:-left-[110px] top-[170px] md:top-[470px] 2xl:top-[300px] 2xl:-left-[620px] relative z-8"
+           variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: false,
+            }}
+            custom={2}
+           >
             <Image className="rounded-lg" src={Image12} width={513} height="127" alt="img01" />
-          </div>
-          <div className="flex inset-0 justify-end mr-[65px] -mt-[50px] 2xs:mr-[80px] sm:mr-[160px] md:mr-[100px] 3md:mr-[260px] lg:mr-[240px] 2lg:mr-[290px] xl:mr-[450px] md:-mt-[90px] 2xl:mr-[700px] 2xl:-mt-[500px] wider:mr-[900px] wider:-mt-[800px]  items-center absolute z-20">
+          </motion.div>
+          <div className="flex inset-0 justify-end mr-[65px] -mt-[50px] 2xs:mr-[80px] sm:mr-[160px] md:mr-[100px] 3md:mr-[260px] lg:mr-[240px] 2lg:mr-[290px] xl:mr-[380px] md:-mt-[90px] 2xl:mr-[550px] 2xl:-mt-[500px] wider:mr-[900px] wider:-mt-[800px]  items-center absolute z-20">
             <div className="text-[16px] wider:text-[22px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-loose">
               <div className="relative left-4 right-1 bottom-10 w-px p-[0.5px] h-20 bg-gray-500 transform translate-y-1/2"></div>
               <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>

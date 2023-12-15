@@ -20,7 +20,7 @@ export default function OtherInfoCard({ OtherInfo }: OtherInfoCardProps) {
   const [currText, setCurrText] = useState(0);
 
   return (
-    <div className="flex justify-center lg:pl-[30px] xl:pl-[100px] 3xl:px-[150px] wide:px-[220px]">
+    <div className="flex justify-center lg:pl-[30px] xl:pl-[100px] 3xl:px-[150px] wide:px-[220px] wider:pl-[220px]">
       <div className="lg:hidden flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
         {OtherInfo.map((item) => (
           <OtherCard
@@ -35,7 +35,7 @@ export default function OtherInfoCard({ OtherInfo }: OtherInfoCardProps) {
           />
         ))}
       </div>
-      <div className="hidden lg:flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full">
+      <div className="hidden lg:flex overflow-x-auto mt-4 items-start no-scrollbar wide:max-w-full wider:w-full">
         <CarouselText autoSlide={false} setCurr={setCurrText} curr={currText}>
           {OtherInfo.map((item) => (
             <OtherCard
@@ -51,7 +51,7 @@ export default function OtherInfoCard({ OtherInfo }: OtherInfoCardProps) {
           ))}
         </CarouselText>
         <div
-          className="flex flex-row items-center wide:mt-[100px] lg:ml-[100px] lg:mr-[50px]"
+          className="flex flex-row items-center wide:mt-[100px] lg:ml-[100px] lg:mr-[50px] wider:ml-[300px] mr-auto"
           onClick={() => setCurrText(currText == OtherInfo.length - 2 ? 0 : currText + 1)}
         >
           <CustomBtn02 title={'view more'} fontType={'font-syne'} />
