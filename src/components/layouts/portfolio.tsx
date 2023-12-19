@@ -45,9 +45,9 @@ export default function Portfolio() {
           <div className="py-2 3md:py-10 lg:py-20">
             {/* desktop filter button */}
             <div
-              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 -mb-[20px] 3md:mt-0 3md:mb-10  ${
+              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 -mb-[20px] 3md:mt-0 3md:mb-10 transition duration-300 ease-in-out ${
                 !top
-                  ? 'fixed bg-white top-[35px] 3md:top-[40px] lg:top-[100px] 3xl:top-[150px] -left-[8px] h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2 ease-in'
+                  ? 'fixed bg-white top-[50px] 3md:top-[9vh] 3xl:top-[8vh] -left-[8px] md:h-18 xl:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2 ease-in'
                   : ''
               }`}
             >

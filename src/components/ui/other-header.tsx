@@ -26,7 +26,7 @@ export default function OtherHeader() {
       }`}
     >
       <div className="h-[100px] md:h-auto max-w-8xl mx-auto px-10 sm:px-6 lg:px-8 xl:px-[140px]">
-        <div className="flex items-center justify-between h-16 pt-6 pr-2 md:h-[100px] 3xl:h-40">
+        <div className="flex items-center justify-between h-16 pt-6 pr-2 md:h-[100px] wide:h-[140px]">
           <Logo top={top} />
 
           {/* Desktop navigation */}
