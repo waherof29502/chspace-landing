@@ -9,13 +9,18 @@ export default function Portfolio() {
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 280 ? setTop(false) : window.pageYOffset > 600 ? setTop(false) : setTop(true);
+    window.pageYOffset > 280 ? setTop(false) : window.pageYOffset > 500 ? setTop(false) : setTop(true);
   };
+
 
   useEffect(() => {
     scrollHandler();
     window.addEventListener('scroll', scrollHandler);
-    return () => window.removeEventListener('scroll', scrollHandler);
+
+    return () => {
+      window.removeEventListener('scroll', scrollHandler);
+
+    }
   }, [top]);
 
   const filterProjects = () => {
@@ -37,12 +42,12 @@ export default function Portfolio() {
     <>
       <section className="relative overflow-hidden">
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="py-2 md:py-10 lg:py-20">
+          <div className="py-2 3md:py-10 lg:py-20">
             {/* desktop filter button */}
             <div
-              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 -mb-[40px] lg:mb-[100px] ${
+              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 -mb-[20px] 3md:mt-0 3md:mb-10  ${
                 !top
-                  ? 'fixed bg-white top-[60px] lg:top-[35px] 3xl:top-[90px] -left-[8px] h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2'
+                  ? 'fixed bg-white top-[35px] 3md:top-[40px] lg:top-[100px] 3xl:top-[150px] -left-[8px] h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2 ease-in'
                   : ''
               }`}
             >
@@ -75,14 +80,13 @@ export default function Portfolio() {
                   key={item.id}
                   onClick={() => setActiveCategory(item.category)}
                  >
-                  <span className={`tracking-wider font-sansCjk text-[18px] md:text-[12px] lg:text-[16px] wide:text-[22px]  ${activeCategory ===item.category ?"text-primary" :'text-[#888]'}  text-[#888] font-semibold hover:text-primary`}>
+                  <span className={`tracking-wider font-sansCjk text-[18px] md:text-[12px]  ${activeCategory ===item.category ?"text-primary" :'text-[#888]'}  text-[#888] font-semibold hover:text-primary`}>
                     {item.title}
                   </span>
                 </button>
               ))}
-            </div>
-
-            <div className="px-0 sm:px-[70px] md:px-10 lg:px-[200px] xl:px-[240px] 3xl:px-[150px] wide:px-20">
+            </div>      
+            <div className={`px-0 ${!top ?"mt-[170px] md:mt-20 3md:mt-8 xl:mt-16":''} sm:px-[90px] md:px-10 3md:px-[190px] xl:px-[240px] 3xl:px-[150px] wide:px-20`}>
             {filterProjects().map((item) => (
               <PortfolioCard
                 key={item.id}
