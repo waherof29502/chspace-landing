@@ -4,7 +4,7 @@ import React from 'react';
 // 共用組件內容（Menu,Footer）
 export const NAV_ITEMS = [
   { id: 1, name: '關於文域', link: '/about-us' },
-  { id: 2, name: '作品欣賞', link: '/portfolio' },
+  { id: 2, name: '作品欣賞', link: '/projects' },
   { id: 3, name: '服務與流程', link: '/services' },
   { id: 4, name: '媒體報導', link: '/news' },
   { id: 5, name: '文・域', link: '/chspace' },
@@ -13,7 +13,7 @@ export const NAV_ITEMS = [
 
 export const FOOTER_ITEMS = [
   { id: 1, name: '關於文域', link: '/about-us' },
-  { id: 2, name: '作品欣賞', link: '/portfolio' },
+  { id: 2, name: '作品欣賞', link: '/projects' },
   { id: 3, name: '服務與流程', link: '/services' }
 ];
 
@@ -39,7 +39,7 @@ export const PORTFOLIO_ITEMS = [
     src: '/images/home/2-1.png',
     title: '三重陳宅｜寧靜致遠',
     location: '新北市 三重',
-    link: '/portfolio/work01',
+    link: '/work01',
     isImageLeft: false
   },
   {
@@ -47,7 +47,7 @@ export const PORTFOLIO_ITEMS = [
     src: '/images/home/2-2.png',
     title: '內湖羅宅｜漫光滋養',
     location: '台北市 內湖',
-    link: '/portfolio/work02',
+    link: '/work02',
     isImageLeft: true
   },
   {
@@ -55,7 +55,7 @@ export const PORTFOLIO_ITEMS = [
     src: '/images/home/2-3.png',
     title: '陽明山李宅｜山嵐藝廊',
     location: '台北市 陽明山',
-    link: '/portfolio/work03',
+    link: '/work03',
     isImageLeft: false
   }
 ];
@@ -66,7 +66,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-1.png',
     title: '三重陳宅｜寧靜致遠',
     location: '新北市 三重',
-    link: '/portfolio/work01',
+    link: '/work01',
     category: '住宅設計',
     desc: '一座居家圖書館家庭成員是一對夫妻和兩位小男孩，屋主很喜歡閱讀也有很多藏書， 為此打造一個親子共讀空間，以木紋區隔出空間的層次也如畫框般，勾勒家的畫景與架構。 玻璃磚屏風，保留早期紅磚交丁的工法，作爲區隔同時引領幽微的光影在室內自然流動。 主臥床頭為消弭大樑壓迫感，在其邊緣倒木紋斜角，使臥室氛圍舒展開來，有如置身溫馨小木屋。靜謐的氛圍和山景交映，達至寧靜致遠的心境。',
     awards:
@@ -78,7 +78,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-2.png',
     title: '內湖羅宅｜漫光滋養',
     location: '台北市 內湖',
-    link: '/portfolio/work02',
+    link: '/work02',
     category: '住宅設計'
   },
   {
@@ -86,7 +86,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-3.png',
     title: '陽明山李宅｜山嵐藝廊',
     location: '台北市 陽明山',
-    link: '/portfolio/work03',
+    link: '/work03',
     category: '住宅設計'
   },
   {
@@ -94,7 +94,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-4.png',
     title: '台灣室內設計週｜漢斯希爾展館',
     location: '南港展覽館1館',
-    link: '/portfolio/work04',
+    link: '/work03',
     category: '書店設計'
   },
   {
@@ -102,7 +102,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-5.png',
     title: '金灣閱潮書店｜閱潮咖啡區',
     location: '廣州珠海 金灣市',
-    link: '/portfolio/work05',
+    link: '/work04',
     category: '書店設計'
   },
   {
@@ -110,7 +110,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-6.png',
     title: '心之所憩｜生活的模樣',
     location: '台北市 中山區',
-    link: '/portfolio/work06',
+    link: '/work04',
     category: '住宅設計'
   }
 ];

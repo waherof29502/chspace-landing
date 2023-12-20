@@ -33,9 +33,9 @@ export default function News() {
         <div className="py-4 xl:p-20 w-full">
             {/* desktop filter button */}
             <div
-              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 -mb-[40px] lg:mb-[100px] ${
+              className={`hidden md:flex flex-row justify-center items-center text-primary font-serif mt-10 mb-[40px] lg:mb-[100px] transition duration-300 ease-in-out ${
                 !top
-                  ? 'fixed bg-white top-[60px] lg:top-[35px] 3xl:top-[90px] -left-[8px] h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2'
+                  ? 'fixed bg-white top-[50px] 3md:top-[6vh] xl:top-[3vh] wide:top-[5vh] -left-[8px] md:h-18 xl:h-20 w-full z-10 flex flex-row justify-center items-center py-4 px-2 ease-in'
                   : ''
               }`}
             >
@@ -81,7 +81,7 @@ export default function News() {
                 className="flex flex-col justify-start items-start px-12 md:px-5 xl:px-10 wider:px-[140px]"
                 key={item.id}
               >
-                <Link href={`/news/1`}>
+                <Link href={`/new1`}>
                   <Image src={item.src} alt="image" width={495} height={325} className="wider:w-[1440px]" />
                   <div className="flex justify-between w-full px-1 ">
                     <span className="font-sansCjk text-[14px] text-primary tracking-[0.42px] pt-5">{item.tag}</span>

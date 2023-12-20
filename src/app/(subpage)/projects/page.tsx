@@ -7,7 +7,7 @@ import PortfolioFeature from '@/src/components/layouts/portfolio';
 import HeroBg from '@/public/images/bg-3.png';
 import OtherHero from '@/src/components/ui/other-hero';
 
-export default function Portfolio() {
+export default function Project() {
   return (
     <>
       <OtherHero imageUrl={HeroBg} title={'作品欣賞'} desc={'Portfolio'} />

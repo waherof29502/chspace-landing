@@ -37,7 +37,7 @@ export default function Footer() {
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
                 <span className="block group-hover:translate-y-6 duration-500 tracking-[11.2px]">服務與流程</span>
               </Link>
-              <Link href="/portfolio" className="items-center text-white font-sansCjk md:ml-5 text-[22px] group">
+              <Link href="/projects" className="items-center text-white font-sansCjk md:ml-5 text-[22px] group">
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
                 <span className="block  group-hover:translate-y-6 duration-500" style={{ letterSpacing: '1em' }}>
                   作品欣賞

@@ -5,7 +5,7 @@ export const metadata = {
 
 import Project01 from '@/src/components/layouts/projects/project-01';
 
-export default function Work() {
+export default function Work04() {
   return (
     <>
       <Project01 />
