@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import IconArrowLeft from '@/public/svg/left-arrow.svg';
 import IconArrowRight from '@/public/svg/right-arrow.svg';
+import useScrollProcess from '@/src/hooks/useScrollProcess';
 type CarouselProps = {
   children: React.ReactNode;
   autoSlide?: boolean;
@@ -9,17 +10,24 @@ type CarouselProps = {
   curr: number;
   setCurr: React.Dispatch<React.SetStateAction<number>>;
   setOpenLightBox: React.Dispatch<React.SetStateAction<boolean>>;
+  projectName:string
+
 };
+
+
 const Carousel = ({
   children,
   autoSlide = false,
   autoSlideInterval = 3000,
   curr,
   setCurr,
-  setOpenLightBox
+  setOpenLightBox,
+  projectName
 }: CarouselProps) => {
   // const [curr, setCurr] = useState(0)
+  const completions = useScrollProcess();
 
+  // 輪播功能
   const prev = () => setCurr((curr: number) => (curr === 0 ? React.Children.count(children) - 1 : curr - 1));
 
   const next = () => setCurr((curr: number) => (curr === React.Children.count(children) - 1 ? 0 : curr + 1));
@@ -33,12 +41,12 @@ const Carousel = ({
   return (
     <div className="overflow-x-hidden overflow-y-hidden relative rounded-lg">
       <div
-        className="flex lg:items-center transition-transform ease-out duration-500 h-[80vh] lg:h-[83vh]"
+        className="flex lg:items-center transition-transform ease-out duration-500 3md:h-[98.5vh]"
         style={{ transform: `translateX(-${curr * 100}%)`}}
       >
         {children}
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10">
+      <div className="absolute inset-0 flex items-center justify-between p-4 md:p-10 z-20">
         <button onClick={prev}>
           <IconArrowLeft className="text-[53px] text-white/90 hover:text-primary/90" />
         </button>
@@ -51,6 +59,9 @@ const Carousel = ({
         <button onClick={next}>
           <IconArrowRight className="text-[53px] text-white/90 hover:text-primary/90" />
         </button>
+      </div>
+      <div className={`absolute inset-0 hidden 3md:flex items-end z-10 ${completions>0 ? '-translate-y-[40px] transform ease-linear duration-500 opacity-0' :''}`}>
+       <span className="text-[32px] font-sansCjk md:text-[38px] font-semibold px-12 py-10">{projectName}</span>
       </div>
       {/* 圖示於圖片中展示 */}
       {/* <div className='absolute bottom-8 right-0 left-0'>

@@ -50,7 +50,8 @@ export default function project01() {
           animation={{ fade: 0 }}
           controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
         />
-        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox} >
+        {/* 案名 projectName 可以直接打字輸入*/}
+        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox} projectName={PORTFOLIO_PAGE_ITEMS[0].title} >
           {SLIDERS01.map((item) => (
             <Image
               key={item.id}
@@ -58,11 +59,13 @@ export default function project01() {
               width={2560}
               height="1270"
               alt="bg-img"
-              className="object-cover md:h-[860px] xl:h-[1120px] 3xl:h-[1560px] wider:h-[1720px] "
+              className="object-cover md:h-[860px] 3md:h-[1120px] 3xl:h-[1560px] wider:h-[1720px] "
             />
           ))}
         </Carousel>
       </div>
+      {/* 輪播客製化按鈕 */}
+      {/* 電腦版按鈕 */}
       <div className="flex md:hidden justify-center mt-2">
         <div className="flex items-center justify-center gap-2 z-10">
           {SLIDERS01.map((_, i) => (
@@ -76,6 +79,7 @@ export default function project01() {
           ))}
         </div>
       </div>
+      {/* 手機版按鈕 */}
       <div className="hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:mt-[50px] 3md:mt-[40px] 3xl:mt-[60px] wide:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]">
         <div className="flex items-center justify-center gap-2 z-10">
           {SLIDERS01.map((_, i) => (
@@ -89,14 +93,15 @@ export default function project01() {
           ))}
         </div>
       </div>
-
+      {/* 專案案名 */}
       <div className="relative max-w-8xl md:-mt-[90px] mx-auto md:mx-[20px] lg:mx-[20px] xl:mx-[100px] 3xl:mx-[120px] wide:mx-[210px] px-4 sm:px-6 ">
         {PORTFOLIO_PAGE_ITEMS.slice(0, 1).map((item) => (
           <ProjectCard key={item.id} {...item} />
         ))}
+        {/* 專案圖片區塊 */}
         {SLIDERS01.map((item) => (
           <motion.div key={item.id} className="mt-10"
-          variants={fadeInAnimationVariants}
+            variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
@@ -107,6 +112,7 @@ export default function project01() {
             <Image src={item.src} width={1920} height="1270" alt="12" className="rounded-xl" />
           </motion.div>
         ))}
+        {/* 社群icon */}
         <div className="text-primary flex flex-row justify-end items-center mt-10 md:mt-10 md:mb-[100px] wider:mr-[200px]">
           <Link href={'https://www.facebook.com/CHSPACE'} target="_blank" rel="noopener noreferrer">
             <IconFb className="text-[34px] mr-2 text-[#7A7A7A] hover:text-[#4e4e4e]" />
@@ -115,6 +121,7 @@ export default function project01() {
             <IconIg className="text-[34px] text-[#7A7A7A] hover:text-[#4e4e4e]" />
           </Link>
         </div>
+        {/* 其他資訊區塊 */}
         <div className="flex flex-row md:flex-row md:justify-start items-center mt-[100px] mb-[10px] md:mb-[45px] border-t-[1.5px] border-[#D6D6D6] border-solid">
           <h2 className="py-10 xl:pt-[80px] xl:pb-[10px] font-syne text-[30px] md:text-[48px] text-primary font-normal capitalize">
             recommend

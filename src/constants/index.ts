@@ -4,7 +4,7 @@ import React from 'react';
 // 共用組件內容（Menu,Footer）
 export const NAV_ITEMS = [
   { id: 1, name: '關於文域', link: '/about-us' },
-  { id: 2, name: '作品欣賞', link: '/projects' },
+  { id: 2, name: '作品欣賞', link: '/portfolio' },
   { id: 3, name: '服務與流程', link: '/services' },
   { id: 4, name: '媒體報導', link: '/news' },
   { id: 5, name: '文・域', link: '/chspace' },
@@ -13,7 +13,7 @@ export const NAV_ITEMS = [
 
 export const FOOTER_ITEMS = [
   { id: 1, name: '關於文域', link: '/about-us' },
-  { id: 2, name: '作品欣賞', link: '/projects' },
+  { id: 2, name: '作品欣賞', link: '/portfolio' },
   { id: 3, name: '服務與流程', link: '/services' }
 ];
 
