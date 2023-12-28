@@ -65,13 +65,13 @@ export default function project01() {
         </Carousel>
       </div>
       {/* 輪播客製化按鈕 */}
-      {/* 電腦版按鈕 */}
+      {/* 手機版按鈕 */}
       <div className="flex md:hidden justify-center mt-2">
         <div className="flex items-center justify-center gap-2 z-10">
           {SLIDERS01.map((_, i) => (
             <div
               key={i}
-              className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[18px] lg:h-[18px] bg-black rounded-full  ${
+              className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] bg-black rounded-full  ${
                 curr === i ? 'p-0.5 bg-[#545351]' : 'bg-opacity-20'
               }`}
               onClick={() => setCurr(i)}
@@ -79,13 +79,13 @@ export default function project01() {
           ))}
         </div>
       </div>
-      {/* 手機版按鈕 */}
+      {/* 電腦版按鈕 */}
       <div className="hidden md:flex justify-end -mt-[440px] xs:-mt-[380px] sm:-mt-[180px] md:mt-[50px] 3md:mt-[40px] 3xl:mt-[60px] wide:mt-[80px] mr-[100px] sm:mr-[200px] md:mr-[100px] wider:mr-[400px]">
         <div className="flex items-center justify-center gap-2 z-10">
           {SLIDERS01.map((_, i) => (
             <div
               key={i}
-              className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] lg:w-[18px] lg:h-[18px] bg-black rounded-full  ${
+              className={`w-[10px] h-[10px] md:w-[14px] md:h-[14px] xl:w-[16px] xl:h-[16px] wide:w-[18px] wide:h-[18px] bg-black rounded-full  ${
                 curr === i ? 'p-0.5 bg-[#545351]' : 'bg-opacity-20'
               }`}
               onClick={() => setCurr(i)}

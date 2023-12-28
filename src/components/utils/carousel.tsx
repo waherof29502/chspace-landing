@@ -61,7 +61,7 @@ const Carousel = ({
         </button>
       </div>
       <div className={`absolute inset-0 hidden 3md:flex items-end z-10 ${completions>0 ? '-translate-y-[40px] transform ease-linear duration-500 opacity-0' :''}`}>
-       <span className="text-[32px] font-sansCjk md:text-[38px] font-semibold px-12 py-10">{projectName}</span>
+       <span className="font-sansCjk text-[28px] 3xl:text-[30px] wide:text-[34px] font-semibold px-12 py-10">{projectName}</span>
       </div>
       {/* 圖示於圖片中展示 */}
       {/* <div className='absolute bottom-8 right-0 left-0'>
