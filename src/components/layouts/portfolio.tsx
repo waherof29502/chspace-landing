@@ -71,7 +71,7 @@ export default function Portfolio() {
             <div
               className={`md:hidden grid grid-cols-2 gap-y-5 font-serif text-primary my-5 items-start ${
                 !top
-                  ? 'fixed bg-white top-[70px] -left-[2px] h-fit w-full z-10 py-3'
+                  ? 'fixed bg-white top-[70px] -left-[2px] h-[20vh] w-full z-10 py-3'
                   : ''
               }`}
             >
