@@ -20,7 +20,7 @@ export default function ContactUs() {
               </span>
             </div>
             <div className="mr-1 xl:mr-[100px] wider:mr-[100px] md:mt-6 flex justify-end">
-              <Link href="/contact-us">
+              <Link href="#contact-us">
                 <CustomBtn title={'立即諮詢'} fontType={'font-sansCjk'} />
               </Link>
             </div>
