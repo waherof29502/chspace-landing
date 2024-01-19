@@ -13,7 +13,6 @@ import Image09 from '@/public/images/home/1-9.jpg';
 import Image10 from '@/public/images/home/1-10.jpg';
 import Image11 from '@/public/images/home/1-11.jpg';
 import Image12 from '@/public/images/home/1-12.jpg';
-import Text from './text';
 import {easeIn, motion} from 'framer-motion';
 export default function Features() {
 const fadeInAnimationVariants = {

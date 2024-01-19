@@ -59,7 +59,7 @@ export default function project01() {
           controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
         />
         {/* 案名 projectName 可以直接打字輸入*/}
-        <Carousel autoSlide={false} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox} projectName={PORTFOLIO_PAGE_ITEMS[0].title} >
+        <Carousel autoSlide={true} setCurr={setCurr} curr={curr} setOpenLightBox={setOpenLightBox} projectName={PORTFOLIO_PAGE_ITEMS[0].title} >
           {SLIDERS01.map((item) => (
             <Image
               key={item.id}

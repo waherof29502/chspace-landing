@@ -325,6 +325,7 @@ export default function About() {
             <Image className="rounded-lg 3md:scale-75" src={Image07} width={546} height="364" alt="img05" />
           </div>
           <div className="flex pb-8 xl:pb-[100px] pt-[4rem] xl:pt-20 wide:pt-[230px] w-full wider:w-[83%] justify-center items-center mx-auto 3md:-mt-20 xl:mt-[7rem] wide:mt-6 mb-10">
+            {/* 老闆的圖和文 */}
             <div className="w-full 3xl:w-3/4 wide:w-2/3 flex flex-col md:grid md:grid-cols-2 3md:flex 3md:flex-row items-center 3md:items-start">
               <Image
                 src={TEAMIMAGE[0].src}
@@ -353,6 +354,7 @@ export default function About() {
               <Image className="rounded-lg" src={Image07} width={546} height="364" alt="img05" />
             </div>
           </div>
+          {/* 員工團體照區塊 */}
           <div className="text-primary grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-16 wider:px-[12.5rem]">
             {TEAMIMAGE.slice(1, 11).map((item) => (
               <div className="flex flex-col justify-center items-center font-sansCjk pb-10" key={item.id}>

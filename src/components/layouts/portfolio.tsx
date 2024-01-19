@@ -24,21 +24,22 @@ export default function Portfolio() {
     }
   }, [top]);
 
-  const filterProjects = () => {
-    if (activeCategory == '住宅設計') {
-      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '住宅設計');
-    } else if (activeCategory === '辦公空間') {
-      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '辦公空間');
-    } else if (activeCategory === '文化場域') {
-      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '文化場域');
-    } else if (activeCategory === '商空設計') {
-      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '商空設計');
-    } else if (activeCategory === '展場規劃') {
-      return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '展場規劃');
-    } else {
-      return PORTFOLIO_PAGE_ITEMS;
-    }
-  };
+  // 原先預定給點擊後跳filter功能，暫時保留
+  // const filterProjects = () => {
+  //   if (activeCategory == '住宅設計') {
+  //     return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '住宅設計');
+  //   } else if (activeCategory === '辦公空間') {
+  //     return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '辦公空間');
+  //   } else if (activeCategory === '文化場域') {
+  //     return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '文化場域');
+  //   } else if (activeCategory === '商空設計') {
+  //     return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '商空設計');
+  //   } else if (activeCategory === '展場規劃') {
+  //     return PORTFOLIO_PAGE_ITEMS.filter((item) => item.category === '展場規劃');
+  //   } else {
+  //     return PORTFOLIO_PAGE_ITEMS;
+  //   }
+  // };
   return (
     <>
       <section className="relative overflow-hidden">
@@ -90,7 +91,7 @@ export default function Portfolio() {
               ))}
             </div>      
             <div className={`px-0 ${!top ?"mt-[170px] md:mt-20 3md:mt-8 xl:mt-16":''} sm:px-[5.625rem] md:px-10 3md:px-[1.875rem] xl:px-[15rem] 3xl:px-[9.375rem] wide:px-20`}>
-            {filterProjects().map((item) => (
+            {PORTFOLIO_PAGE_ITEMS.map((item) => (
               <PortfolioCard
                 key={item.id}
                 imageSrc={item.src}
