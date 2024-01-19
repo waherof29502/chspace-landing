@@ -144,8 +144,8 @@ export default function About() {
               once: false,
             }}
             custom={1}>
-              <div className="relative left-0 right-1 bottom-10 w-px p-[0.5px] h-10 bg-gray-500 transform translate-y-1/2"></div>
-              <div className="text-[1.125rem] text-gray-600 font-medium [writing-mode:vertical-lr] leading-[2.5rem]">
+              <div className="relative left-0 right-1 bottom-10 w-px p-[0.5px] h-10 bg-[#9C9C9C] transform translate-y-1/2"></div>
+              <div className="text-[1.125rem] text-[#4B4646] font-medium [writing-mode:vertical-lr] leading-[2.5rem]">
                 <span className="block font-sansCjk tracking-[1.25rem]">世界</span>
                 <span className="block font-sansCjk tracking-[1.25rem]">閱讀</span>
                 <span className="block font-sansCjk tracking-[1.25rem]">以設計<span className="absolute mr-3">，</span></span>
@@ -335,12 +335,12 @@ export default function About() {
               />
               <div className="flex flex-col p-4 md:p-10 xxxl:p-20 items-center md:items-start">
                 <div className="flex flex-row items-center 3md:pt-20 xl:pt-10">
-                  <p className="text-primary tracking-[12.98px] text-[1.375rem] md:text-[1.125rem] pt-4 [writing-mode:vertical-lr] ">
+                  <p className="text-primary tracking-[12.98px] text-[1.375rem] md:text-[1.125rem] font-medium pt-4 [writing-mode:vertical-lr] ">
                     {TEAMIMAGE[0].title.slice(0, 3)}
                   </p>
                   <div className="flex flex-col pl-5">
-                    <p className="text-primary tracking-[1.98px] text-[1rem] md:text-[1.125rem] pt-4">{TEAMIMAGE[0].title.slice(3, 10)}</p>
-                    <span className="text-primary tracking-[1.98px] text-[1rem] md:text-[1.125rem] pt-2 ">{TEAMIMAGE[0].category}</span>
+                    <p className="text-primary font-serifNoto tracking-[1.98px] text-[1rem] md:text-[1.125rem] pt-4">{TEAMIMAGE[0].title.slice(3, 10)}</p>
+                    <span className="text-primary font-normal tracking-[1.98px] text-[1rem] md:text-[1.125rem] pt-2 ">{TEAMIMAGE[0].category}</span>
                   </div>
                 </div>
                 <p className="text-[#464646] leading-[35px] tracking-[1.82px] md:tracking-[1.76px] text-[0.875rem] md:text-[1rem] pt-2 lg:pr-0  wider:pr-[300px]">

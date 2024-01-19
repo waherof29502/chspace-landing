@@ -18,9 +18,20 @@ export default function ContactUs() {
                 欲瞭解更多我們的專業服務，歡迎與我們聯繫
               </span>
             </div>
-            <div className="-mr-10 xl:mr-[100px] wider:mr-[100px] -mt-10 md:mt-6 flex justify-end">
+            <div className="ml-auto  flex justify-end">
               <Link href="/contact-us">
-                <CustomBtn title={'立即諮詢'} fontType={'font-sansCjk'} />
+                 <button className="flex my-[10px] md:my-0 py-[50px] transition-all ">
+                    <div className="group flex w-[180px] items-center justify-between">
+                      <p
+                        className={`text-primary translate-x-13 font-sansCjk text-[16px] tracking-[2.08px] transition-all group-hover:translate-x-12 ease-linear duration-500`}
+                      >
+                        立即諮詢
+                      </p>
+                      <div className="relative w-[50px] group-hover:w-5 h-[1.2px] bg-primary transform transition-transform group-hover:ease-linear group-hover:translate-x-2 duration-500" />
+                      <div className="relative -ml-[50px]  rounded-full border-[1.5px] border-primary border-solid w-8 h-8  group-hover:bg-black duration-500" />
+                      <div className="absolute w-0 group-hover:w-5 h-[1.2px] translate-x-[144px] bg-blue-200 transform transition-transform group-hover:ease-linear group-hover:translate-x-[147px] duration-200" />
+                    </div>
+                  </button>
               </Link>
             </div>
           </div>

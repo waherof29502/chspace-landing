@@ -3,6 +3,7 @@ import Image from 'next/image';
 import HeroBg from '@/public/images/home/hero-image.png';
 import Slogan from '@/public/images/home/slogan.png';
 export default function Hero() {
+  
   return (
     <section className="relative">
       <div className="w-full min-h-screen flex items-center justify-center relative">

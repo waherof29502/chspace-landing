@@ -65,7 +65,7 @@ const ServiceCard = ({ dataIndex, src, title, icon }: ServiceProps) => {
           <Image src={src} alt={title} width={100} height={100} className="w-full object-contain" />
 
           <div className="absolute inset-0 flex flex-col justify-center items-center p-0 md:p-1 transition-all slide-out-from-bottom-10  hover:bg-slate-200/20 hover:rounded-[51px]">
-            <div className="text-[28px] hover:text-white p-[85px] -mb-[100px] hover:-mb-[30px] hover:-mt-10 animate-in opacity-0 hover:opacity-100 ease-linear duration-500 z-20">
+            <div className="text-[30px] hover:text-white p-[85px] -mb-[100px] hover:-mb-[30px] hover:-mt-10 animate-in opacity-0 hover:opacity-100 ease-linear duration-500 z-20">
               {icon}
             </div>
             <p className="text-[22px] font-sansCjk font-medium md:font-bold tracking-[3.3px] text-white -translate-y-10  ease-linear  duration-500 ">

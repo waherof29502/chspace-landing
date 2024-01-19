@@ -32,7 +32,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
-        serifNoto: ['var(--font-serifNoto)', ...fontFamily.serif],
+        serifNoto: ['var(--font-serifNoto)'],
         syne: ['var(--font-syne)', 'sans-serif'],
         sansNoto: ['var(--font-sansNoto)', 'sans-serif'],
         sansCjk: ['var(--font-sansCjk)', 'sans-serif']
