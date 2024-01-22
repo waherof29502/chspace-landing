@@ -4,6 +4,7 @@ interface ButtonProps {
 }
 export default function CustomBtn02({ title, fontType}: ButtonProps) {
   return (
+    // 此為更多資訊的大按鈕
     <button className="flex mx-0 my-[10px] md:my-0 xl:my-5 py-[60px] wide:py-0 transition-all">
       <div className="group flex w-[210px] lg:w-[260px]  items-center justify-between -mt-[30px] ">
         <p
