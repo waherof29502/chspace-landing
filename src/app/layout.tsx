@@ -13,7 +13,7 @@ const syne = Syne({
 });
 
 const sansCjk = localFonts({
-  src: '../../public/fonts/NotoSerifCJKtc-VF.otf',
+  src: '../../public/fonts/NotoSerifTC.ttf',
   display: 'swap',
   variable: '--font-sansCjk'
 });
