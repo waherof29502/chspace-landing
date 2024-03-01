@@ -1,5 +1,5 @@
 import '../styles/style.css';
-import { Syne} from 'next/font/google';
+import { Syne } from 'next/font/google';
 import localFonts from 'next/font/local';
 import { cn } from '@/src/utils/utils';
 
@@ -18,12 +18,11 @@ const sansCjk = localFonts({
   variable: '--font-sansCjk'
 });
 
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-Hans-TW">
       <body
-        className={cn('font-serif antialiased bg-white text-white tracking-tight' ,sansCjk.variable,syne.variable)}
+        className={cn('font-serif antialiased bg-white text-white tracking-tight', sansCjk.variable, syne.variable)}
       >
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}

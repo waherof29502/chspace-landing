@@ -59,7 +59,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-1.png',
     title: '三重陳宅｜寧靜致遠',
     location: '新北市 三重',
-    link: '/work01',
+    link: '/portfolio/work01',
     category: '住宅設計',
     desc: '一座居家圖書館家庭成員是一對夫妻和兩位小男孩，屋主很喜歡閱讀也有很多藏書， 為此打造一個親子共讀空間，以木紋區隔出空間的層次也如畫框般，勾勒家的畫景與架構。 玻璃磚屏風，保留早期紅磚交丁的工法，作爲區隔同時引領幽微的光影在室內自然流動。 主臥床頭為消弭大樑壓迫感，在其邊緣倒木紋斜角，使臥室氛圍舒展開來，有如置身溫馨小木屋。靜謐的氛圍和山景交映，達至寧靜致遠的心境。',
     awards:
@@ -71,7 +71,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-2.png',
     title: '內湖羅宅｜漫光滋養',
     location: '台北市 內湖',
-    link: '/work02',
+    link: '/portfolio/work02',
     category: '住宅設計'
   },
   {
@@ -79,7 +79,7 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-3.png',
     title: '陽明山李宅｜山嵐藝廊',
     location: '台北市 陽明山',
-    link: '/work03',
+    link: '/portfolio/work03',
     category: '住宅設計'
   },
   {
@@ -87,33 +87,33 @@ export const PORTFOLIO_PAGE_ITEMS = [
     src: '/images/home/2-4.png',
     title: '台灣室內設計週｜漢斯希爾展館',
     location: '南港展覽館1館',
-    link: '/work03',
-    category: '書店設計'
+    link: '/portfolio/work03',
+    category: '展場規劃'
   },
   {
     id: 5,
     src: '/images/home/2-5.png',
     title: '金灣閱潮書店｜閱潮咖啡區',
     location: '廣州珠海 金灣市',
-    link: '/work04',
-    category: '書店設計'
+    link: '/portfolio/work04',
+    category: '商空設計'
   },
   {
     id: 6,
     src: '/images/home/2-6.png',
     title: '心之所憩｜生活的模樣',
     location: '台北市 中山區',
-    link: '/work04',
-    category: '住宅設計'
+    link: '/portfolio/work04',
+    category: '文化場域'
   }
 ];
 export const PORTFOLIO_FILTER_LISTS = [
-  { id: 1, title: 'All', category: 'All',path:'all' },
-  { id: 2, title: '住宅設計', category: '住宅設計' ,path:'house'},
-  { id: 3, title: '辦公空間', category: '辦公空間' ,path:'office'},
-  { id: 4, title: '文化場域', category: '文化場域' ,path:'cultural-space' },
-  { id: 5, title: '商空設計', category: '商空設計',path:'commercial-space' },
-  { id: 6, title: '展場規劃', category: '展場規劃',path:'venue-plan' }
+  { id: 1, title: 'All', category: 'All', path: 'all' },
+  { id: 2, title: '住宅設計', category: '住宅設計', path: 'house' },
+  { id: 3, title: '辦公空間', category: '辦公空間', path: 'office' },
+  { id: 4, title: '文化場域', category: '文化場域', path: 'cultural-space' },
+  { id: 5, title: '商空設計', category: '商空設計', path: 'commercial-space' },
+  { id: 6, title: '展場規劃', category: '展場規劃', path: 'venue-plan' }
 ];
 //作品詳細內文內容
 export const SLIDERS01 = [
@@ -138,9 +138,15 @@ export const PROJECTDETAIL = [
   }
 ];
 export const OTHERSPROJECT01 = [
-  { id: 1, src: '/images/work01/2-1.png', title: '台灣室內設計週｜漢斯希爾展館', desc: '南港展覽館1館' ,link:"/work01"},
-  { id: 2, src: '/images/work01/2-2.png', title: '台灣室內設計週｜漢斯希爾展館', desc: '新竹高鐵旁' ,link:'/work02'},
-  { id: 3, src: '/images/work01/2-2.png', title: '閱讀軌跡｜閱讀迷宮', desc: '浙江/紹興 鏡湖區',link:'/work03' }
+  {
+    id: 1,
+    src: '/images/work01/2-1.png',
+    title: '台灣室內設計週｜漢斯希爾展館',
+    desc: '南港展覽館1館',
+    link: '/work01'
+  },
+  { id: 2, src: '/images/work01/2-2.png', title: '台灣室內設計週｜漢斯希爾展館', desc: '新竹高鐵旁', link: '/work02' },
+  { id: 3, src: '/images/work01/2-2.png', title: '閱讀軌跡｜閱讀迷宮', desc: '浙江/紹興 鏡湖區', link: '/work03' }
 ];
 export const NEWS01 = [
   { id: 1, content: '【2022 iF獎設計】放緩生活步調享受日光、木質的洗禮' },
@@ -263,8 +269,8 @@ export const PROCESSINFO = [
 ];
 //media report page
 export const NEWS_FILTER_LISTS = [
-  { id: 1, title: '影音專區', category: '影音專區',path:'video' },
-  { id: 2, title: '媒體專訪', category: '媒體專訪',path:'report' }
+  { id: 1, title: '影音專區', category: '影音專區', path: 'video' },
+  { id: 2, title: '媒體專訪', category: '媒體專訪', path: 'report' }
 ];
 export const MEDIAREPORT = [
   {
@@ -274,7 +280,7 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 2,
@@ -283,7 +289,7 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 3,
@@ -292,7 +298,7 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 4,
@@ -301,7 +307,7 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 5,
@@ -310,7 +316,7 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 6,
@@ -319,7 +325,7 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 7,
@@ -328,25 +334,25 @@ export const MEDIAREPORT = [
     tag: '影音專區',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 8,
     src: '/images/news/1-8.png',
     title: '2022 iF 設計精選－文域室內裝修設計有限公司 文域生活｜太倉閱潮書店',
-    tag: '影音專區',
+    tag: '媒體專訪',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   },
   {
     id: 9,
     src: '/images/news/1-9.png',
     title: '文域設計 謝鎮宇總監 : 重新定義人與空間的連結 | 睦人物 Vol.3',
-    tag: '影音專區',
+    tag: '媒體專訪',
     date: '2021/07',
     resource: '來源：T客邦',
-    link:'/new1'
+    link: '/media-reports/new1'
   }
 ];
 export const MEDIACONTENTIMG = [
@@ -361,7 +367,7 @@ export const CHSPACE = [
     id: 1,
     src: '/images/chspace/1-1.png',
     title: '書架的模組化、可拆解與富有彈性的構件組裝，創造出空間生命週循環的迴圈，體現環保永續的精神。',
-    date: '2023/11',
+    date: '2023/11'
   },
   {
     id: 2,
@@ -395,29 +401,26 @@ export const CHSPACE = [
   }
 ];
 
-
-
 export const OTHERCONTENTS01 = [
   {
     id: 1,
     src: '/images/chspace/1-1-12.png',
     title: '書架的模組化、可拆解與富有彈性的構件組裝，創造出空間生命週循環的迴圈，體現環保永續的精神。',
     date: '2021/07',
-    link:'/chspace1'
+    link: '/chspace1'
   },
   {
     id: 2,
     src: '/images/chspace/1-1-13.png',
     title: '《做鐵工的人》每個項目工地幕後的無名英雄，都是成就作品的大英雄。',
     date: '2021/07',
-    link:'/chspace1'
+    link: '/chspace1'
   },
   {
     id: 3,
     src: '/images/chspace/1-1-13.png',
     title: '書架的模組化、可拆解與富有彈性的構件組裝，創造出空間生命週循環的迴圈，體現環保永續的精神。',
     date: '2021/07',
-    link:'/chspace1'
-
+    link: '/chspace1'
   }
 ];

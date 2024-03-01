@@ -10,7 +10,7 @@ export default function ArticleHeader() {
       <div className="bg-[#F5F5F5] w-[99%] rounded-[20px] mt-2 md:h-auto max-w-8xl mx-auto px-10 md:px-4 lg:px-8 xl:px-[140px]">
         <div className="flex items-center justify-between pt-0 md:pt-16 wide:pt-10 pr-2 h-[5rem] md:h-[6rem] wide:h-[9rem]">
           <div className="-mt-4 md:-mt-10 3md:-mt-10 xxxl:-mt-8 wide:-mt-2">
-          <Logo completions={1}/>
+            <Logo completions={1} />
           </div>
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">

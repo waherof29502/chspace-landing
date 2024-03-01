@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect, useRef, FC } from "react";
+import React, { useState, useEffect, useRef, FC } from 'react';
 
 interface PicAuthCodeProps {
   code: () => string;
@@ -8,7 +7,7 @@ interface PicAuthCodeProps {
 const PicAuthCode: FC<PicAuthCodeProps> = (props) => {
   const config = {
     contentWidth: 150,
-    contentHeight:50,
+    contentHeight: 50,
     backgroundColorMin: 180,
     backgroundColorMax: 240,
     fontSizeMin: 5,
@@ -18,16 +17,16 @@ const PicAuthCode: FC<PicAuthCodeProps> = (props) => {
     lineColorMin: 40,
     lineColorMax: 180,
     dotColorMin: 0,
-    dotColorMax: 255,
+    dotColorMax: 255
   };
 
-  const [identifyCode, setIdentifyCode] = useState("");
+  const [identifyCode, setIdentifyCode] = useState('');
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     refresh();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     identifyCode && drawPic();
@@ -85,7 +84,7 @@ const PicAuthCode: FC<PicAuthCodeProps> = (props) => {
 
   const drawPic = (): void => {
     const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const ctx = canvas?.getContext('2d');
 
     if (ctx) {
       ctx.fillStyle = randomColor(config.backgroundColorMin, config.backgroundColorMax);
@@ -100,14 +99,7 @@ const PicAuthCode: FC<PicAuthCodeProps> = (props) => {
     }
   };
 
-  return (
-    <canvas
-      ref={canvasRef}
-      width={config.contentWidth}
-      height={config.contentHeight}
-      onClick={refresh}
-    />
-  );
+  return <canvas ref={canvasRef} width={config.contentWidth} height={config.contentHeight} onClick={refresh} />;
 };
 
 export default PicAuthCode;

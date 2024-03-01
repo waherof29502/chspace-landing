@@ -14,24 +14,25 @@ export default function ContactUs() {
             </div>
             <div className="flex md:ml-[1rem] lg:ml-[1.25rem] md:p-0 mt-4 md:mt-[3.75rem] xl:ml-[5rem] xxxl:ml-[4.375rem] 2xl:ml-[10px] wider:-ml-[8.75rem] lg:mr-0 3xl:mr-[9.375rem] flex-col md:items-center lg:justify-center ">
               <span className="text-[#545351] text-[1rem] md:text-[1rem] lg:text-[1.125rem] font-sansCjk font-medium md:font-semibold leading-10">
-                營造生活美學，享受無比舒適<br/>
+                營造生活美學，享受無比舒適
+                <br />
                 欲瞭解更多我們的專業服務，歡迎與我們聯繫
               </span>
             </div>
             <div className="ml-auto  flex justify-end">
               <Link href="/contact-us">
-                 <button className="flex my-[10px] md:my-0 py-[50px] transition-all ">
-                    <div className="group flex w-[180px] items-center justify-between">
-                      <p
-                        className={`text-primary translate-x-13 font-sansCjk text-[16px] tracking-[2.08px] transition-all group-hover:translate-x-12 ease-linear duration-500`}
-                      >
-                        立即諮詢
-                      </p>
-                      <div className="relative w-[50px] group-hover:w-5 h-[1.2px] bg-primary transform transition-transform group-hover:ease-linear group-hover:translate-x-2 duration-500" />
-                      <div className="relative -ml-[50px]  rounded-full border-[1.5px] border-primary border-solid w-8 h-8  group-hover:bg-black duration-500" />
-                      <div className="absolute w-0 group-hover:w-5 h-[1.2px] translate-x-[144px] bg-blue-200 transform transition-transform group-hover:ease-linear group-hover:translate-x-[147px] duration-200" />
-                    </div>
-                  </button>
+                <button className="flex my-[10px] md:my-0 py-[50px] transition-all ">
+                  <div className="group flex w-[180px] items-center justify-between">
+                    <p
+                      className={`text-primary translate-x-13 font-sansCjk text-[16px] tracking-[2.08px] transition-all group-hover:translate-x-12 ease-linear duration-500`}
+                    >
+                      立即諮詢
+                    </p>
+                    <div className="relative w-[50px] group-hover:w-5 h-[1.2px] bg-primary transform transition-transform group-hover:ease-linear group-hover:translate-x-2 duration-500" />
+                    <div className="relative -ml-[50px]  rounded-full border-[1.5px] border-primary border-solid w-8 h-8  group-hover:bg-black duration-500" />
+                    <div className="absolute w-0 group-hover:w-5 h-[1.2px] translate-x-[144px] bg-blue-200 transform transition-transform group-hover:ease-linear group-hover:translate-x-[147px] duration-200" />
+                  </div>
+                </button>
               </Link>
             </div>
           </div>

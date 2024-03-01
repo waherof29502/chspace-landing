@@ -9,7 +9,7 @@ export default function ChSpace() {
   return (
     <>
       <OtherHero imageUrl={HeroBg} title={'文・域'} desc={'C.H.Space'} />
-      <Chspace/>
+      <Chspace />
     </>
   );
 }

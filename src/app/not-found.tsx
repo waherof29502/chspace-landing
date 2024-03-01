@@ -12,7 +12,7 @@ export default function NotFound() {
     <>
       <HeaderWhite />
       <div className="flex flex-col flex-1 justify-between items-center min-h-fit mt-[220px] md:mt-[300px] mb-[100px]">
-        <Image src={ErrorImg} width={529} height="223" alt="error" className='w-[300px] md:w-[529px]' />
+        <Image src={ErrorImg} width={529} height="223" alt="error" className="w-[300px] md:w-[529px]" />
         <div>
           <h1 className="text-black font-sansCjk mt-[100px] text-[22px] tracking-[3.3px] font-semibold">
             OOPS!頁面發生錯誤!!

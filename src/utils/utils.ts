@@ -6,12 +6,12 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 type SortProps = {
-arr:{
-  title:string
-}[],
-title:string
+  arr: {
+    title: string;
+  }[];
+  title: string;
 };
 
-export function sortTag({arr,title}:SortProps){
-  return arr.find((item)=> item.title === title)
+export function sortTag({ arr, title }: SortProps) {
+  return arr.find((item) => item.title === title);
 }

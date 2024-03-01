@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -10,19 +10,19 @@ interface FormValues {
   email: string;
   line?: string;
   message?: string;
-  authCode?:string;
-  captcha:string;
+  authCode?: string;
+  captcha: string;
 }
 
 export default function ContactForm() {
-  const [ authCode, setAuthCode ] = useState('');
+  const [authCode, setAuthCode] = useState('');
   const router = useRouter();
   // 設定生成隨機驗證碼的 logic
   // 導入pic-auth-code component <PicAuthCode code={codeHandler} />
   const codeHandler = () => {
-    const words = "QWERTYUIPASDFGHJKLZXCVBNM123456789";
-    let code = "";
-    
+    const words = 'QWERTYUIPASDFGHJKLZXCVBNM123456789';
+    let code = '';
+
     // 驗證碼為四碼
     for (let i = 0; i < 4; i++) {
       code += words[Math.floor(Math.random() * 34)];
@@ -37,8 +37,8 @@ export default function ContactForm() {
       email: '',
       line: '',
       message: '',
-      authCode:authCode,
-      captcha:'',
+      authCode: authCode,
+      captcha: ''
     },
     validationSchema: Yup.object({
       name: Yup.string().max(5, '請輸入正確姓名格式').required('名稱為必填欄位。'),
@@ -46,11 +46,14 @@ export default function ContactForm() {
       email: Yup.string().email('錯誤的Email格式').required('Email為必填欄位'),
       line: Yup.string().max(10, '請輸入正確Line帳號格式'),
       message: Yup.string().max(400, '文字敘述上限400字').required('需求說明為必填欄位。'),
-      captcha: Yup.string().transform((value, originalValue) => originalValue ? originalValue.toUpperCase() : value).oneOf([authCode], "驗證碼不正確").required(''),
+      captcha: Yup.string()
+        .transform((value, originalValue) => (originalValue ? originalValue.toUpperCase() : value))
+        .oneOf([authCode], '驗證碼不正確')
+        .required('')
     }),
     onSubmit: async (values) => {
       // 可確認後端傳入資料
-       const queryParams:any = {
+      const queryParams: any = {
         name: values.name,
         phone: values.phone,
         email: values.email,

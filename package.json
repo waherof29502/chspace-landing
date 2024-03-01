@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"src/app/**/*.{ts,tsx}\""
+    "format": "npx prettier --write \"src/app/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",

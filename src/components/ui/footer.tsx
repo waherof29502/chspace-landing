@@ -1,4 +1,4 @@
-import { IconFb, IconIg, IconShare,LogoVWhite } from '@/public/svg';
+import { IconFb, IconIg, IconShare, LogoVWhite } from '@/public/svg';
 import Link from 'next/link';
 export default function Footer() {
   return (
@@ -6,11 +6,11 @@ export default function Footer() {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 bg-background rounded-xl -my-3 lg:m-[8px] py-20">
         <div className="flex flex-col mb-2 md:mb-4 p-10 xl:px-[120px] py-4 md:py-12">
           <div className="md:hidden flex justify-center items-center">
-             <LogoVWhite  className="text-[120px] pb-2"/>
+            <LogoVWhite className="text-[120px] pb-2" />
           </div>
           <div className="hidden md:flex justify-between w-full">
             {/* Logo */}
-            <LogoVWhite  className="text-[140px] ml-8"/>
+            <LogoVWhite className="text-[140px] ml-8" />
             {/* Service Nav as */}
             <div className="mb-10 ml-5 md:mb-0 md:flex flex-col justify-center items-center md:items-start text-sm text-gray-600 md:[writing-mode:vertical-lr]">
               <Link href="/chspace" className="item-center font-sansCjk text-white text-[22px] group">
@@ -23,7 +23,10 @@ export default function Footer() {
                   聯絡文域
                 </span>
               </Link>
-              <Link href="/media-reports" className="items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group">
+              <Link
+                href="/media-reports"
+                className="items-center text-white font-sansCjk md:ml-5 text-[22px] md:-mr-1 group"
+              >
                 <div className="relative left-[16px] h-0 group-hover:h-2 w-[1.2px] bg-white transform transition-transform group-hover:ease-in-out group-hover:translate-y-1 duration-500" />
                 <span className="block group-hover:translate-y-6 duration-500" style={{ letterSpacing: '1em' }}>
                   媒體報導

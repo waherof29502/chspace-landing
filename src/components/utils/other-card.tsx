@@ -10,10 +10,10 @@ interface OthersCardProps {
   date?: string;
   desc?: string;
   tag?: string;
-  link:string
+  link: string;
 }
 
-const OtherCard = ({ dataIndex, imageUrl, title, otherTitle, desc, date, tag ,link}: OthersCardProps) => {
+const OtherCard = ({ dataIndex, imageUrl, title, otherTitle, desc, date, tag, link }: OthersCardProps) => {
   const TOTAL_CAROUSEL_COUNT = dataIndex;
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef: RefObject<HTMLDivElement> = useRef(null);
@@ -62,7 +62,10 @@ const OtherCard = ({ dataIndex, imageUrl, title, otherTitle, desc, date, tag ,li
         className={`w-60 3md:w-[300px] xl:w-[350px] wide:w-[435px] p-2 ${
           dataIndex === TOTAL_CAROUSEL_COUNT - 1 ? 'mr-[1px]' : 'mr-[0.5px]'
         }  rounded-lg cursor-pointer`}
-        onClick={(e) => {handleClick(e, dataIndex);window.location.href=`${link}`}}
+        onClick={(e) => {
+          handleClick(e, dataIndex);
+          window.location.href = `${link}`;
+        }}
       >
         <div className="relative overflow-hidden rounded-lg">
           <div className="flex flex-col">

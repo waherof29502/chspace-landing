@@ -10,10 +10,8 @@ type CarouselProps = {
   curr: number;
   setCurr: React.Dispatch<React.SetStateAction<number>>;
   setOpenLightBox: React.Dispatch<React.SetStateAction<boolean>>;
-  projectName:string
-
+  projectName: string;
 };
-
 
 const Carousel = ({
   children,
@@ -42,7 +40,7 @@ const Carousel = ({
     <div className="overflow-x-hidden overflow-y-hidden relative rounded-lg">
       <div
         className="flex lg:items-center transition-transform ease-out duration-500 3md:h-[98.5vh]"
-        style={{ transform: `translateX(-${curr * 100}%)`}}
+        style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {children}
       </div>
@@ -60,8 +58,14 @@ const Carousel = ({
           <IconArrowRight className="text-[53px] text-white/90 hover:text-primary/90" />
         </button>
       </div>
-      <div className={`absolute inset-0 hidden 3md:flex items-end z-10 ${completions>0 ? '-translate-y-[40px] transform ease-linear duration-500 opacity-0' :''}`}>
-       <span className="font-sansCjk text-[28px] 3xl:text-[30px] wide:text-[34px] font-semibold px-12 py-10">{projectName}</span>
+      <div
+        className={`absolute inset-0 hidden 3md:flex items-end z-10 ${
+          completions > 0 ? '-translate-y-[40px] transform ease-linear duration-500 opacity-0' : ''
+        }`}
+      >
+        <span className="font-sansCjk text-[28px] 3xl:text-[30px] wide:text-[34px] font-semibold px-12 py-10">
+          {projectName}
+        </span>
       </div>
       {/* 圖示於圖片中展示 */}
       {/* <div className='absolute bottom-8 right-0 left-0'>

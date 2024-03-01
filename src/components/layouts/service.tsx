@@ -5,7 +5,7 @@ import NewsBg from '@/public/images/services/bg-1.png';
 import Link from 'next/link';
 import CustomBtn from '@/src/components/ui/custom-btn';
 import Image from 'next/image';
-import {easeIn, motion} from 'framer-motion';
+import { easeIn, motion } from 'framer-motion';
 
 export default function Service() {
   const [activeCategory, setActiveCategory] = useState('住宅設計');
@@ -33,25 +33,24 @@ export default function Service() {
             <div className="hidden lg:flex lg:pl-10 xl:pl-12 3xl:pl-0 xl:justify-center pt-[80px]">
               <div className="w-1/2 xl:w-1/3 h-auto object-cover">
                 {filterProjects().map((item) => (
-                <motion.div
-                      key={item.id}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 3 }}
-                    >
-                      <Image
-                        src={item.src}
-                        width={500}
-                        height={550}
-                        alt={item.title}
-                        className={"rounded-xl"}
-                      />
-                    </motion.div>))}
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 3 }}
+                  >
+                    <Image src={item.src} width={500} height={550} alt={item.title} className={'rounded-xl'} />
+                  </motion.div>
+                ))}
               </div>
               <div className="w-full xl:w-1/2 flex flex-col justify-start pl-10 wide:pl-0 3xl:pr-10 flex-wrap">
                 <div className="flex flex-row md:justify-start items-center px-0 xl:px-5 xl:pt-4">
-                  <h2 className="font-syne text-[1.875rem] md:text-[3rem] text-primary font-normal capitalize">Service</h2>
-                  <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[1rem] xl:text-[1.125rem]">服務項目</span>
+                  <h2 className="font-syne text-[1.875rem] md:text-[3rem] text-primary font-normal capitalize">
+                    Service
+                  </h2>
+                  <span className="pl-4 mt-1.5 font-sansCjk text-[#545351] text-[1rem] xl:text-[1.125rem]">
+                    服務項目
+                  </span>
                 </div>
                 <div className="flex flex-row items-center xl:pl-3 pt-5 py-[1.25rem] xl:py-[3.125rem] 3xl:py-[4rem]">
                   {SERVICESFILTER.map((item) => (
@@ -61,7 +60,11 @@ export default function Service() {
                       className={`pr-8 2lg:pr-16 xl:px-3 3xl:pl-2 3xl:pr-10 wide:pr-14 wider:pr-[100px]`}
                     >
                       <div className="flex flex-col justify-center items-center group">
-                        <div className={`text-[1.875rem] xl:text-[2.5rem] ${activeCategory=== item.category ?'text-[#1B1B1B]' :'text-[#D9D9D9]'} group-hover:text-[#1B1B1B]  pb-4`}>
+                        <div
+                          className={`text-[1.875rem] xl:text-[2.5rem] ${
+                            activeCategory === item.category ? 'text-[#1B1B1B]' : 'text-[#D9D9D9]'
+                          } group-hover:text-[#1B1B1B]  pb-4`}
+                        >
                           {item.icon}
                         </div>
                         <span className="tracking-[3px] font-sansCjk text-[1rem] xxxl:text-[1.25rem] text-primary font-medium whitespace-pre">
@@ -91,10 +94,10 @@ export default function Service() {
             <div className="w-2/3 h-[500px] pl-5 sm:pl-10 sm:pr-0">
               {filterProjects().map((item) => (
                 <motion.div
-                 key={item.id}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 3 }}
+                  key={item.id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 3 }}
                   className="bg-cover bg-center w-full h-[500px] pb-10 rounded-xl"
                   style={{ backgroundImage: `url(${item.src})` }}
                 ></motion.div>
@@ -105,7 +108,13 @@ export default function Service() {
                 {SERVICESFILTER.map((item) => (
                   <button key={item.id} onClick={() => setActiveCategory(item.category)} className="px-1">
                     <div className="flex flex-col justify-center items-center group">
-                      <div className={`text-[2.5rem] group-hover:text-[#1B1B1B] pb-4 ${activeCategory=== item.category ?'text-[#1B1B1B]' :'text-[#D9D9D9]'}`}>{item.icon}</div>
+                      <div
+                        className={`text-[2.5rem] group-hover:text-[#1B1B1B] pb-4 ${
+                          activeCategory === item.category ? 'text-[#1B1B1B]' : 'text-[#D9D9D9]'
+                        }`}
+                      >
+                        {item.icon}
+                      </div>
                       <span className="tracking-[2.4px] font-sansCjk text-[1rem] text-primary font-medium whitespace-pre">
                         {item.title}
                       </span>
@@ -122,7 +131,7 @@ export default function Service() {
             <CustomBtn title={'觀看作品'} fontType={'font-syne'} />
           </Link>
         </div>
-          {/* process section */}
+        {/* process section */}
         <div className="px-7 md:px-10 xl:px-[160px] wider:pl-[340px] py-20 sm:py-10 xl:py-[200px]">
           <div className="flex flex-row md:justify-start items-center ">
             <h2 className="font-syne text-[1.875rem] md:text-[3rem] text-primary font-normal capitalize">Process</h2>
@@ -134,7 +143,9 @@ export default function Service() {
               {PROCESSINFO.map((item, index) => (
                 <li className="relative flex gap-4 mt-[40px] items-center" key={item.id}>
                   <div className="flex justify-center items-center bg-[#F3F3F3] rounded-full w-[5rem] h-[5rem] z-10">
-                    <p className="text-primary font-syne tracking-[0.54px] text-[1rem] lg:text-[1.125rem]">Step{item.id}</p>
+                    <p className="text-primary font-syne tracking-[0.54px] text-[1rem] lg:text-[1.125rem]">
+                      Step{item.id}
+                    </p>
                   </div>
                   {index !== PROCESSINFO.slice(0, 8).length - 1 ? (
                     <div className="before:absolute before:z-0 before:left-[40px] before:h-full before:w-[2px] before:bg-[#F3F3F3]" />
@@ -168,7 +179,7 @@ export default function Service() {
                   {index !== PROCESSINFO.slice(0, 4).length - 1 ? (
                     <div className="before:absolute before:z-0 before:left-[50px] before:h-full before:w-[2px] before:bg-[#F3F3F3]" />
                   ) : (
-                    <div className="before:absolute before:z-0 before:left-[50px] before:h-full before:w-[2px]"/>
+                    <div className="before:absolute before:z-0 before:left-[50px] before:h-full before:w-[2px]" />
                   )}
                   <div className="flex-col justify-start text-[#464646] font-sansCjk w-2/3 lg:whitespace-pre">
                     <p className="font-semibold text-[0.875rem] lg:text-[1.25rem] tracking-[3px] py-2">{item.title}</p>
@@ -178,7 +189,9 @@ export default function Service() {
                       <span className="text-[0.625rem] lg:text-[0.75rem] xl:text-[1rem] ">
                         <a href="tel:+886-2-27386876">{item.contact?.slice(0, 20)}</a>
                       </span>
-                      <span className="text-[0.625rem] lg:text-[0.75rem] xl:text-[1rem] pl-1">{item.contact?.slice(20, 40)}</span>
+                      <span className="text-[0.625rem] lg:text-[0.75rem] xl:text-[1rem] pl-1">
+                        {item.contact?.slice(20, 40)}
+                      </span>
                     </div>
                   </div>
                 </li>

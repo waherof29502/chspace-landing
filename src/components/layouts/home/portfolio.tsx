@@ -15,14 +15,14 @@ export default function Portfolio() {
             {PORTFOLIO_ITEMS.map((item) => (
               <div className="transition-all" key={item.id}>
                 <div className="relative flex flex-col text-center lg:text-right">
-                    <PortfolioCard
-                      key={item.id}
-                      imageSrc={item.src}
-                      title={item.title}
-                      location={item.location}
-                      link={item.link}
-                      isImageLeft={item.isImageLeft}
-                    />
+                  <PortfolioCard
+                    key={item.id}
+                    imageSrc={item.src}
+                    title={item.title}
+                    location={item.location}
+                    link={item.link}
+                    isImageLeft={item.isImageLeft}
+                  />
                 </div>
               </div>
             ))}

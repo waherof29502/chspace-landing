@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import {LogoHWhite} from '@/public/svg';
+import { LogoHWhite } from '@/public/svg';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -59,8 +59,8 @@ export default function MobileMenuWhite() {
         {mobileNavOpen ? (
           <div id="mobile-nav" className="absolute top-0 h-screen pb-16 z-100 left-0 w-full overflow-scroll bg-primary">
             <div className="shrink-0 ml-4 pr-2 pl-1 pt-1">
-              <Link href="/"  onClick={() => setMobileNavOpen(!mobileNavOpen)}>
-              <LogoHWhite className="text-[100px] md:text-[183px]"/>
+              <Link href="/" onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                <LogoHWhite className="text-[100px] md:text-[183px]" />
               </Link>
             </div>
             <ul className="px-5 mt-[45px] font-syne">
