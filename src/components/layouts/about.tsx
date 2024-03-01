@@ -1,5 +1,4 @@
 'use client';
-import { useRef } from 'react';
 import { TEAMIMAGE, ANNUALEVENTS, AWARDRECORDS } from '@/src/constants';
 import Image from 'next/image';
 import NewsBg from '@/public/images/bg-2.png';
@@ -62,10 +61,10 @@ export default function About() {
                 }}
                 custom={0}
               >
-                <h2 className="text-[1rem] lg:text-[1.25rem] 3xl:text-[1.5rem] font-medium tracking-[2.08px] md:tracking-[2.4px]">
+                <h2 className="text-[1rem] lg:text-[1.25rem] 3xl:text-[1.5rem] font-medium font-sansCjk tracking-[2.08px] md:tracking-[2.4px]">
                   文域設計創立於2017年，深耕文化場域
                 </h2>
-                <p className="text-[#464646] text-[0.875rem] 3xl:text-[1rem] font-medium tracking-[1.82px] md:tracking-[1.76px] leading-[2.25rem] 3xl:leading-[39px] px-2 md:px-4 3md:pl-0 xl:pr-[6.25rem] py-5 md:pt-10 md:pb-0 3xl:py-20">
+                <p className="text-[#464646] text-[0.875rem] 3xl:text-[1rem] font-medium font-sansCjk tracking-[1.82px] md:tracking-[1.76px] leading-[2.25rem] 3xl:leading-[39px] px-2 md:px-4 3md:pl-0 xl:pr-[6.25rem] py-5 md:pt-10 md:pb-0 3xl:py-20">
                   以”文化創生”為核心理念，致力於文化、藝術和商業的有機融合，建構室內外的空間場域，藉由場域精神傳達文化價值，提升生活美學及品味。
                   <br />
                   我們專注於高端商業的綜合服務，包括商業空間升級以打造城市文化地標、文化空間企劃與設計、文化內容策劃等，透過淬鏈、創意、多元的設計概念及操作手法，以最純粹的方式，表現品牌價值及故事。
@@ -158,7 +157,7 @@ export default function About() {
               custom={1}
             >
               <div className="relative left-0 right-1 bottom-10 w-px p-[0.5px] h-10 bg-[#9C9C9C] transform translate-y-1/2"></div>
-              <div className="text-[1.125rem] text-[#4B4646] font-medium [writing-mode:vertical-lr] leading-[2.5rem]">
+              <div className="text-[1.125rem] text-[#4B4646] font-medium font-sansCjk [writing-mode:vertical-lr] leading-[2.5rem]">
                 <span className="block tracking-[1.25rem]">世界</span>
                 <span className="block tracking-[1.25rem]">閱讀</span>
                 <span className="block tracking-[1.25rem]">
@@ -236,11 +235,11 @@ export default function About() {
                 custom={1}
               >
                 <div className="relative left-0 right-1 bottom-10 w-px p-[0.5px] h-10 bg-gray-500 transform translate-y-1/2"></div>
-                <div className="text-[24px] wider:text-[24px] text-gray-600 font-medium [writing-mode:vertical-lr] leading-[60px]">
+                <div className="text-[24px] wider:text-[24px] text-gray-600 font-medium font-sansCjk [writing-mode:vertical-lr] leading-[60px]">
                   <span className="block tracking-[20px]">世界</span>
                   <span className="block tracking-[20px]">閱讀</span>
                   <span className="block relative tracking-[20px]">
-                    以設計<span className="absolute right-[2px]">，</span>
+                    以設計
                   </span>
                 </div>
                 <div className="text-[18px] wider:text-[24px] text-[#1b1b1b] font-normal mt-10">
@@ -290,7 +289,7 @@ export default function About() {
                       <p className="text-[#464646] text-[14px] lg:text-[1.125rem] font-black tracking-[1.98px]">
                         {item.year}
                       </p>
-                      <ul className="md:px-5 lg:px-10 text-[14px] lg:text-[1rem] leading-[2.625rem] tracking-[1.76px] font-medium whitespace-pre">
+                      <ul className="md:px-5 lg:px-10 text-[14px] lg:text-[1rem] leading-[2.625rem] tracking-[1.76px] font-medium font-sansCjk whitespace-pre">
                         {Array.isArray(item.desc) ? (
                           item.desc.map((achievement, index) => (
                             <li key={index} className="">
@@ -318,7 +317,7 @@ export default function About() {
                       <p className="text-[#464646] text-[14px] lg:text-[1.125rem] font-black tracking-[1.98px]">
                         {item.year}
                       </p>
-                      <ul className="md:px-5 lg:px-10 text-[14px] lg:text-[1rem] leading-[2.625rem] tracking-[1.76px] font-medium whitespace-pre">
+                      <ul className="md:px-5 lg:px-10 text-[14px] lg:text-[1rem] leading-[2.625rem] tracking-[1.76px] font-medium font-sansCjk whitespace-pre">
                         {Array.isArray(item.desc) ? (
                           item.desc.map((achievement, index) => (
                             <li key={index} className="">
@@ -392,7 +391,7 @@ export default function About() {
               />
               <div className="flex flex-col p-4 md:p-10 xxxl:p-20 items-center md:items-start">
                 <div className="flex flex-row items-center 3md:pt-20 xl:pt-10">
-                  <p className="text-primary tracking-[12.98px] text-[1.375rem] md:text-[1.125rem] font-medium pt-4 [writing-mode:vertical-lr] ">
+                  <p className="text-primary tracking-[12.98px] text-[1.375rem] md:text-[1.125rem] font-medium font-sansCjk pt-4 [writing-mode:vertical-lr] ">
                     {TEAMIMAGE[0].title.slice(0, 3)}
                   </p>
                   <div className="flex flex-col pl-5">
@@ -439,10 +438,10 @@ export default function About() {
                 key={item.id}
               >
                 <Image src={item.src} width={285} height={367} alt={item.title} className="rounded-sm" />
-                <p className="text-primary tracking-[1.98px] text-[1rem] 3xl:text-[1.125rem] pt-10 md:pt-4 font-medium">
+                <p className="text-primary tracking-[1.98px] text-[1rem] 3xl:text-[1.125rem] pt-10 md:pt-4 font-medium font-sansCjk">
                   {item.title}
                 </p>
-                <span className="text-primary tracking-[1.98px] text-[1rem]  3xl:text-[1.125rem] pt-2 font-medium">
+                <span className="text-primary tracking-[1.98px] text-[1rem]  3xl:text-[1.125rem] pt-2 font-medium font-sansCjk">
                   {item.category}
                 </span>
               </motion.div>

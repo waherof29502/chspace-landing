@@ -87,23 +87,23 @@ export default function Features() {
           </motion.div>
           <div className="flex inset-0 justify-center md:ml-[350px] 2xl:ml-[370px] items-center absolute z-20">
             <div className="text-[16px] wider:text-[22px] text-[#4B4646] font-medium [writing-mode:vertical-lr] leading-loose">
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 提升生活美學及品味
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 藉由場域精神傳達文化藝術
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 建構於室內外的空間場域
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 從設計概念發展到落實
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 以自然為師，搭配天然素材的使用
               </span>
               <div className="text-[18px] wider:text-[24px] text-[#1b1b1b] font-normal ml-10">
-                <span className="block" style={{ letterSpacing: '0.5em' }}>
+                <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                   秉持著以 文化創生 為設計理念
                 </span>
               </div>
@@ -175,16 +175,16 @@ export default function Features() {
           </motion.div>
           <div className="flex inset-0 justify-start ml-[80px] 2xs:ml-[120px] sm:ml-[180px] md:ml-[100px] 3md:ml-[150px] lg:ml-[190px] 2lg:ml-[240px] xl:ml-[390px] 2xl:ml-[350px] md:-mt-[90px] wider:ml-[700px] wider:-mt-[180px] items-center absolute z-20">
             <div className="text-[16px] wider:text-[22px] text-[#4B4646] font-medium [writing-mode:vertical-lr] leading-loose">
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 為一個家的圓
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 週而復始得以滿足
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 深層的放鬆和自在的工作與休憩
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 生活是圓潤
               </span>
             </div>
@@ -268,14 +268,14 @@ export default function Features() {
           <div className="flex inset-0 justify-end mr-[65px] -mt-[50px] 2xs:mr-[80px] sm:mr-[160px] md:mr-[100px] 3md:mr-[260px] lg:mr-[240px] 2lg:mr-[290px] xl:mr-[380px] md:-mt-[90px] 2xl:mr-[550px] 2xl:-mt-[500px] wider:mr-[900px] wider:-mt-[800px]  items-center absolute z-20">
             <div className="text-[16px] wider:text-[22px] text-[#4B4646] font-medium [writing-mode:vertical-lr] leading-loose">
               <div className="relative left-4 right-1 bottom-10 w-px p-[0.5px] h-20 bg-gray-500 transform translate-y-1/2"></div>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莎士比亞
               </span>
 
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 智慧裡沒有書籍 ，就好像鳥兒沒有翅膀
               </span>
-              <span className="block" style={{ letterSpacing: '0.5em' }}>
+              <span className="block font-sansCjk" style={{ letterSpacing: '0.5em' }}>
                 生活裡沒有書籍 ，就好像鳥兒沒有翅膀
               </span>
             </div>
