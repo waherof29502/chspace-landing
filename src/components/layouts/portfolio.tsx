@@ -53,13 +53,10 @@ export default function Portfolio() {
             </div>
             {/* mobile filter button */}
             <div
-              className={`md:hidden grid grid-cols-2 gap-y-5 font-serif text-primary my-5 items-start ${
-                !top ? 'fixed bg-white top-[70px] -left-[2px] h-[20vh] w-full z-10 py-3' : ''
-              }`}
+              className={`md:hidden grid grid-cols-2 gap-y-5 font-serif text-primary my-5 items-start`}
             >
               {PORTFOLIO_FILTER_LISTS.map((item) => (
-                <button key={item.id}>
-                  <Link href={item.path}>
+                <button key={item.id} onClick={() => setActiveCategory(item.category)}>
                     <span
                       className={`tracking-wider text-[1.125rem] md:text-[12px]  ${
                         activeCategory === item.category ? 'text-primary' : 'text-[#888]'
@@ -67,14 +64,11 @@ export default function Portfolio() {
                     >
                       {item.title}
                     </span>
-                  </Link>
                 </button>
               ))}
             </div>
             <div
-              className={`px-0 ${
-                !top ? 'mt-[170px] md:mt-20 3md:mt-8 xl:mt-16' : ''
-              } sm:px-[5.625rem] md:px-10 3md:px-[1.875rem] xl:px-[15rem] 3xl:px-[9.375rem] wide:px-20 min-h-[20vh]`}
+              className={`px-0 sm:px-[5.625rem] md:px-10 3md:px-[1.875rem] xl:px-[15rem] 3xl:px-[9.375rem] wide:px-20 min-h-[20vh]`}
             >
               {filterProjects().map((item) => (
                 <PortfolioCard
