@@ -2,10 +2,12 @@ import ModalVideo from '@/src/components/utils/modal-video';
 import Image from 'next/image';
 import HeroBg from '@/public/images/home/hero-image.png';
 import Slogan from '@/public/images/home/slogan.png';
+import Paragraph from '../../ui/word';
 export default function Hero() {
+  const paragraph = `深耕"人文藝術文化場域"以設計閱讀世界。`
   return (
     <section className="relative">
-      <div className="w-full min-h-screen flex items-center justify-center relative">
+      <div className="w-full min-h-[99vh] flex items-center justify-center relative">
         {/* Hero video */}
         {/* <ModalVideo
           video='/videos/video.mp4'
